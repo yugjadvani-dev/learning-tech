@@ -14,3 +14,8 @@ os.getcwd()`
 
 `import sys
 sys.platform`
+
+# run a file in shell
+
+`import file_name
+file_name.chai_four`
