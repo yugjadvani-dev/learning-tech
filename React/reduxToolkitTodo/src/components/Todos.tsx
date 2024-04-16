@@ -5,7 +5,7 @@ import { removeTodo } from "../features/todo/todoSlice";
 const Todos: React.FC = () => {
   const dispatch = useDispatch();
 
-  const todos = useSelector((state) => state.todos);
+  const todos: Todo[] = useSelector((state: TodoState) => state.todos);
   console.log("🚀 ~ file: Todos.tsx:8 ~ todos 😀👏:", todos);
 
   return (

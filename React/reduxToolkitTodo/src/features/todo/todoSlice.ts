@@ -1,14 +1,5 @@
 import { createSlice, nanoid, PayloadAction } from "@reduxjs/toolkit";
 
-interface Todo {
-  id: string;
-  text: string;
-}
-
-interface TodoState {
-  todos: Todo[];
-}
-
 const initialState: TodoState = {
   todos: [],
 };
