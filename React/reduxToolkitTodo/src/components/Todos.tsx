@@ -2,7 +2,7 @@ import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { editTodo, removeTodo } from "../features/todo/todoSlice";
 
-const Todos: React.FC = () => {
+const Todos: React.FC<AddTodoProps> = ({ setEditingId }) => {
   const dispatch = useDispatch();
 
   const todos: Todo[] = useSelector((state: TodoState) => state.todos);
@@ -18,7 +18,10 @@ const Todos: React.FC = () => {
             <div className="text-white">{todo.text}</div>
             <div className="flex items-center gap-4">
               <button
-                onClick={() => dispatch(editTodo(todo.id))}
+                onClick={() => {
+                  dispatch(editTodo({ id: todo.id, text: todo.text }));
+                  setEditingId(todo.id);
+                }}
                 className="text-white bg-red-500 border-0 py-1 px-4 focus:outline-none hover:bg-red-600 rounded text-md">
                 Edit
               </button>

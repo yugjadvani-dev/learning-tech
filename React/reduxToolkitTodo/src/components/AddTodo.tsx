@@ -1,15 +1,23 @@
 import React from "react";
-import { useDispatch } from "react-redux";
-import { addTodo } from "../features/todo/todoSlice";
+import { useDispatch, useSelector } from "react-redux";
+import { addTodo, editTodo } from "../features/todo/todoSlice";
 
-const AddTodo: React.FC = () => {
-  const [input, setInput] = React.useState("");
+const AddTodo: React.FC<AddTodoProps> = ({ editingId, setEditingId }) => {
+  const todo = useSelector((state: TodoState) => state.update);
+  const [input, setInput] = React.useState<string>("");
 
   const dispatch = useDispatch();
 
   const addTodoHandler = (e: { preventDefault: () => void }) => {
     e.preventDefault();
-    dispatch(addTodo(input));
+    if (!input.trim()) return;
+
+    if (editingId !== null) {
+      editTodo({ id: editingId, text: input });
+      setEditingId("");
+    } else {
+      dispatch(addTodo(input));
+    }
     setInput("");
   };
 
@@ -28,7 +36,7 @@ const AddTodo: React.FC = () => {
         <button
           type="submit"
           className="text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">
-          Add Todo
+          {editingId !== null ? "Update Todo" : "Add Todo"}
         </button>
       </form>
     </>

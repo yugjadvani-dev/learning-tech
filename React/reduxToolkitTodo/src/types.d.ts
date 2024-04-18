@@ -5,4 +5,10 @@ interface Todo {
 
 type TodoState = {
   todos: Todo[];
+  update: string;
 };
+
+interface AddTodoProps {
+  editingId: string | null;
+  setEditingId: (id: string | null) => void;
+}
