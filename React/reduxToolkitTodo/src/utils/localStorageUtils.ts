@@ -1,10 +1,10 @@
 const TODO_STORAGE_KEY = "todos";
 
-export const saveTodos = (todos: Todo[]) => {
+export const localStorageSave = (todos: Todo[]) => {
   localStorage.setItem(TODO_STORAGE_KEY, JSON.stringify(todos));
 };
 
-export const getTodos = (): Todo[] => {
+export const localStorageGet = (): Todo[] => {
   const todosJson = localStorage.getItem(TODO_STORAGE_KEY);
   if (todosJson) {
     return JSON.parse(todosJson);
@@ -12,20 +12,20 @@ export const getTodos = (): Todo[] => {
   return [];
 };
 
-export const addTodo = (todo: Todo) => {
-  const todos = getTodos();
-  saveTodos([...todos, todo]);
+export const localStorageAdd = (todo: Todo) => {
+  const todos = localStorageGet();
+  localStorageSave([...todos, todo]);
 };
 
-export const updateTodo = (updatedTodo: Todo) => {
-  let todos = getTodos();
+export const localStorageUpdate = (updatedTodo: Todo) => {
+  let todos = localStorageGet();
   todos = todos.map((todo) =>
     todo.id === updatedTodo.id ? updatedTodo : todo
   );
-  saveTodos(todos);
+  localStorageSave(todos);
 };
 
-export const deleteTodo = (id: string) => {
-  const todos = getTodos().filter((todo) => todo.id !== id);
-  saveTodos(todos);
+export const localStorageDelete = (id: string) => {
+  const todos = localStorageGet().filter((todo) => todo.id !== id);
+  localStorageSave(todos);
 };
