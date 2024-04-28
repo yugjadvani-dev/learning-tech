@@ -26,7 +26,7 @@ export const todoSlice = createSlice({
       state.todos = state.todos.filter((todo) => todo.id !== action.payload);
       localStorageDelete(action.payload); // Delete from localStorage
     },
-    editTodo: (state, action: PayloadAction<{ id: string; text: string }>) => {
+    editTodo: (state, action: PayloadAction<Todo>) => {
       const index = state.todos.findIndex(
         (todo) => todo.id === action.payload.id
       );
