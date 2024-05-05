@@ -1,8 +1,13 @@
 import { createSlice, nanoid, PayloadAction } from "@reduxjs/toolkit";
+import {
+  localStorageAdd,
+  localStorageDelete,
+  localStorageUpdate,
+  localStorageGet,
+} from "../../utils/localStorageUtils";
 
 const initialState: TodoState = {
-  todos: [],
-  update: "",
+  todos: localStorageGet(),
 };
 
 export const todoSlice = createSlice({
@@ -15,14 +20,19 @@ export const todoSlice = createSlice({
         text: action.payload,
       };
       state.todos.push(todo);
+      localStorageAdd(todo); // Save to localStorage
     },
     removeTodo: (state, action: PayloadAction<string>) => {
       state.todos = state.todos.filter((todo) => todo.id !== action.payload);
+      localStorageDelete(action.payload); // Delete from localStorage
     },
-    editTodo: (state, action: PayloadAction<{ id: string; text: string }>) => {
-      const updated = state.todos.find((todo) => todo.id === action.payload.id);
-      if (updated) {
-        state.update = action.payload.text;
+    editTodo: (state, action: PayloadAction<Todo>) => {
+      const index = state.todos.findIndex(
+        (todo) => todo.id === action.payload.id
+      );
+      if (index !== -1) {
+        state.todos[index].text = action.payload.text;
+        localStorageUpdate(state.todos[index]); // Update in localStorage
       }
     },
   },
