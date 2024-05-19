@@ -1,1 +1,1 @@
-# This Repo for which i learning
+# In this repo I put everything which I was leared and learning.
