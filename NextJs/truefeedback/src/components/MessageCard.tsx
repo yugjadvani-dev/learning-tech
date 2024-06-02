@@ -3,8 +3,6 @@ import React from "react";
 import {
   Card,
   CardContent,
-  CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
@@ -21,20 +19,20 @@ import {
 } from "@/components/ui/alert-dialog";
 import { Button } from "./ui/button";
 import { X } from "lucide-react";
-import { toast } from "./ui/use-toast";
+import { useToast } from "./ui/use-toast";
 import axios, { AxiosError } from "axios";
 import { ApiResponse } from "@/types/ApiResponse";
 import { Message } from "@/model/User";
+import dayjs from 'dayjs';
 
 type MessageCardProps = {
   message: Message;
-  onMessageDelete: (messageId: string | unknown) => void;
+  onMessageDelete: (messageId: string) => void;
 };
 
-const MessageCard: React.FC<MessageCardProps> = ({
-  message,
-  onMessageDelete,
-}) => {
+export function MessageCard({ message, onMessageDelete }: MessageCardProps) {
+  const { toast } = useToast();
+
   const handleDeleteConfirm = async () => {
     try {
       const response = await axios.delete<ApiResponse>(`/api/delete-message/${message._id}`)
@@ -81,13 +79,11 @@ const MessageCard: React.FC<MessageCardProps> = ({
             </AlertDialogContent>
           </AlertDialog>
         </div>
-        {/* <div className="text-sm">
+        <div className="text-sm">
           {dayjs(message.createdAt).format('MMM D, YYYY h:mm A')}
-        </div> */}
+        </div>
       </CardHeader>
       <CardContent></CardContent>
     </Card>
   );
 };
-
-export default MessageCard;
