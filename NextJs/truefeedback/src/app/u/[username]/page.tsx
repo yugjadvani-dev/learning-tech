@@ -34,6 +34,8 @@ const initialMessageString =
   "What's your favorite movie?||Do you have any pets?||What's your dream job?";
 
 const SendMessage = () => {
+  const [isLoading, setIsLoading] = useState(false);
+
   const params = useParams<{ username: string }>();
   const username = params.username;
 
@@ -53,9 +55,9 @@ const SendMessage = () => {
 
   const messageContent = form.watch('content')
 
-  const handleMessageClick = (message: string) => {};
-
-  const [isLoading, setIsLoading] = useState(false);
+  const handleMessageClick = (message: string) => {
+    form.setValue('content', message);
+  };
 
   const onSubmit = async (data: z.infer<typeof messageSchema>) => {
     setIsLoading(true);
