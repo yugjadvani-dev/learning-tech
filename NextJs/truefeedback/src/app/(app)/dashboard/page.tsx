@@ -17,6 +17,7 @@ import { AcceptMessageSchema } from "@/schemas/acceptMessageSchema";
 
 function UserDashboard() {
   const [messages, setMessages] = useState<Message[]>([]);
+  console.log("🚀 ~ file: page.tsx:20 ~ messages 😀👏:", messages)
   const [isLoading, setIsLoading] = useState(false);
   const [isSwitchLoading, setIsSwitchLoading] = useState(false);
 
