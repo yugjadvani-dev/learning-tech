@@ -87,7 +87,7 @@ const SignInForm = () => {
               render={({ field }) => (
                 <FormItem>
                   <FormLabel>Password</FormLabel>
-                  <Input type="password" {...field} />
+                  <Input type="password" {...field} placeholder="Password" />
                   <FormMessage />
                 </FormItem>
               )}
