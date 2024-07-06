@@ -1,1 +1,9 @@
-# In this repo I put everything which I was leared and learning.
+Creare a native app with CLI
+```bash
+npx react-native init appname
+```
+
+Run Native app in android 
+```bash
+npx react-native run-android
+```
