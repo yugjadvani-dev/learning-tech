@@ -69,3 +69,16 @@ let callFunction = (func, num) => {
     }
 }
 callFunction(multiply,5)
+
+// Write a higher-order function that takes two functions and a value, applies the first function to the value, and then applies the second function to the result.
+const applyFunction = (func1, func2, value) => {
+    const intermediateResult = func1(value)
+    const finalResult = func2(intermediateResult)
+    return finalResult
+}
+
+const add = (x) => x + 2
+const multiply1 = (x) => x * 2 
+
+const result = applyFunction(add, multiply1, 5)
+console.log(result) // 14
