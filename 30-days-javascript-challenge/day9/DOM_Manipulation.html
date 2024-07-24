@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation</title>
+    <style>
+        .highlight {
+            background-color: yellow;
+        }
+
+        #myElement2 {
+            width: 200px;
+            height: 100px;
+            border: 2px solid black;
+            text-align: center;
+            line-height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="changeText">Hello World!</h1>
+    <h1 class="changeBg">Change Bg</h1>
+
+    <ul></ul>
+
+    <img src="" alt="">
+
+    <p id="myElement">This is a paragraph.</p>
+    <button onclick="addClass()">Add Class</button>
+    <button onclick="removeClass()">Remove Class</button>
+
+    <p id="myParagraph">This is the original text.</p>
+    <button id="myButton">Change Text</button>
+
+    <div id="myElement2">Hover over me!</div>
+    <script>
+        // Selecting and Manipulating Elements
+        document.getElementById("changeText").textContent = "Hii There"
+        document.querySelector(".changeBg").style.backgroundColor = "red";
+
+        // Creating and Appending Elements
+        const newParagraph = document.createElement("div");
+        newParagraph.textContent = "This is a new paragraph";
+        document.body.appendChild(newParagraph);
+
+        const task4List = document.querySelector("ul");
+        const newTask = document.createElement("li");
+        newTask.textContent = "New li";
+        task4List.appendChild(newTask);
+
+        // Removing Elements
+        const firstChild = document.body.firstChild;
+        document.body.removeChild(firstChild);
+
+        // Modifying Attributes and Classes
+        const img = document.querySelector("img");
+        img.setAttribute("src", "https://via.placeholder.com/150");
+
+        function addClass() {
+            const element = document.getElementById('myElement');
+            element.classList.add('highlight');
+        }
+
+        function removeClass() {
+            const element = document.getElementById('myElement');
+            element.classList.remove('highlight');
+        }
+
+        // Event Handling
+        document.getElementById('myButton').addEventListener('click', function () {
+            const paragraph = document.getElementById('myParagraph');
+            paragraph.textContent = 'This is the new text.';
+        });
+
+        const element = document.getElementById('myElement2');
+
+        element.addEventListener('mouseover', function () {
+            element.style.borderColor = 'red';
+        });
+
+        element.addEventListener('mouseout', function () {
+            element.style.borderColor = 'black';
+        });
+    </script>
+</body>
+
+</html>
