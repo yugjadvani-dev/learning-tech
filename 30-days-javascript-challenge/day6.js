@@ -37,7 +37,6 @@ console.log(arr6.unshift(0)) // 0
 console.log(arr6) // [0, 1, 2, 3, 4, 5]
 
 // Array methods (Intermediate)
-// Use a map to create a new array where each number is doubled and log the new array
 const arr7 = [1, 2, 3, 4, 5]
 const doubleArr = arr.map(num => num * 2)
 console.log(doubleArr) // [2, 4, 6, 8, 10]
@@ -62,9 +61,7 @@ const arr11 = [1, 2, 3, 4, 5]
 arr11.forEach(num => console.log(num))
 
 // Multi dimensional array
-//  Create a two-dimensional array (matrix) and log the entire array to the console.
 const matrix = [[1,2,3], [4,5,6],[7,8,9]]
 console.log(matrix)
 
-//  Access and log a specific element from the two-dimensional array.
 console.log(matrix[1,2])

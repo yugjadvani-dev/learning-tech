@@ -12,7 +12,6 @@ for (let i = 1; i <= 10; i++) {
 }
 
 // while loop
-// the sum of numbers
 let sum = 0
 let i = 1
 while (i <= 10) {
@@ -34,7 +33,7 @@ do {
   j++
 } while (j <= 5)
 
-// Factorial Num using While Loop
+// Factorial
 let num2 = 5
 let factorial = 1
 while (num2 > 0) {

@@ -18,7 +18,6 @@ if (age >= 18){
 }
 
 // Nested if-else
-// find the largest of three numbers using nested if-else
 let num1=10, num2=20, num3=30
 if(num1 > num2){
     if(num1 > num3){

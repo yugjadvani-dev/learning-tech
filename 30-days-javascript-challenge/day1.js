@@ -30,5 +30,3 @@ console.log(val)
 // understading const
 const constValue = "I am constant"
 console.log(constValue)
-// constValue = 1000
-// console.log(constValue)
