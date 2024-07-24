@@ -59,12 +59,13 @@ console.log(greetPerson('John Doe', 30)) // Hello, John Doe! You are 30 years ol
 console.log(greetPerson('Jane Smith')) // Hello, Jane Smith! You are 20 years old.
 
 //  Write a higher-order function that takes a function and a number, and calls the function that many times.
-
 let multiplyBy = (num1, num2) => {
     return num1 * num2
 }
+
 let callFunction = (func, num) => {
     for(let i = 0; i < num; i++){
         console.log(func(i, 2))
     }
 }
+callFunction(multiply,5)
