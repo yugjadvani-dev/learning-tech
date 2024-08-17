@@ -1,6 +1,5 @@
 
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar"
-import { Link } from "react-router-dom";
 
 export function AboutUs() {
   return (
@@ -177,82 +176,6 @@ export function AboutUs() {
           </div>
         </section>
       </main>
-      <footer className="bg-muted p-6 md:py-12 w-full">
-        <div className="container max-w-7xl grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-8 text-sm">
-          <div className="grid gap-1">
-            <h3 className="font-semibold">Company</h3>
-            <Link to={"/"} >
-              About Us
-            </Link>
-            <Link to={"/"} >
-              Our Team
-            </Link>
-            <Link to={"/"} >
-              Careers
-            </Link>
-            <Link to={"/"} >
-              News
-            </Link>
-          </div>
-          <div className="grid gap-1">
-            <h3 className="font-semibold">Services</h3>
-            <Link to={"/"} >
-              Event Ticketing
-            </Link>
-            <Link to={"/"} >
-              Event Calendar
-            </Link>
-            <Link to={"/"} >
-              Secure Payments
-            </Link>
-            <Link to={"/"} >
-              Customer Support
-            </Link>
-          </div>
-          <div className="grid gap-1">
-            <h3 className="font-semibold">Resources</h3>
-            <Link to={"/"} >
-              Help Center
-            </Link>
-            <Link to={"/"} >
-              FAQs
-            </Link>
-            <Link to={"/"} >
-              Blog
-            </Link>
-            <Link to={"/"} >
-              Contact Us
-            </Link>
-          </div>
-          <div className="grid gap-1">
-            <h3 className="font-semibold">Legal</h3>
-            <Link to={"/"} >
-              Privacy Policy
-            </Link>
-            <Link to={"/"} >
-              Terms of Service
-            </Link>
-            <Link to={"/"} >
-              Cookie Policy
-            </Link>
-          </div>
-          <div className="grid gap-1">
-            <h3 className="font-semibold">Connect</h3>
-            <Link to={"/"} >
-              Facebook
-            </Link>
-            <Link to={"/"} >
-              Twitter
-            </Link>
-            <Link to={"/"} >
-              Instagram
-            </Link>
-            <Link to={"/"} >
-              LinkedIn
-            </Link>
-          </div>
-        </div>
-      </footer>
     </div>
   )
 }

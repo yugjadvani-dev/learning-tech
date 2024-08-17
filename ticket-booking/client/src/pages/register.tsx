@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 
 export function Register() {
   return (
-    <div className="flex h-screen w-full items-center justify-center bg-background">
+    <div className="flex h-screen w-full items-center justify-center bg-[url('/placeholder.svg?height=800&width=1200')] bg-cover bg-center">
       <Card className="w-full max-w-md">
         <CardHeader>
           <CardTitle className="text-2xl font-bold">Register</CardTitle>
@@ -32,8 +32,8 @@ export function Register() {
             </Button>
           </form>
         </CardContent>
-        <CardFooter className="text-center text-muted-foreground">
-          Already have an account?{" "}
+        <CardFooter className="text-center text-muted-foreground space-x-2">
+          <span>Already have an account?{" "}</span>
           <Link to={"/"} className="font-medium underline underline-offset-4">
             Sign in
           </Link>

@@ -19,6 +19,7 @@ const App = () => {
   return (
     <>
       <Routes>
+        <Route path="/" element={<Home />} />
         <Route path="/about-us" element={<AboutUs />} />
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
@@ -28,7 +29,6 @@ const App = () => {
         <Route path="/ChackStatus" element={<ChackStatus />} />
         <Route path="/deshboard" element={<Deshboard />} />
         <Route path="/flight" element={<Flight />} />
-        <Route path="/home" element={<Home />} />
         <Route path="/loyalty" element={<Loyalty />} />
         <Route path="/private-policy" element={<PrivatePolicy />} />
         <Route path="/rewards" element={<Rewards />} />
