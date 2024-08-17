@@ -10,7 +10,7 @@ const Footer = () => {
             Privacy
           </Link>
           <Link to="/services" className="hover:underline">
-            Terms
+            Services
           </Link>
           <Link to="/contact-us" className="hover:underline">
             Contact

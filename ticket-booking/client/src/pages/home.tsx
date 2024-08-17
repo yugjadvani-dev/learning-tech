@@ -29,7 +29,7 @@ export function Home() {
                       Find the best deals and plan your journey with ease.
                     </p>
                     <Link
-                      to="/"
+                      to="/train"
                       className="inline-flex h-10 items-center justify-center rounded-md bg-primary-foreground px-8 text-sm font-medium text-primary shadow transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
                     >
                       Book Train Tickets
@@ -55,7 +55,7 @@ export function Home() {
                       Explore new destinations with our reliable bus services.
                     </p>
                     <Link
-                      to="/"
+                      to="/bus"
                       className="inline-flex h-10 items-center justify-center rounded-md bg-primary-foreground px-8 text-sm font-medium text-primary shadow transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
                     >
                       Book Bus Tickets
@@ -81,7 +81,7 @@ export function Home() {
                       Book your flights with ease and enjoy your journey.
                     </p>
                     <Link
-                      to="/"
+                      to="/flight"
                       className="inline-flex h-10 items-center justify-center rounded-md bg-primary-foreground px-8 text-sm font-medium text-primary shadow transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
                     >
                       Book Flight Tickets
@@ -114,7 +114,7 @@ export function Home() {
                 journey.
               </p>
               <Link
-                to="/"
+                to="/train"
                 className="inline-flex h-10 items-center justify-center rounded-md bg-primary px-8 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
               >
                 Book Now
@@ -129,7 +129,7 @@ export function Home() {
                 Explore new destinations with our reliable bus services.
               </p>
               <Link
-                to="/"
+                to="/bus"
                 className="inline-flex h-10 items-center justify-center rounded-md bg-primary px-8 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
               >
                 Book Now
@@ -144,7 +144,7 @@ export function Home() {
                 Book your flights with ease and enjoy your journey.
               </p>
               <Link
-                to="/"
+                to="/flight"
                 className="inline-flex h-10 items-center justify-center rounded-md bg-primary px-8 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
               >
                 Book Now
@@ -173,7 +173,7 @@ export function Home() {
               to make travel planning easy and accessible for everyone.
             </p>
             <Link
-              to="/"
+              to="/about-us"
               className="inline-flex h-10 items-center justify-center rounded-md bg-primary px-8 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
             >
               Learn More

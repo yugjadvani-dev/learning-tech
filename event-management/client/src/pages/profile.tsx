@@ -108,7 +108,7 @@ export function Profile() {
         "user",
         JSON.stringify({ ...response.data.user, isLogin })
       );
-      window.location.reload()
+      window.location.reload();
     } catch (err) {
       console.error("Failed to update user", err);
     }
@@ -140,7 +140,6 @@ export function Profile() {
               <CardTitle className="text-2xl">{user?.name}</CardTitle>
               <Dialog>
                 <DialogTrigger asChild>
-                  {/*  */}
                   <Button variant="outline">Edit Profile</Button>
                 </DialogTrigger>
                 <DialogContent className="sm:max-w-[425px]">

@@ -48,7 +48,7 @@ router.post("/login", async (req, res) => {
     console.log("user", user);
 
     const newUser = {
-      id: user._id,
+      _id: user._id,
       name: user.name,
       email: user.email,
       company: user.company,

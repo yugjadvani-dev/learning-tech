@@ -1,12 +1,21 @@
-
-import { Button } from "@/components/ui/button"
-import { Label } from "@/components/ui/label"
-import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from "@/components/ui/select"
-import { Popover, PopoverTrigger, PopoverContent } from "@/components/ui/popover"
-import { Calendar } from "@/components/ui/calendar"
-import { Card, CardContent } from "@/components/ui/card"
-import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar"
-import { Input } from "@/components/ui/input"
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Button } from "@/components/ui/button";
+import { Calendar } from "@/components/ui/calendar";
+import { Card, CardContent } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/components/ui/popover";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 
 export function Bus() {
   return (
@@ -16,8 +25,12 @@ export function Bus() {
           <div className="container mx-auto px-4 md:px-6">
             <div className="grid md:grid-cols-2 gap-8">
               <div className="space-y-4">
-                <h1 className="text-3xl md:text-4xl font-bold">Find Your Next Bus Adventure</h1>
-                <p className="text-muted-foreground text-lg">Book your bus tickets with ease and confidence.</p>
+                <h1 className="text-3xl md:text-4xl font-bold">
+                  Find Your Next Bus Adventure
+                </h1>
+                <p className="text-muted-foreground text-lg">
+                  Book your bus tickets with ease and confidence.
+                </p>
                 <form className="grid gap-4">
                   <div className="grid md:grid-cols-2 gap-4">
                     <div>
@@ -29,8 +42,12 @@ export function Bus() {
                           <SelectValue placeholder="Select departure location" />
                         </SelectTrigger>
                         <SelectContent>
-                          <SelectItem value="san-francisco">San Francisco</SelectItem>
-                          <SelectItem value="los-angeles">Los Angeles</SelectItem>
+                          <SelectItem value="san-francisco">
+                            San Francisco
+                          </SelectItem>
+                          <SelectItem value="los-angeles">
+                            Los Angeles
+                          </SelectItem>
                           <SelectItem value="seattle">Seattle</SelectItem>
                           <SelectItem value="chicago">Chicago</SelectItem>
                         </SelectContent>
@@ -45,8 +62,12 @@ export function Bus() {
                           <SelectValue placeholder="Select arrival location" />
                         </SelectTrigger>
                         <SelectContent>
-                          <SelectItem value="san-francisco">San Francisco</SelectItem>
-                          <SelectItem value="los-angeles">Los Angeles</SelectItem>
+                          <SelectItem value="san-francisco">
+                            San Francisco
+                          </SelectItem>
+                          <SelectItem value="los-angeles">
+                            Los Angeles
+                          </SelectItem>
                           <SelectItem value="seattle">Seattle</SelectItem>
                           <SelectItem value="chicago">Chicago</SelectItem>
                         </SelectContent>
@@ -60,7 +81,10 @@ export function Bus() {
                       </Label>
                       <Popover>
                         <PopoverTrigger asChild>
-                          <Button variant="outline" className="w-full flex items-center justify-between">
+                          <Button
+                            variant="outline"
+                            className="w-full flex items-center justify-between"
+                          >
                             <span>Select date</span>
                             <CalendarIcon className="h-5 w-5" />
                           </Button>
@@ -94,11 +118,11 @@ export function Bus() {
               </div>
               <div className="flex items-center justify-center">
                 <img
-                  src="/placeholder.svg"
+                  src="/bus-map.jpg"
                   alt="Bus Booking"
                   width={500}
                   height={500}
-                  className="max-w-full"
+                  className="max-w-full rounded-3xl"
                   style={{ aspectRatio: "500/500", objectFit: "cover" }}
                 />
               </div>
@@ -109,7 +133,9 @@ export function Bus() {
           <div className="container mx-auto px-4 md:px-6">
             <div className="grid md:grid-cols-2 gap-8">
               <div>
-                <h2 className="text-2xl md:text-3xl font-bold mb-4">Booking Details</h2>
+                <h2 className="text-2xl md:text-3xl font-bold mb-4">
+                  Booking Details
+                </h2>
                 <form className="grid gap-4">
                   <div>
                     <Label htmlFor="passengers" className="text-sm font-medium">
@@ -171,27 +197,35 @@ export function Bus() {
                 </form>
               </div>
               <div>
-                <h2 className="text-2xl md:text-3xl font-bold mb-4">Location and Time</h2>
+                <h2 className="text-2xl md:text-3xl font-bold mb-4">
+                  Location and Time
+                </h2>
                 <div className="grid gap-4">
                   <div className="flex items-center gap-4">
                     <LocateIcon className="h-6 w-6 text-primary" />
                     <div>
                       <div className="font-medium">Pickup Location</div>
-                      <div className="text-muted-foreground">123 Main St, San Francisco, CA 94101</div>
+                      <div className="text-muted-foreground">
+                        123 Main St, San Francisco, CA 94101
+                      </div>
                     </div>
                   </div>
                   <div className="flex items-center gap-4">
                     <LocateIcon className="h-6 w-6 text-primary" />
                     <div>
                       <div className="font-medium">Drop-off Location</div>
-                      <div className="text-muted-foreground">456 Oak St, Los Angeles, CA 90001</div>
+                      <div className="text-muted-foreground">
+                        456 Oak St, Los Angeles, CA 90001
+                      </div>
                     </div>
                   </div>
                   <div className="flex items-center gap-4">
                     <ClockIcon className="h-6 w-6 text-primary" />
                     <div>
                       <div className="font-medium">Travel Time</div>
-                      <div className="text-muted-foreground">5 hours 30 minutes</div>
+                      <div className="text-muted-foreground">
+                        5 hours 30 minutes
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -203,49 +237,65 @@ export function Bus() {
           <div className="container mx-auto px-4 md:px-6">
             <div className="grid md:grid-cols-2 gap-8">
               <div>
-                <h2 className="text-2xl md:text-3xl font-bold mb-4">Why Choose Us?</h2>
+                <h2 className="text-2xl md:text-3xl font-bold mb-4">
+                  Why Choose Us?
+                </h2>
                 <div className="grid gap-4">
                   <div className="flex items-start gap-4">
                     <TicketIcon className="h-6 w-6 text-primary" />
                     <div>
                       <div className="font-medium">Easy Booking</div>
-                      <p className="text-muted-foreground">Book your bus tickets with just a few clicks.</p>
+                      <p className="text-muted-foreground">
+                        Book your bus tickets with just a few clicks.
+                      </p>
                     </div>
                   </div>
                   <div className="flex items-start gap-4">
                     <ShieldIcon className="h-6 w-6 text-primary" />
                     <div>
                       <div className="font-medium">Secure Payments</div>
-                      <p className="text-muted-foreground">Your payment information is safe with us.</p>
+                      <p className="text-muted-foreground">
+                        Your payment information is safe with us.
+                      </p>
                     </div>
                   </div>
                   <div className="flex items-start gap-4">
                     <SmileIcon className="h-6 w-6 text-primary" />
                     <div>
                       <div className="font-medium">Reliable Service</div>
-                      <p className="text-muted-foreground">Enjoy a comfortable and punctual bus ride.</p>
+                      <p className="text-muted-foreground">
+                        Enjoy a comfortable and punctual bus ride.
+                      </p>
                     </div>
                   </div>
                 </div>
               </div>
               <div>
-                <h2 className="text-2xl md:text-3xl font-bold mb-4">What Our Customers Say</h2>
+                <h2 className="text-2xl md:text-3xl font-bold mb-4">
+                  What Our Customers Say
+                </h2>
                 <div className="grid gap-4">
                   <Card>
                     <CardContent>
                       <div className="flex items-start gap-4">
                         <Avatar className="border w-12 h-12">
-                          <AvatarImage src="/placeholder-user.jpg" alt="@username" />
+                          <AvatarImage
+                            src="/placeholder-user.jpg"
+                            alt="@username"
+                          />
                           <AvatarFallback>CN</AvatarFallback>
                         </Avatar>
                         <div>
                           <div className="font-medium">John Doe</div>
-                          <div className="text-muted-foreground text-sm">Satisfied Customer</div>
+                          <div className="text-muted-foreground text-sm">
+                            Satisfied Customer
+                          </div>
                         </div>
                       </div>
                       <p className="mt-4">
-                        "I had a great experience booking my bus tickets with this\n website. The process was easy and
-                        the customer service was\n excellent."
+                        "I had a great experience booking my bus tickets with
+                        this\n website. The process was easy and the customer
+                        service was\n excellent."
                       </p>
                     </CardContent>
                   </Card>
@@ -253,17 +303,23 @@ export function Bus() {
                     <CardContent>
                       <div className="flex items-start gap-4">
                         <Avatar className="border w-12 h-12">
-                          <AvatarImage src="/placeholder-user.jpg" alt="@username" />
+                          <AvatarImage
+                            src="/placeholder-user.jpg"
+                            alt="@username"
+                          />
                           <AvatarFallback>CN</AvatarFallback>
                         </Avatar>
                         <div>
                           <div className="font-medium">Jane Smith</div>
-                          <div className="text-muted-foreground text-sm">Frequent Traveler</div>
+                          <div className="text-muted-foreground text-sm">
+                            Frequent Traveler
+                          </div>
                         </div>
                       </div>
                       <p className="mt-4">
-                        "I've been using this bus booking website for years and\n I'm always impressed by the
-                        reliability and convenience\n of their service."
+                        "I've been using this bus booking website for years
+                        and\n I'm always impressed by the reliability and
+                        convenience\n of their service."
                       </p>
                     </CardContent>
                   </Card>
@@ -276,13 +332,22 @@ export function Bus() {
           <div className="container mx-auto px-4 md:px-6">
             <div className="grid md:grid-cols-2 gap-8">
               <div>
-                <h2 className="text-2xl md:text-3xl font-bold mb-4">Secure Payment</h2>
+                <h2 className="text-2xl md:text-3xl font-bold mb-4">
+                  Secure Payment
+                </h2>
                 <form className="grid gap-4">
                   <div>
-                    <Label htmlFor="card-number" className="text-sm font-medium">
+                    <Label
+                      htmlFor="card-number"
+                      className="text-sm font-medium"
+                    >
                       Card Number
                     </Label>
-                    <Input id="card-number" type="text" placeholder="Enter your card number" />
+                    <Input
+                      id="card-number"
+                      type="text"
+                      placeholder="Enter your card number"
+                    />
                   </div>
                   <div className="grid md:grid-cols-2 gap-4">
                     <div>
@@ -333,10 +398,10 @@ export function Bus() {
         </section>
       </main>
     </div>
-  )
+  );
 }
 
-function CalendarIcon(props:any) {
+function CalendarIcon(props: any) {
   return (
     <svg
       {...props}
@@ -355,11 +420,10 @@ function CalendarIcon(props:any) {
       <rect width="18" height="18" x="3" y="4" rx="2" />
       <path d="M3 10h18" />
     </svg>
-  )
+  );
 }
 
-
-function ClockIcon(props:any) {
+function ClockIcon(props: any) {
   return (
     <svg
       {...props}
@@ -376,11 +440,10 @@ function ClockIcon(props:any) {
       <circle cx="12" cy="12" r="10" />
       <polyline points="12 6 12 12 16 14" />
     </svg>
-  )
+  );
 }
 
-
-function LocateIcon(props:any) {
+function LocateIcon(props: any) {
   return (
     <svg
       {...props}
@@ -400,11 +463,10 @@ function LocateIcon(props:any) {
       <line x1="12" x2="12" y1="19" y2="22" />
       <circle cx="12" cy="12" r="7" />
     </svg>
-  )
+  );
 }
 
-
-function ShieldIcon(props:any) {
+function ShieldIcon(props: any) {
   return (
     <svg
       {...props}
@@ -420,11 +482,10 @@ function ShieldIcon(props:any) {
     >
       <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" />
     </svg>
-  )
+  );
 }
 
-
-function SmileIcon(props:any) {
+function SmileIcon(props: any) {
   return (
     <svg
       {...props}
@@ -443,11 +504,10 @@ function SmileIcon(props:any) {
       <line x1="9" x2="9.01" y1="9" y2="9" />
       <line x1="15" x2="15.01" y1="9" y2="9" />
     </svg>
-  )
+  );
 }
 
-
-function TicketIcon(props:any) {
+function TicketIcon(props: any) {
   return (
     <svg
       {...props}
@@ -466,5 +526,5 @@ function TicketIcon(props:any) {
       <path d="M13 17v2" />
       <path d="M13 11v2" />
     </svg>
-  )
+  );
 }
