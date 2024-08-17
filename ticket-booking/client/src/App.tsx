@@ -1,11 +1,10 @@
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
 import { AboutUs } from "./pages/about-us";
 import { Register } from "./pages/register";
 import { Login } from "./pages/login";
 import { Bus } from "./pages/bus";
 import { ContactUs } from "./pages/contact-us";
 import { ChackStatus } from "./pages/ChackStatus";
-import { Deshboard } from "./pages/deshboard";
 import { Flight } from "./pages/flight";
 import { Home } from "./pages/home";
 import { Loyalty } from "./pages/loyalty";
@@ -16,11 +15,14 @@ import { Train } from "./pages/train";
 import { CheckIn } from "./pages/check-in";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import { Dashboard } from "./pages/dashboard";
 
 const App = () => {
+  const {pathname} = useLocation()
+
   return (
     <>
-    <Header/>
+      {pathname === '/login' || pathname === '/register' ? null : <Header />}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about-us" element={<AboutUs />} />
@@ -30,7 +32,7 @@ const App = () => {
         <Route path="/check-in" element={<CheckIn />} />
         <Route path="/contact-us" element={<ContactUs />} />
         <Route path="/chack-status" element={<ChackStatus />} />
-        <Route path="/deshboard" element={<Deshboard />} />
+        <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/flight" element={<Flight />} />
         <Route path="/loyalty" element={<Loyalty />} />
         <Route path="/private-policy" element={<PrivatePolicy />} />
@@ -38,7 +40,7 @@ const App = () => {
         <Route path="/services" element={<Services />} />
         <Route path="/train" element={<Train />} />
       </Routes>
-      <Footer/>
+      {pathname === '/login' || pathname === '/register' ? null : <Footer />}
     </>
   );
 };

@@ -1,20 +1,10 @@
 
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs"
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card"
-import { Link } from "react-router-dom";
 
-export function Deshboard() {
+export function Dashboard() {
   return (
     <div className="flex flex-col min-h-screen">
-      <header className="bg-primary text-primary-foreground py-4 px-6 flex items-center justify-between">
-        <Link to="/" className="flex items-center gap-2 font-bold text-lg">
-          <TicketIcon className="w-6 h-6" />
-          Ticket Booking
-        </Link>
-        <Link to="/" className="text-sm font-medium hover:underline">
-          Dashboard
-        </Link>
-      </header>
       <main className="flex-1 py-10 px-6">
         <Tabs defaultValue="train">
           <TabsList className="border-b">
@@ -193,27 +183,5 @@ export function Deshboard() {
         </Tabs>
       </main>
     </div>
-  )
-}
-
-function TicketIcon(props:any) {
-  return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <path d="M2 9a3 3 0 0 1 0 6v2a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-2a3 3 0 0 1 0-6V7a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z" />
-      <path d="M13 5v2" />
-      <path d="M13 17v2" />
-      <path d="M13 11v2" />
-    </svg>
   )
 }
