@@ -7,7 +7,7 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card"
 
 export function ChackStatus() {
   return (
-    <div className="w-full max-w-4xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+    <div className="w-full max-w-4xl min-h-[88vh] mx-auto py-12 px-4 sm:px-6 lg:px-8">
       <div className="mb-8">
         <h1 className="text-3xl font-bold text-center">Check Your Booking Status</h1>
         <p className="text-muted-foreground text-center mt-2">

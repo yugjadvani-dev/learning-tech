@@ -1,9 +1,23 @@
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <div>
-      
-    </div>
+    <footer className="bg-primary text-primary-foreground py-4 px-6 shadow">
+        <div className="container mx-auto flex items-center justify-between">
+          <p className="text-sm">&copy; 2024 Ticket Booking</p>
+          <nav className="flex items-center gap-4">
+            <Link to="/" className="hover:underline">
+              Privacy
+            </Link>
+            <Link to="/" className="hover:underline">
+              Terms
+            </Link>
+            <Link to="/" className="hover:underline">
+              Contact
+            </Link>
+          </nav>
+        </div>
+      </footer>
   )
 }
 
