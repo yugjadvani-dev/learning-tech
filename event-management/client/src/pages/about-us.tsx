@@ -1,53 +1,29 @@
-import { Button } from "@/components/ui/button"
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
 
 export function AboutUs() {
   return (
     <div className="flex flex-col min-h-[100dvh]">
-      <header className="bg-primary text-primary-foreground py-4 px-6 flex items-center justify-between">
-        <Link to="#" className="flex items-center gap-2" >
-          <CalendarIcon className="h-6 w-6" />
-          <span className="text-xl font-bold">Event Planners</span>
-        </Link>
-        <nav className="hidden md:flex items-center gap-4">
-          <Link to="#" className="hover:underline underline-offset-4" >
-            Home
-          </Link>
-          <Link to="#" className="hover:underline underline-offset-4" >
-            Services
-          </Link>
-          <Link to="#" className="hover:underline underline-offset-4" >
-            Portfolio
-          </Link>
-          <Link to="#" className="hover:underline underline-offset-4" >
-            Contact
-          </Link>
-          <Link
-            to="#"
-            className="inline-flex h-9 items-center justify-center rounded-md bg-primary-foreground px-4 py-2 text-sm font-medium text-primary shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
-            
-          >
-            Get a Quote
-          </Link>
-        </nav>
-        <Button variant="ghost" className="md:hidden">
-          <MenuIcon className="h-6 w-6" />
-        </Button>
-      </header>
       <main className="flex-1">
         <section className="relative h-[60vh] w-full overflow-hidden">
-          <img src="/placeholder.svg" alt="Event Planning" className="object-cover object-center" />
+          <img
+            src="/event2.jpg"
+            alt="Event Planning"
+            className="object-cover object-center"
+          />
           <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
             <div className="text-center text-white max-w-2xl px-4">
-              <h1 className="text-4xl sm:text-5xl font-bold mb-4">Elevate Your Events with Our Expertise</h1>
+              <h1 className="text-4xl sm:text-5xl font-bold mb-4">
+                Elevate Your Events with Our Expertise
+              </h1>
               <p className="text-lg mb-8">
-                At Event Planners, we specialize in creating unforgettable experiences for our clients. From corporate
-                events to weddings, our team of experienced professionals will transform your vision into reality.
+                At Event Planners, we specialize in creating unforgettable
+                experiences for our clients. From corporate events to weddings,
+                our team of experienced professionals will transform your vision
+                into reality.
               </p>
               <Link
                 to="#"
                 className="inline-flex h-10 items-center justify-center rounded-md bg-primary px-6 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
-                
               >
                 Learn More
               </Link>
@@ -58,15 +34,17 @@ export function AboutUs() {
           <div className="max-w-5xl mx-auto">
             <h2 className="text-3xl font-bold mb-8">About Us</h2>
             <p className="text-lg text-muted-foreground mb-12">
-              Event Planners is a leading event management company that has been creating unforgettable experiences for
-              our clients for over a decade. Our team of passionate and experienced professionals are dedicated to
-              delivering exceptional service and ensuring the success of every event we plan.
+              Event Planners is a leading event management company that has been
+              creating unforgettable experiences for our clients for over a
+              decade. Our team of passionate and experienced professionals are
+              dedicated to delivering exceptional service and ensuring the
+              success of every event we plan.
             </p>
             <h2 className="text-3xl font-bold mb-8">Our Team</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
               <div className="bg-muted rounded-lg overflow-hidden shadow-md">
                 <img
-                  src="/placeholder.svg"
+                  src="/men1.jpg"
                   alt="Team Member 1"
                   width={400}
                   height={400}
@@ -77,15 +55,16 @@ export function AboutUs() {
                   <h3 className="text-xl font-bold mb-2">Jane Doe</h3>
                   <p className="text-muted-foreground mb-4">Event Planner</p>
                   <p>
-                    Jane has over 8 years of experience in the event planning industry, specializing in corporate events
-                    and weddings. She is known for her meticulous attention to detail and her ability to bring clients'
-                    visions to life.
+                    Jane has over 8 years of experience in the event planning
+                    industry, specializing in corporate events and weddings. She
+                    is known for her meticulous attention to detail and her
+                    ability to bring clients' visions to life.
                   </p>
                 </div>
               </div>
               <div className="bg-muted rounded-lg overflow-hidden shadow-md">
                 <img
-                  src="/placeholder.svg"
+                  src="/men2.jpg"
                   alt="Team Member 2"
                   width={400}
                   height={400}
@@ -94,17 +73,20 @@ export function AboutUs() {
                 />
                 <div className="p-4">
                   <h3 className="text-xl font-bold mb-2">John Smith</h3>
-                  <p className="text-muted-foreground mb-4">Event Coordinator</p>
+                  <p className="text-muted-foreground mb-4">
+                    Event Coordinator
+                  </p>
                   <p>
-                    John has been with Event Planners for 5 years, bringing his expertise in logistics and project
-                    management to ensure the seamless execution of every event. He is known for his calm demeanor and
-                    his ability to problem solve on the fly.
+                    John has been with Event Planners for 5 years, bringing his
+                    expertise in logistics and project management to ensure the
+                    seamless execution of every event. He is known for his calm
+                    demeanor and his ability to problem solve on the fly.
                   </p>
                 </div>
               </div>
               <div className="bg-muted rounded-lg overflow-hidden shadow-md">
                 <img
-                  src="/placeholder.svg"
+                  src="/women.jpg"
                   alt="Team Member 3"
                   width={400}
                   height={400}
@@ -115,9 +97,11 @@ export function AboutUs() {
                   <h3 className="text-xl font-bold mb-2">Sarah Lee</h3>
                   <p className="text-muted-foreground mb-4">Event Designer</p>
                   <p>
-                    Sarah is the creative force behind Event Planners, bringing her unique vision and attention to
-                    detail to every event she designs. With a background in interior design, she has a keen eye for
-                    creating stunning environments that leave a lasting impression.
+                    Sarah is the creative force behind Event Planners, bringing
+                    her unique vision and attention to detail to every event she
+                    designs. With a background in interior design, she has a
+                    keen eye for creating stunning environments that leave a
+                    lasting impression.
                   </p>
                 </div>
               </div>
@@ -132,24 +116,27 @@ export function AboutUs() {
                 <CalendarIcon className="h-12 w-12 mb-4 text-primary" />
                 <h3 className="text-xl font-bold mb-2">Event Planning</h3>
                 <p className="text-muted-foreground">
-                  From corporate events to weddings, our team of experienced professionals will work with you to create
-                  a seamless and unforgettable experience.
+                  From corporate events to weddings, our team of experienced
+                  professionals will work with you to create a seamless and
+                  unforgettable experience.
                 </p>
               </div>
               <div className="bg-background rounded-lg shadow-md p-6">
                 <WallpaperIcon className="h-12 w-12 mb-4 text-primary" />
                 <h3 className="text-xl font-bold mb-2">Event Design</h3>
                 <p className="text-muted-foreground">
-                  Our in-house design team will work with you to create a unique and visually stunning event, tailored
-                  to your brand and vision.
+                  Our in-house design team will work with you to create a unique
+                  and visually stunning event, tailored to your brand and
+                  vision.
                 </p>
               </div>
               <div className="bg-background rounded-lg shadow-md p-6">
                 <CheckIcon className="h-12 w-12 mb-4 text-primary" />
                 <h3 className="text-xl font-bold mb-2">Event Management</h3>
                 <p className="text-muted-foreground">
-                  From venue selection to vendor coordination, our team will handle all the logistics to ensure your
-                  event runs smoothly and efficiently.
+                  From venue selection to vendor coordination, our team will
+                  handle all the logistics to ensure your event runs smoothly
+                  and efficiently.
                 </p>
               </div>
             </div>
@@ -161,44 +148,40 @@ export function AboutUs() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
               <div className="bg-muted rounded-lg shadow-md p-6 text-center">
                 <TrophyIcon className="h-12 w-12 mb-4 text-primary" />
-                <h3 className="text-xl font-bold mb-2">Best Event Planner of the Year</h3>
-                <p className="text-muted-foreground">Awarded by the Event Industry Association in 2021.</p>
+                <h3 className="text-xl font-bold mb-2">
+                  Best Event Planner of the Year
+                </h3>
+                <p className="text-muted-foreground">
+                  Awarded by the Event Industry Association in 2021.
+                </p>
               </div>
               <div className="bg-muted rounded-lg shadow-md p-6 text-center">
                 <StarIcon className="h-12 w-12 mb-4 text-primary" />
-                <h3 className="text-xl font-bold mb-2">5-Star Client Satisfaction</h3>
-                <p className="text-muted-foreground">Consistently rated 5 stars by our clients.</p>
+                <h3 className="text-xl font-bold mb-2">
+                  5-Star Client Satisfaction
+                </h3>
+                <p className="text-muted-foreground">
+                  Consistently rated 5 stars by our clients.
+                </p>
               </div>
               <div className="bg-muted rounded-lg shadow-md p-6 text-center">
                 <AwardIcon className="h-12 w-12 mb-4 text-primary" />
-                <h3 className="text-xl font-bold mb-2">Industry Innovation Award</h3>
-                <p className="text-muted-foreground">Recognized for our innovative event technology solutions.</p>
+                <h3 className="text-xl font-bold mb-2">
+                  Industry Innovation Award
+                </h3>
+                <p className="text-muted-foreground">
+                  Recognized for our innovative event technology solutions.
+                </p>
               </div>
             </div>
           </div>
         </section>
       </main>
-      <footer className="bg-primary text-primary-foreground py-6 px-6 md:px-12 lg:px-20">
-        <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between">
-          <p className="text-sm">&copy; 2024 Event Planners</p>
-          <nav className="flex items-center gap-4 mt-4 md:mt-0">
-            <Link to="#" className="hover:underline underline-offset-4" >
-              Privacy Policy
-            </Link>
-            <Link to="#" className="hover:underline underline-offset-4" >
-              Terms of Service
-            </Link>
-            <Link to="#" className="hover:underline underline-offset-4" >
-              Contact Us
-            </Link>
-          </nav>
-        </div>
-      </footer>
     </div>
-  )
+  );
 }
 
-function AwardIcon(props:any) {
+function AwardIcon(props: any) {
   return (
     <svg
       {...props}
@@ -215,11 +198,10 @@ function AwardIcon(props:any) {
       <path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526" />
       <circle cx="12" cy="8" r="6" />
     </svg>
-  )
+  );
 }
 
-
-function CalendarIcon(props:any) {
+function CalendarIcon(props: any) {
   return (
     <svg
       {...props}
@@ -238,11 +220,10 @@ function CalendarIcon(props:any) {
       <rect width="18" height="18" x="3" y="4" rx="2" />
       <path d="M3 10h18" />
     </svg>
-  )
+  );
 }
 
-
-function CheckIcon(props:any) {
+function CheckIcon(props: any) {
   return (
     <svg
       {...props}
@@ -258,11 +239,10 @@ function CheckIcon(props:any) {
     >
       <path d="M20 6 9 17l-5-5" />
     </svg>
-  )
+  );
 }
 
-
-function MenuIcon(props:any) {
+function MenuIcon(props: any) {
   return (
     <svg
       {...props}
@@ -280,11 +260,10 @@ function MenuIcon(props:any) {
       <line x1="4" x2="20" y1="6" y2="6" />
       <line x1="4" x2="20" y1="18" y2="18" />
     </svg>
-  )
+  );
 }
 
-
-function StarIcon(props:any) {
+function StarIcon(props: any) {
   return (
     <svg
       {...props}
@@ -300,11 +279,10 @@ function StarIcon(props:any) {
     >
       <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
     </svg>
-  )
+  );
 }
 
-
-function TrophyIcon(props:any) {
+function TrophyIcon(props: any) {
   return (
     <svg
       {...props}
@@ -325,11 +303,10 @@ function TrophyIcon(props:any) {
       <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22" />
       <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z" />
     </svg>
-  )
+  );
 }
 
-
-function WallpaperIcon(props:any) {
+function WallpaperIcon(props: any) {
   return (
     <svg
       {...props}
@@ -348,5 +325,5 @@ function WallpaperIcon(props:any) {
       <path d="M8 21h8" />
       <path d="M12 17v4" />
     </svg>
-  )
+  );
 }

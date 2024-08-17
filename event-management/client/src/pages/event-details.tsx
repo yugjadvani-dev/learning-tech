@@ -1,37 +1,16 @@
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
-import { Link } from "react-router-dom"
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 
 export function EventDetails() {
   return (
     <div className="flex flex-col min-h-screen">
-      <header className="bg-primary text-primary-foreground py-4 px-6 flex items-center justify-between">
-        <div className="flex items-center gap-4">
-          <Avatar className="w-10 h-10">
-            <AvatarImage src="/placeholder-user.jpg" alt="User Avatar" />
-            <AvatarFallback>JD</AvatarFallback>
-          </Avatar>
-          <div>
-            <h1 className="text-xl font-bold">John Doe</h1>
-            <p className="text-sm">johndoe@example.com</p>
-          </div>
-        </div>
-        <nav className="flex items-center gap-4">
-          <Link to={'/'} className="hover:underline">
-            Events
-          </Link>
-          <Link to={'/'} className="hover:underline">
-            Profile
-          </Link>
-          <Link to={'/'} className="hover:underline">
-            Settings
-          </Link>
-          <Link to={'/'} className="hover:underline">
-            Logout
-          </Link>
-        </nav>
-      </header>
       <main className="flex-1 p-6">
         <div className="flex items-center justify-between mb-6">
           <h2 className="text-2xl font-bold">Event Details</h2>
@@ -43,7 +22,7 @@ export function EventDetails() {
           <CardContent className="grid gap-4">
             <div className="grid gap-2">
               <img
-                src="/placeholder.svg"
+                src="/events.webp"
                 alt="Event Image"
                 width={800}
                 height={400}
@@ -53,8 +32,10 @@ export function EventDetails() {
             <div className="grid gap-2">
               <p className="text-lg font-medium">Event Description</p>
               <p>
-                Join us for a fun-filled summer picnic at the park! Bring your family and friends and enjoy delicious
-                food, games, and activities. It's the perfect way to soak up the sun and make lasting memories.
+                Join us for a fun-filled summer picnic at the park! Bring your
+                family and friends and enjoy delicious food, games, and
+                activities. It's the perfect way to soak up the sun and make
+                lasting memories.
               </p>
             </div>
             <div className="grid gap-2">
@@ -110,5 +91,5 @@ export function EventDetails() {
         </Card>
       </main>
     </div>
-  )
+  );
 }
