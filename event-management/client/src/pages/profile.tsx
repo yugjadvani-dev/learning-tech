@@ -23,6 +23,7 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 interface User {
+  _id: string;
   name: string;
   email: string;
   company: string;
@@ -36,6 +37,7 @@ export function Profile() {
   const { user: users }: any = auth();
   console.log("users", users);
   const [user, setUser] = useState<User | null>(null);
+  console.log("user", user);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -50,11 +52,15 @@ export function Profile() {
     const fetchUser = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:8888/api/auth/user/${users?.id}`
+          `http://localhost:8888/api/auth/user/${users?._id}`
         );
         console.log("response", response);
         setUser(response.data.user);
-        localStorage.setItem("user", JSON.stringify(response.data.user));
+        let isLogin = true;
+        localStorage.setItem(
+          "user",
+          JSON.stringify({ ...response.data.user, isLogin })
+        );
         setFormData({
           name: response.data.user.name,
           email: response.data.user.email,
@@ -69,7 +75,7 @@ export function Profile() {
     };
 
     fetchUser();
-  }, [users?.id]);
+  }, [user?._id]);
 
   const navigate = useNavigate();
 
@@ -92,14 +98,33 @@ export function Profile() {
 
     try {
       const response = await axios.put(
-        `http://localhost:8888/api/auth/user/${users?.id}`,
+        `http://localhost:8888/api/auth/user/${users?._id}`,
         formData
       );
       console.log("response", response);
       alert("Profile updated successfully");
-      localStorage.setItem("user", JSON.stringify(response.data.user));
+      let isLogin = true;
+      localStorage.setItem(
+        "user",
+        JSON.stringify({ ...response.data.user, isLogin })
+      );
+      window.location.reload()
     } catch (err) {
       console.error("Failed to update user", err);
+    }
+  };
+
+  const handleDelete = async () => {
+    try {
+      const response = await axios.delete(
+        `http://localhost:8888/api/auth/user/${users?._id}`
+      );
+      console.log("response", response);
+      alert("Profile deleted successfully");
+      navigate("/");
+      localStorage.removeItem("user");
+    } catch (error) {
+      console.error("Failed to update user", error);
     }
   };
 
@@ -115,6 +140,7 @@ export function Profile() {
               <CardTitle className="text-2xl">{user?.name}</CardTitle>
               <Dialog>
                 <DialogTrigger asChild>
+                  {/*  */}
                   <Button variant="outline">Edit Profile</Button>
                 </DialogTrigger>
                 <DialogContent className="sm:max-w-[425px]">
@@ -246,6 +272,14 @@ export function Profile() {
                   </CardContent>
                 </Card>
               </div>
+            </div>
+            <div className="flex items-center gap-4">
+              <Button onClick={handleDelete} variant={"destructive"}>
+                Delete Profile
+              </Button>
+              <Button onClick={handleLogout} variant={"destructive"}>
+                Logout
+              </Button>
             </div>
           </CardContent>
         </Card>

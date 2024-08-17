@@ -72,7 +72,7 @@ export function Login() {
         <div className="flex items-center justify-center">
           <Link to={"/"}>
             <MountainIcon className="h-8 w-8" />
-            <span className="sr-only">Event Management</span>
+            <span>Event Management</span>
           </Link>
         </div>
         <Card>

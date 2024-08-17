@@ -4,7 +4,7 @@ const jwt = require("jsonwebtoken");
 const User = require("../models/User");
 
 // JWT secret
-const JWT_SECRET = "your_jwt_secret_key";
+const JWT_SECRET = "event";
 
 // Signup
 router.post("/signup", async (req, res) => {
@@ -124,7 +124,7 @@ router.delete("/user/:id", async (req, res) => {
       return res.status(404).json({ success: false, message: "User not found" });
     }
 
-    await user.remove();
+    await user.deleteOne();
 
     res.status(200).json({ success: true, message: "User deleted successfully" });
   } catch (err) {
