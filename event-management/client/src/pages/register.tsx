@@ -122,8 +122,8 @@ export function Register() {
                       id="email"
                       value={user.email}
                       onChange={handleChange}
-                      type="email"
                       name="email"
+                      type="email"
                       placeholder="john@example.com"
                       required
                     />
@@ -157,8 +157,9 @@ export function Register() {
                       Password
                     </Label>
                     <Input
-                      name="password"
                       id="password"
+                      type="password"
+                      name="password"
                       value={user.password}
                       onChange={handleChange}
                       placeholder="Software Engineer"
