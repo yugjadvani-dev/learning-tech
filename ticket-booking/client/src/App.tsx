@@ -1,28 +1,46 @@
+<<<<<<< Updated upstream
 import { Route, Routes, useLocation } from "react-router-dom";
+=======
+import { Route, Routes } from "react-router-dom";
+import Footer from "./components/Footer";
+import Header from "./components/Header";
+>>>>>>> Stashed changes
 import { AboutUs } from "./pages/about-us";
-import { Register } from "./pages/register";
-import { Login } from "./pages/login";
 import { Bus } from "./pages/bus";
-import { ContactUs } from "./pages/contact-us";
 import { ChackStatus } from "./pages/ChackStatus";
+<<<<<<< Updated upstream
+=======
+import { CheckIn } from "./pages/check-in";
+import { ContactUs } from "./pages/contact-us";
+import { Deshboard } from "./pages/deshboard";
+>>>>>>> Stashed changes
 import { Flight } from "./pages/flight";
 import { Home } from "./pages/home";
+import { Login } from "./pages/login";
 import { Loyalty } from "./pages/loyalty";
 import { PrivatePolicy } from "./pages/private-policy";
+import { Register } from "./pages/register";
 import { Rewards } from "./pages/rewards";
 import { Services } from "./pages/services";
 import { Train } from "./pages/train";
+<<<<<<< Updated upstream
 import { CheckIn } from "./pages/check-in";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import { Dashboard } from "./pages/dashboard";
+=======
+>>>>>>> Stashed changes
 
 const App = () => {
   const {pathname} = useLocation()
 
   return (
     <>
+<<<<<<< Updated upstream
       {pathname === '/login' || pathname === '/register' ? null : <Header />}
+=======
+      <Header />
+>>>>>>> Stashed changes
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about-us" element={<AboutUs />} />
@@ -40,7 +58,11 @@ const App = () => {
         <Route path="/services" element={<Services />} />
         <Route path="/train" element={<Train />} />
       </Routes>
+<<<<<<< Updated upstream
       {pathname === '/login' || pathname === '/register' ? null : <Footer />}
+=======
+      <Footer />
+>>>>>>> Stashed changes
     </>
   );
 };
