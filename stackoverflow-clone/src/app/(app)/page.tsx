@@ -37,7 +37,7 @@ export default function Home() {
                 </div>
               </div>
               <img
-                src="/placeholder.svg"
+                src="/placeholder.jpg"
                 width="550"
                 height="550"
                 alt="Hero"
@@ -59,7 +59,7 @@ export default function Home() {
             </div>
             <div className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-2 lg:gap-12">
               <img
-                src="/placeholder.svg"
+                src="/question-answer.jpg"
                 width="550"
                 height="310"
                 alt="Image"
@@ -137,7 +137,7 @@ export default function Home() {
                 </ul>
               </div>
               <img
-                src="/placeholder.svg"
+                src="/devloper.jpg"
                 width="550"
                 height="310"
                 alt="Image"
@@ -159,7 +159,7 @@ export default function Home() {
             </div>
             <div className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-2 lg:gap-12">
               <img
-                src="/placeholder.svg"
+                src="/search.jpg"
                 width="550"
                 height="310"
                 alt="Image"
