@@ -11,23 +11,11 @@ const userSchema = new mongoose.Schema({
         required: true,
         unique: true
     },
-    company: {
+    features: {
         type: String,
         required: true,
     },
-    jobTitle: {
-        type: String,
-        required: true
-    },
     password: {
-        type: String,
-        required: true
-    },
-    dietaryRequirements: {
-        type: String,
-        required: true
-    },
-    accommodations: {
         type: String,
         required: true
     },

@@ -11,21 +11,15 @@ router.post("/signup", async (req, res) => {
   const {
     name,
     email,
-    company,
-    jobTitle,
     password,
-    dietaryRequirements,
-    accommodations,
+    features,
   } = req.body;
   try {
     await User.create({
       name,
       email,
-      company,
-      jobTitle,
       password,
-      dietaryRequirements,
-      accommodations,
+      features
     });
     res
       .status(201)
@@ -51,10 +45,7 @@ router.post("/login", async (req, res) => {
       _id: user._id,
       name: user.name,
       email: user.email,
-      company: user.company,
-      jobTitle: user.jobTitle,
-      dietaryRequirements: user.dietaryRequirements,
-      accommodations: user.accommodations,
+      features: user.features,
     };
 
     if (!user || !(await user.matchPassword(password))) {
@@ -90,7 +81,7 @@ router.get("/user/:id", async (req, res) => {
 // Edit User
 router.put("/user/:id", async (req, res) => {
   const { id } = req.params;
-  const { name, email, company, jobTitle, dietaryRequirements, accommodations } = req.body;
+  const { name, email, features} = req.body;
 
   try {
     const user = await User.findById(id);
@@ -101,10 +92,7 @@ router.put("/user/:id", async (req, res) => {
     // Update user details
     user.name = name || user.name;
     user.email = email || user.email;
-    user.company = company || user.company;
-    user.jobTitle = jobTitle || user.jobTitle;
-    user.dietaryRequirements = dietaryRequirements || user.dietaryRequirements;
-    user.accommodations = accommodations || user.accommodations;
+    user.features = features || user.features;
 
     await user.save();
 
