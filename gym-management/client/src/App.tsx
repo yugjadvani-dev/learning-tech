@@ -1,21 +1,21 @@
 import { Route, Routes, useLocation } from "react-router-dom";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
-import { AboutUs } from "./page.tsx/about-us";
-import { AffiliateProgram } from "./page.tsx/affiliate-program";
-import { Blog } from "./page.tsx/blog";
-import { BookDemo } from "./page.tsx/book-demo";
-import { ContactUs } from "./page.tsx/contact-us";
-import { CookiePolicy } from "./page.tsx/cookie-policy";
-import { Hardware } from "./page.tsx/hardware";
-import { Home } from "./page.tsx/home";
-import { Integration } from "./page.tsx/integration";
-import { Login } from "./page.tsx/login";
-import { Pricing } from "./page.tsx/pricing";
-import { PrivacyCenter } from "./page.tsx/privacy-center";
-import { SecurityPrivacy } from "./page.tsx/security-privacy";
-import { SuccessStories } from "./page.tsx/success-stories";
-import { Support } from "./page.tsx/support";
+import { AboutUs } from "./pages/about-us";
+import { AffiliateProgram } from "./pages/affiliate-program";
+import { Blog } from "./pages/blog";
+import { BookDemo } from "./pages/book-demo";
+import { ContactUs } from "./pages/contact-us";
+import { CookiePolicy } from "./pages/cookie-policy";
+import { Hardware } from "./pages/hardware";
+import { Home } from "./pages/home";
+import { Integration } from "./pages/integration";
+import { Login } from "./pages/login";
+import { Pricing } from "./pages/pricing";
+import { PrivacyCenter } from "./pages/privacy-center";
+import { SecurityPrivacy } from "./pages/security-privacy";
+import { SuccessStories } from "./pages/success-stories";
+import { Support } from "./pages/support";
 
 const App = () => {
   const { pathname } = useLocation();
