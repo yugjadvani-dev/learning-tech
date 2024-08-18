@@ -19,7 +19,7 @@ import { Textarea } from "@/components/ui/textarea";
 
 export function BookAnAppointment() {
   return (
-    <div className="max-w-2xl mx-auto p-6 sm:p-8 md:p-10">
+    <div className="max-w-2xl min-h-screen mx-auto p-6 sm:p-8 md:p-10">
       <div className="space-y-4 mb-8">
         <h1 className="text-3xl font-bold">Book an Appointment</h1>
         <p className="text-muted-foreground">

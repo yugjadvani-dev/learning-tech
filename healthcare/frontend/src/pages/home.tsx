@@ -4,44 +4,6 @@ import { Link } from "react-router-dom";
 export function Home() {
   return (
     <div className="flex flex-col min-h-[100dvh]">
-      <header className="px-4 lg:px-6 h-14 flex items-center">
-        <Link to="/" className="flex items-center justify-center">
-          <HospitalIcon className="h-6 w-6" />
-          <span className="sr-only">Acme Healthcare</span>
-        </Link>
-        <nav className="ml-auto flex gap-4 sm:gap-6">
-          <Link
-            to="/"
-            className="text-sm font-medium hover:underline underline-offset-4"
-          >
-            Services
-          </Link>
-          <Link
-            to="/"
-            className="text-sm font-medium hover:underline underline-offset-4"
-          >
-            Departments
-          </Link>
-          <Link
-            to="/"
-            className="text-sm font-medium hover:underline underline-offset-4"
-          >
-            Patients
-          </Link>
-          <Link
-            to="/"
-            className="text-sm font-medium hover:underline underline-offset-4"
-          >
-            About
-          </Link>
-          <Link
-            to="/"
-            className="text-sm font-medium hover:underline underline-offset-4"
-          >
-            Contact
-          </Link>
-        </nav>
-      </header>
       <main className="flex-1">
         <section className="w-full py-12 md:py-24 lg:py-32">
           <div className="container px-4 md:px-6">
@@ -318,24 +280,6 @@ export function Home() {
           </div>
         </section>
       </main>
-      <footer className="bg-muted p-6 md:py-12 w-full">
-        <div className="container max-w-7xl grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-8 text-sm">
-          <div className="grid gap-1">
-            <h3 className="font-semibold">About</h3>
-            <Link to="/">Our Story</Link>
-            <Link to="/">Our Team</Link>
-            <Link to="/">Careers</Link>
-          </div>
-          <div className="grid gap-1">
-            <h3 className="font-semibold">Services</h3>
-            <Link to="/">Cardiology</Link>
-            <Link to="/">Oncology</Link>
-            <Link to="/">Pediatrics</Link>
-            <Link to="/">Neurology</Link>
-            <Link to="/" />
-          </div>
-        </div>
-      </footer>
     </div>
   );
 }

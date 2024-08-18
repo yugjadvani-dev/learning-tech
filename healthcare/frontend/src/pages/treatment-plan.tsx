@@ -4,18 +4,6 @@ import { Textarea } from "@/components/ui/textarea";
 export function TreatmentPlan() {
   return (
     <div className="flex flex-col h-full">
-      <header className="bg-primary text-primary-foreground py-4 px-6">
-        <div className="flex items-center justify-between">
-          <div>
-            <h1 className="text-2xl font-bold">John Doe</h1>
-            <p className="text-sm">Age: 45 | Gender: Male</p>
-          </div>
-          <div>
-            <p className="text-sm">Patient ID: 12345</p>
-            <p className="text-sm">Primary Care Physician: Dr. Jane Smith</p>
-          </div>
-        </div>
-      </header>
       <main className="flex-1 bg-background p-8">
         <div className="max-w-3xl mx-auto">
           <h2 className="text-xl font-bold mb-4">Treatment Plan</h2>

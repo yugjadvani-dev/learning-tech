@@ -9,23 +9,25 @@ const JWT_SECRET = "gym";
 // Signup
 router.post("/signup", async (req, res) => {
   const {
-    name,
+    firstName,
+    lastName,
     email,
-    company,
-    jobTitle,
     password,
-    dietaryRequirements,
-    accommodations,
+    dateOfBirth,
+    phone,
+    address,
+    insurance,
   } = req.body;
   try {
     await User.create({
-      name,
+      firstName,
+      lastName,
       email,
-      company,
-      jobTitle,
       password,
-      dietaryRequirements,
-      accommodations,
+      dateOfBirth,
+      phone,
+      address,
+      insurance,
     });
     res
       .status(201)
@@ -49,12 +51,14 @@ router.post("/login", async (req, res) => {
 
     const newUser = {
       _id: user._id,
-      name: user.name,
+      firstName: user.firstName,
+      lastName: user.lastName,
       email: user.email,
-      company: user.company,
-      jobTitle: user.jobTitle,
-      dietaryRequirements: user.dietaryRequirements,
-      accommodations: user.accommodations,
+      password: user.password,
+      dateOfBirth: user.dateOfBirth,
+      phone: user.phone,
+      address: user.address,
+      insurance: user.insurance,
     };
 
     if (!user || !(await user.matchPassword(password))) {
@@ -79,38 +83,63 @@ router.get("/user/:id", async (req, res) => {
   try {
     const user = await User.findById(id).select("-password"); // Exclude password from the response
     if (!user) {
-      return res.status(404).json({ success: false, message: "User not found" });
+      return res
+        .status(404)
+        .json({ success: false, message: "User not found" });
     }
     res.status(200).json({ success: true, user });
   } catch (err) {
-    res.status(500).json({ success: false, message: "Failed to retrieve user", error: err.message });
+    res.status(500).json({
+      success: false,
+      message: "Failed to retrieve user",
+      error: err.message,
+    });
   }
 });
 
 // Edit User
 router.put("/user/:id", async (req, res) => {
   const { id } = req.params;
-  const { name, email, company, jobTitle, dietaryRequirements, accommodations } = req.body;
+  const {
+    firstName,
+    lastName,
+    email,
+    password,
+    dateOfBirth,
+    phone,
+    address,
+    insurance,
+  } = req.body;
 
   try {
     const user = await User.findById(id);
     if (!user) {
-      return res.status(404).json({ success: false, message: "User not found" });
+      return res
+        .status(404)
+        .json({ success: false, message: "User not found" });
     }
 
     // Update user details
-    user.name = name || user.name;
     user.email = email || user.email;
-    user.company = company || user.company;
-    user.jobTitle = jobTitle || user.jobTitle;
-    user.dietaryRequirements = dietaryRequirements || user.dietaryRequirements;
-    user.accommodations = accommodations || user.accommodations;
+    user.firstName = firstName || user.firstName;
+    user.lastName = lastName || user.lastName;
+    user.password = password || user.password;
+    user.dateOfBirth = dateOfBirth || user.dateOfBirth;
+    user.phone = phone || user.phone;
+    user.address = address || user.address;
+    user.insurance = insurance || user.insurance;
 
     await user.save();
 
-    res.status(200).json({ success: true, message: "User updated successfully", user });
+    res
+      .status(200)
+      .json({ success: true, message: "User updated successfully", user });
   } catch (err) {
-    res.status(500).json({ success: false, message: "Failed to update user", error: err.message });
+    res.status(500).json({
+      success: false,
+      message: "Failed to update user",
+      error: err.message,
+    });
   }
 });
 
@@ -121,14 +150,22 @@ router.delete("/user/:id", async (req, res) => {
   try {
     const user = await User.findById(id);
     if (!user) {
-      return res.status(404).json({ success: false, message: "User not found" });
+      return res
+        .status(404)
+        .json({ success: false, message: "User not found" });
     }
 
     await user.deleteOne();
 
-    res.status(200).json({ success: true, message: "User deleted successfully" });
+    res
+      .status(200)
+      .json({ success: true, message: "User deleted successfully" });
   } catch (err) {
-    res.status(500).json({ success: false, message: "Failed to delete user", error: err.message });
+    res.status(500).json({
+      success: false,
+      message: "Failed to delete user",
+      error: err.message,
+    });
   }
 });
 

@@ -1,4 +1,6 @@
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
+import Footer from "./components/Footer";
+import Header from "./components/Header";
 import { About } from "./pages/about";
 import { BookAnAppointment } from "./pages/book-an-appointment";
 import { Departments } from "./pages/departments";
@@ -16,8 +18,11 @@ import { Services } from "./pages/services";
 import { TreatmentPlan } from "./pages/treatment-plan";
 
 const App = () => {
+  const { pathname } = useLocation();
+
   return (
     <>
+      {pathname === "/login" || pathname === "/register" ? null : <Header />}
       <Routes>
         <Route path="/about" element={<About />} />
         <Route path="/book-an-appointment" element={<BookAnAppointment />} />
@@ -35,6 +40,7 @@ const App = () => {
         <Route path="/services" element={<Services />} />
         <Route path="/tretment-plan" element={<TreatmentPlan />} />
       </Routes>
+      {pathname === "/login" || pathname === "/register" ? null : <Footer />}
     </>
   );
 };

@@ -2,9 +2,69 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
-import { Link } from "react-router-dom";
+import axios from "axios";
+import { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+
+interface FormData {
+  firstName: string;
+  lastName: string;
+  email: string;
+  password: string;
+  dateOfBirth: string;
+  phone: string;
+  address: string;
+  insurance: string;
+}
 
 export function Register() {
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const [success, setSuccess] = useState(false);
+  const [formData, setFormData] = useState<FormData>({
+    firstName: "",
+    lastName: "",
+    email: "",
+    password: "",
+    dateOfBirth: "",
+    phone: "",
+    address: "",
+    insurance: "",
+  });
+  console.log("formData", formData);
+
+  const navigate = useNavigate();
+
+  // Handle input changes
+  const handleInputChange = (e: any) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
+
+  const handleSubmit = async (e: any) => {
+    e.preventDefault();
+    setLoading(true);
+    setError(null);
+
+    try {
+      const response = await axios.post(
+        "http://localhost:3333/api/auth/signup",
+        formData
+      );
+      console.log("Response:", response.data);
+      navigate("/login");
+      setSuccess(true);
+    } catch (err: any) {
+      console.error("Error:", err);
+      setError(err.response?.data?.message || "An error occurred");
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <div className="flex min-h-[100dvh] items-center justify-center bg-background px-4 py-12 sm:px-6 lg:px-8">
       <div className="w-full max-w-md space-y-8">
@@ -15,35 +75,39 @@ export function Register() {
           <p className="mt-2 text-center text-sm text-muted-foreground">
             Or{" "}
             <Link
-              to="/"
+              to="/login"
               className="font-medium text-primary hover:text-primary/80"
             >
               sign in to your existing account
             </Link>
           </p>
         </div>
-        <form className="space-y-6" action="#" method="POST">
+        <form className="space-y-6" onSubmit={handleSubmit}>
           <div className="grid grid-cols-2 gap-6">
             <div className="space-y-2">
-              <Label htmlFor="first-name">First Name</Label>
+              <Label htmlFor="firstName">First Name</Label>
               <Input
-                id="first-name"
-                name="first-name"
+                id="firstName"
+                name="firstName"
                 type="text"
                 autoComplete="given-name"
                 required
                 placeholder="John"
+                value={formData.firstName}
+                onChange={handleInputChange}
               />
             </div>
             <div className="space-y-2">
-              <Label htmlFor="last-name">Last Name</Label>
+              <Label htmlFor="lastName">Last Name</Label>
               <Input
-                id="last-name"
-                name="last-name"
+                id="lastName"
+                name="lastName"
                 type="text"
                 autoComplete="family-name"
                 required
                 placeholder="Doe"
+                value={formData.lastName}
+                onChange={handleInputChange}
               />
             </div>
           </div>
@@ -56,6 +120,8 @@ export function Register() {
               autoComplete="email"
               required
               placeholder="you@example.com"
+              value={formData.email}
+              onChange={handleInputChange}
             />
           </div>
           <div className="space-y-2">
@@ -66,16 +132,20 @@ export function Register() {
               type="password"
               autoComplete="current-password"
               required
+              value={formData.password}
+              onChange={handleInputChange}
               placeholder="••••••••"
             />
           </div>
           <div className="space-y-2">
-            <Label htmlFor="date-of-birth">Date of Birth</Label>
+            <Label htmlFor="dateOfBirth">Date of Birth</Label>
             <Input
-              id="date-of-birth"
-              name="date-of-birth"
+              id="dateOfBirth"
+              name="dateOfBirth"
               type="date"
               required
+              value={formData.dateOfBirth}
+              onChange={handleInputChange}
             />
           </div>
           <div className="space-y-2">
@@ -87,6 +157,8 @@ export function Register() {
               autoComplete="tel"
               required
               placeholder="(123) 456-7890"
+              value={formData.phone}
+              onChange={handleInputChange}
             />
           </div>
           <div className="space-y-2">
@@ -97,6 +169,8 @@ export function Register() {
               rows={3}
               required
               placeholder="123 Main St, Anytown USA"
+              value={formData.address}
+              onChange={handleInputChange}
             />
           </div>
           <div className="space-y-2">
@@ -107,13 +181,19 @@ export function Register() {
               type="text"
               required
               placeholder="Aetna, Blue Cross, etc."
+              value={formData.insurance}
+              onChange={handleInputChange}
             />
           </div>
           <div>
             <Button type="submit" className="w-full">
-              Register
+              {loading ? "Registering..." : "Register"}
             </Button>
           </div>
+          {error && <p style={{ color: "red" }}>{error}</p>}
+          {success && (
+            <p style={{ color: "green" }}>Registration successful!</p>
+          )}
         </form>
       </div>
     </div>
