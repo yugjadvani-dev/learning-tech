@@ -1,4 +1,4 @@
-# In this repo I put everything which I was leared and learning.
+# In this repo I put everything that I learned.
 
 Checkout the branch
 
@@ -25,3 +25,7 @@ Checkout the branch
 # Version Control
 
 - [GIT](https://github.com/yugjadvani-dev/learning-tech/tree/git)
+
+# MERN Stack
+
+- [MERN](https://github.com/yugjadvani-dev/learning-tech/tree/mern-stack)
