@@ -124,14 +124,18 @@ const Header = () => {
         </Link>
         <div className="flex items-center gap-4">
           <Link to="/" className="text-muted-foreground hover:text-primary">
-            Dashboard
+            Home
           </Link>
-          <Link to="/" className="text-muted-foreground hover:text-primary">
-            Appointments
+          <Link to="/about" className="text-muted-foreground hover:text-primary">
+            About
           </Link>
-          <Link to="/" className="text-muted-foreground hover:text-primary">
-            Profile
+          <Link to="/departments  " className="text-muted-foreground hover:text-primary">
+            Deportments
           </Link>
+          <Link to="/book-an-appointment" className="text-muted-foreground hover:text-primary">
+            Book-an-appointment
+          </Link>
+          
           <Button variant="ghost" size="icon">
             <BellIcon className="h-6 w-6" />
             <span className="sr-only">Notifications</span>

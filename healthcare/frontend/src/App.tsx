@@ -38,7 +38,7 @@ const App = () => {
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/register" element={<Register />} />
         <Route path="/services" element={<Services />} />
-        <Route path="/tretment-plan" element={<TreatmentPlan />} />
+        <Route path="/treatment-plan" element={<TreatmentPlan />} />
       </Routes>
       {pathname === "/login" || pathname === "/register" ? null : <Footer />}
     </>
