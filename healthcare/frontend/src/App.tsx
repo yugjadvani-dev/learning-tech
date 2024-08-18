@@ -1,19 +1,19 @@
 import { Route, Routes } from "react-router-dom";
-import { About } from "./page.tsx/about";
-import { BookAnAppointment } from "./page.tsx/book-an-appointment";
-import { Departments } from "./page.tsx/departments";
-import { GetInTouch } from "./page.tsx/get-in-touch";
-import { HealthCare } from "./page.tsx/health-care";
-import { Home } from "./page.tsx/home";
-import { LifeInsurance } from "./page.tsx/life-insurance";
-import { Login } from "./page.tsx/login";
-import { MedicarePlans } from "./page.tsx/medicare-plans";
-import { OurCareTeam } from "./page.tsx/our-care-team";
-import { Patients } from "./page.tsx/patients";
-import { PrivacyPolicy } from "./page.tsx/privacy-policy";
-import { Register } from "./page.tsx/register";
-import { Services } from "./page.tsx/services";
-import { TreatmentPlan } from "./page.tsx/treatment-plan";
+import { About } from "./pages/about";
+import { BookAnAppointment } from "./pages/book-an-appointment";
+import { Departments } from "./pages/departments";
+import { GetInTouch } from "./pages/get-in-touch";
+import { HealthCare } from "./pages/health-care";
+import { Home } from "./pages/home";
+import { LifeInsurance } from "./pages/life-insurance";
+import { Login } from "./pages/login";
+import { MedicarePlans } from "./pages/medicare-plans";
+import { OurCareTeam } from "./pages/our-care-team";
+import { Patients } from "./pages/patients";
+import { PrivacyPolicy } from "./pages/privacy-policy";
+import { Register } from "./pages/register";
+import { Services } from "./pages/services";
+import { TreatmentPlan } from "./pages/treatment-plan";
 
 const App = () => {
   return (
