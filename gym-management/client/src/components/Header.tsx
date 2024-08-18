@@ -63,19 +63,19 @@ const Header = () => {
             Features
           </Link>
           <Link
-            to="/"
+            to="/pricing"
             className="text-sm font-medium hover:underline underline-offset-4"
           >
             Pricing
           </Link>
           <Link
-            to="/"
+            to="/about-us"
             className="text-sm font-medium hover:underline underline-offset-4"
           >
             About
           </Link>
           <Link
-            to="/"
+            to="/contact-us"
             className="text-sm font-medium hover:underline underline-offset-4"
           >
             Contact
