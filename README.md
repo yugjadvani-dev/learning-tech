@@ -1,31 +1,33 @@
-# In this repo I put everything that I learned.
+# Development environment
 
-Checkout the branch
+Install Astro [vscode extension][extension].
 
-# Front-end
+# Integrating Prettier
 
-- [JavaScript](https://github.com/yugjadvani-dev/learning-tech/tree/javascript)
+```zsh
+npm install --save-dev prettier prettier-plugin-astro
+```
 
-- [React Js](https://github.com/yugjadvani-dev/learning-tech/tree/reactjs)
+# Project initialization
 
-- [Next Js](https://github.com/yugjadvani-dev/learning-tech/tree/nextjs)
+```zsh
+npm create astro@latest
+```
 
-# Mobile App
+# Integrating Tailwind
 
-- [React-Native](https://github.com/yugjadvani-dev/learning-tech/tree/react-native)
+```zsh
+npx astro add tailwind
+```
 
-# Backend
+# Resources
 
-- [Node Js](https://github.com/yugjadvani-dev/learning-tech/tree/nodejs)
+-   [Astro][astro]
+-   [Astro vscode extension][extension]
+-   [Course outline][outline]
+-   [UX mocks][figma]
 
-- [Python](https://github.com/yugjadvani-dev/learning-tech/tree/python)
-
-- [FastAPI](https://github.com/yugjadvani-dev/learning-tech/tree/fastapi)
-
-# Version Control
-
-- [GIT](https://github.com/yugjadvani-dev/learning-tech/tree/git)
-
-# MERN Stack
-
-- [MERN](https://github.com/yugjadvani-dev/learning-tech/tree/mern-stack)
+[extension]: https://marketplace.visualstudio.com/items?itemName=astro-build.astro-vscode
+[astro]: https://astro.build
+[outline]: https://docs.google.com/document/d/1WvgbgoUPLUc_KPYN5ryaj4NcCTdZOjqcxP61vj4EBrQ/edit
+[figma]: https://www.figma.com/file/G5ePPEpkmVad5FQygN7mFh/Astro-Course?node-id=1-103&t=sPFbh23zqusIKJLJ-0
