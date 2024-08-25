@@ -1,18 +1,10 @@
-# In this repo I put everything that I learned.
-
-Checkout the branch
+# In this repo I put everything that I learned Checkout below branches.
 
 # Front-end
 
 - [JavaScript](https://github.com/yugjadvani-dev/learning-tech/tree/javascript)
 
 - [React Js](https://github.com/yugjadvani-dev/learning-tech/tree/reactjs)
-
-- [Next Js](https://github.com/yugjadvani-dev/learning-tech/tree/nextjs)
-
-# Mobile App
-
-- [React-Native](https://github.com/yugjadvani-dev/learning-tech/tree/react-native)
 
 # Backend
 
@@ -21,6 +13,16 @@ Checkout the branch
 - [Python](https://github.com/yugjadvani-dev/learning-tech/tree/python)
 
 - [FastAPI](https://github.com/yugjadvani-dev/learning-tech/tree/fastapi)
+
+# Mobile App
+
+- [React-Native](https://github.com/yugjadvani-dev/learning-tech/tree/react-native)
+
+# Web Framework
+
+- [Next Js](https://github.com/yugjadvani-dev/learning-tech/tree/nextjs)
+  
+- [Astro](https://github.com/yugjadvani-dev/learning-tech/tree/astro)
 
 # Version Control
 
