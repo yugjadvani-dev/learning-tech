@@ -1,8 +1,6 @@
 ---
-import { type CollectionEntry, getEntryBySlug } from "astro:content";
 import { Image } from "astro:assets";
-
-import CategoryList from "./CategoryList.astro";
+import { type CollectionEntry, getEntryBySlug } from "astro:content";
 
 type Props = {
   post: CollectionEntry<"posts">;
@@ -26,10 +24,6 @@ const author = await getEntryBySlug("authors", post.data.author);
       class="rounded-2xl shadow-xl mb-6 aspect-thumbnail object-cover"
     />
   </a>
-
-  <div class="mb-4">
-    <CategoryList categories={post.data.categories} />
-  </div>
 
   <a
     href={`/blog/${post.slug}`}
