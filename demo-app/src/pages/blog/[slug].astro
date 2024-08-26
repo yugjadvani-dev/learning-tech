@@ -1,0 +1,56 @@
+---
+import { Image } from "astro:assets";
+import type { CollectionEntry } from "astro:content";
+import { getCollection } from "astro:content";
+import H1 from "../../components/H1.astro";
+import Main from "../../components/Main.astro";
+import Layout from "../../layouts/Layout.astro";
+
+export const getStaticPaths = async () => {
+  const posts = await getCollection("posts");
+  const paths = posts.map((post) => {
+    return {
+      params: { slug: post.slug },
+      props: { post },
+    };
+  });
+
+  return paths;
+};
+
+type Props = {
+  post: CollectionEntry<"posts">;
+};
+
+const { post } = Astro.props;
+const { Content } = await post.render();
+---
+
+<Layout title={post.data.title}>
+  <Main>
+    <div class="text-zinc-500 text-2xl mb-16">
+      ← <a href="/blog" class="underline">Back to all blogs</a>
+    </div>
+
+    <H1 text={post.data.title} />
+
+    <Image
+      src={post.data.image}
+      alt={post.data.title}
+      width={1024}
+      height={1024 / 1.5}
+      format="webp"
+      class="rounded-2xl shadow-xl mb-28 aspect-thumbnail object-cover"
+    />
+
+    <Content />
+
+    <div class="relative">
+      <!-- <Share post={post} /> -->
+
+      <div class="prose prose-2xl overflow-visible relative">
+        <Content />
+      </div>
+    </div>
+  </Main>
+</Layout>
