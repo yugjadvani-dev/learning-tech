@@ -1,4 +1,5 @@
 // import {MotiView} from 'moti';
+import {useNavigation} from '@react-navigation/native';
 import React from 'react';
 import {
   StyleSheet,
@@ -18,9 +19,12 @@ interface Data {
 }
 
 const Home = () => {
+  const navigation = useNavigation();
   const {width} = useWindowDimensions();
 
-  const data: Data[] = [{navigate: 'Home', title: '00 - Home App'}];
+  const data: Data[] = [
+    {navigate: 'OnboardingScreen', title: '01 - Onboarding Screen'},
+  ];
 
   return (
     <GestureHandlerRootView style={{flex: 1}}>
@@ -61,7 +65,7 @@ const Home = () => {
                   //     ],
                   //   );
                   // } else {
-                  // navigation.navigate(value.navigate as any);
+                  navigation.navigate(value.navigate as any);
                   // }
                 }}>
                 <Text style={styles.listText}>{value.title}</Text>
