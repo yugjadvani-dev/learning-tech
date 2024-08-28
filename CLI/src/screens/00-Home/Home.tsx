@@ -1,5 +1,5 @@
-// import {MotiView} from 'moti';
 import {useNavigation} from '@react-navigation/native';
+import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import React from 'react';
 import {
   StyleSheet,
@@ -11,20 +11,14 @@ import {
 import {GestureHandlerRootView, ScrollView} from 'react-native-gesture-handler';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import ArrowIcon from '../../assets/icons/ArrowIcon.svg';
-import {RootStackParamList} from '../../navigator/RootNavigator';
+import {data} from '../../data';
+import {RootStackParamList} from '../../types';
 
-interface Data {
-  navigate: keyof RootStackParamList;
-  title: string;
-}
+type NavigationProp = NativeStackNavigationProp<RootStackParamList>;
 
-const Home = () => {
-  const navigation = useNavigation();
+const Home: React.FC = () => {
+  const navigation = useNavigation<NavigationProp>();
   const {width} = useWindowDimensions();
-
-  const data: Data[] = [
-    {navigate: 'OnboardingScreen', title: '01 - Onboarding Screen'},
-  ];
 
   return (
     <GestureHandlerRootView style={{flex: 1}}>
@@ -40,33 +34,8 @@ const Home = () => {
                 key={index}
                 style={styles.listContainer}
                 onPress={() => {
-                  // if (
-                  //   (value.navigate === 'OnboardingScreen3D' ||
-                  //     value.navigate === 'Model3D' ||
-                  //     value.navigate === 'Character3D' ||
-                  //     value.navigate === 'ShopUI3D') &&
-                  //   Platform.OS === 'ios'
-                  // ) {
-                  //   console.log(value.navigate);
-                  //   Alert.alert(
-                  //     '3D',
-                  //     'if you are using iOS simulator, then the 3D Model will not load, use iOS physical device or use Android Emulator instead',
-                  //     [
-                  //       {
-                  //         text: 'Cancel',
-                  //         onPress: () => console.log('Cancel Pressed'),
-                  //         style: 'cancel',
-                  //       },
-                  //       {
-                  //         text: 'OK',
-                  //         onPress: () =>
-                  //           navigation.navigate(value.navigate as any),
-                  //       },
-                  //     ],
-                  //   );
-                  // } else {
-                  navigation.navigate(value.navigate as any);
-                  // }
+                  const navigateTo: keyof RootStackParamList = value.navigate;
+                  navigation.navigate(navigateTo);
                 }}>
                 <Text style={styles.listText}>{value.title}</Text>
                 <ArrowIcon width={14} height={14} />
