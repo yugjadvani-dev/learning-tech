@@ -1,25 +1,22 @@
-import React from 'react';
+import React, {useRef, useState} from 'react';
 import {
   Dimensions,
   FlatList,
   SafeAreaView,
   StatusBar,
   StyleSheet,
-  Text,
-  TouchableOpacity,
   View,
 } from 'react-native';
+import CustomButton from './src/components/CustomButton';
 import Slide from './src/components/Slide';
 import {slides} from './src/data';
 
 const {width, height} = Dimensions.get('window');
-
 const COLORS = {primary: '#282534', white: '#FFFFFF'};
 
-const OnboardingScreen = ({navigation}: any) => {
-  const [currentSlideIndex, setCurrentSlideIndex] = React.useState(0);
-
-  const ref = React.useRef<any>(null);
+const OnboardingScreen: React.FC<{navigation: any}> = ({navigation}) => {
+  const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
+  const ref = useRef<FlatList>(null);
 
   const updateCurrentSlideIndex = (e: any) => {
     const contentOffsetX = e.nativeEvent.contentOffset.x;
@@ -31,24 +28,32 @@ const OnboardingScreen = ({navigation}: any) => {
     const nextSlideIndex = currentSlideIndex + 1;
     if (nextSlideIndex !== slides.length) {
       const offset = nextSlideIndex * width;
-      if (ref.current) {
-        ref.current.scrollToOffset({offset});
-        setCurrentSlideIndex(nextSlideIndex);
-      }
+      ref.current?.scrollToOffset({offset});
+      setCurrentSlideIndex(nextSlideIndex);
     }
   };
 
   const skip = () => {
     const lastSlideIndex = slides.length - 1;
     const offset = lastSlideIndex * width;
-    if (ref.current) {
-      ref.current.scrollToOffset({offset});
-      setCurrentSlideIndex(lastSlideIndex);
-    }
+    ref.current?.scrollToOffset({offset});
+    setCurrentSlideIndex(lastSlideIndex);
   };
 
-  const CustomButton = () => {
-    return (
+  return (
+    <SafeAreaView style={{flex: 1, backgroundColor: COLORS.primary}}>
+      <StatusBar backgroundColor={COLORS.primary} />
+      <FlatList
+        ref={ref}
+        onMomentumScrollEnd={updateCurrentSlideIndex}
+        data={slides}
+        contentContainerStyle={{height: height * 0.75}}
+        horizontal
+        showsHorizontalScrollIndicator={false}
+        keyExtractor={item => item.id.toString()}
+        pagingEnabled
+        renderItem={({item}) => <Slide image={item.image} text={item.text} />}
+      />
       <View
         style={{
           height: height * 0.25,
@@ -74,93 +79,37 @@ const OnboardingScreen = ({navigation}: any) => {
             />
           ))}
         </View>
-        <View style={{marginBottom: 20}}>
-          {currentSlideIndex == slides.length - 1 ? (
+        <View style={styles.footer}>
+          {currentSlideIndex === slides.length - 1 ? (
             <View style={{height: 50}}>
-              <TouchableOpacity
-                style={styles.btn}
-                onPress={() => navigation.replace('Home')}>
-                <Text style={{fontWeight: 'bold', fontSize: 15}}>
-                  GET STARTED
-                </Text>
-              </TouchableOpacity>
+              <CustomButton
+                title="GET STARTED"
+                onPress={() => navigation.replace('Home')}
+              />
             </View>
           ) : (
             <View style={{flexDirection: 'row'}}>
-              <TouchableOpacity
-                activeOpacity={0.8}
-                onPress={skip}
-                style={[
-                  styles.btn,
-                  {
-                    borderColor: '#FFF',
-                    borderWidth: 1,
-                    backgroundColor: 'transparent',
-                  },
-                ]}>
-                <Text
-                  style={{
-                    fontWeight: 'bold',
-                    fontSize: 15,
-                    color: '#FFF',
-                  }}>
-                  Skip
-                </Text>
-              </TouchableOpacity>
+              <CustomButton isTransprant={true} title="Skip" onPress={skip} />
               <View style={{width: 15}} />
-              <TouchableOpacity
-                activeOpacity={0.8}
-                onPress={goToNextSlide}
-                style={styles.btn}>
-                <Text
-                  style={{
-                    fontWeight: 'bold',
-                    fontSize: 15,
-                  }}>
-                  Next
-                </Text>
-              </TouchableOpacity>
+              <CustomButton title="Next" onPress={goToNextSlide} />
             </View>
           )}
         </View>
       </View>
-    );
-  };
-
-  return (
-    <SafeAreaView style={{flex: 1, backgroundColor: COLORS.primary}}>
-      <StatusBar backgroundColor={COLORS.primary} />
-      <FlatList
-        ref={ref}
-        data={slides}
-        pagingEnabled
-        onMomentumScrollEnd={updateCurrentSlideIndex}
-        contentContainerStyle={{height: height * 0.75}}
-        horizontal
-        showsHorizontalScrollIndicator={false}
-        keyExtractor={item => item.id.toString()}
-        renderItem={({item}) => <Slide item={item} />}
-      />
-      <CustomButton />
     </SafeAreaView>
   );
 };
 
 const styles = StyleSheet.create({
+  footer: {
+    marginBottom: 20,
+  },
   indicator: {
     height: 2.5,
     width: 10,
     backgroundColor: 'grey',
     marginHorizontal: 3,
     borderRadius: 2,
-  },
-  btn: {
-    flex: 1,
-    height: 50,
-    borderRadius: 5,
-    backgroundColor: '#fff',
-    justifyContent: 'center',
-    alignItems: 'center',
   },
 });
 

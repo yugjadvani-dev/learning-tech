@@ -1,16 +1,22 @@
+import React from 'react';
 import {Dimensions, Image, StyleSheet, Text, View} from 'react-native';
+
+interface SlideProps {
+  image: any;
+  text: string;
+}
 
 const {width} = Dimensions.get('window');
 
-const Slide = ({item}: any) => {
+const Slide: React.FC<SlideProps> = ({image, text}) => {
   return (
     <View style={{alignItems: 'center'}}>
       <Image
-        source={item?.image}
+        source={image}
         style={{height: '75%', width, resizeMode: 'contain'}}
       />
       <View>
-        <Text style={styles.title}>{item?.text}</Text>
+        <Text style={styles.title}>{text}</Text>
       </View>
     </View>
   );
