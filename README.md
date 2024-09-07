@@ -3,7 +3,7 @@
 Run in terminal:
   ```bash
   # For Mac OS
-  g++ code.cpp && code.out
+  g++ code.cpp && a.out
 
   # For Windows
   g++ code.cpp
