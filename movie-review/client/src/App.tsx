@@ -1,19 +1,19 @@
 import { Route, Routes, useLocation } from "react-router-dom";
-import { AboutUs } from "./components/pages/AboutUs";
-import { AccountSetting } from "./components/pages/AccountSetting";
-import { ContactUs } from "./components/pages/ContactUs";
-import { Dashboard } from "./components/pages/Dashboard";
-import { FAQ } from "./components/pages/FAQ";
-import { Home } from "./components/pages/Home";
-import { Jobs } from "./components/pages/Jobs";
-import { Login } from "./components/pages/Login";
-import { PressRoom } from "./components/pages/Press-room";
-import { PrivacyPolicy } from "./components/pages/PrivacyPolicy";
-import { Register } from "./components/pages/Register";
-import { Services } from "./components/pages/Services";
-import { TermsofServices } from "./components/pages/TermsofServices";
-import { UserRating } from "./components/pages/UserRating";
-import { Wishlist } from "./components/pages/Wishlist";
+import { AboutUs } from "./pages/AboutUs";
+import { AccountSetting } from "./pages/AccountSetting";
+import { ContactUs } from "./pages/ContactUs";
+import { Dashboard } from "./pages/Dashboard";
+import { FAQ } from "./pages/FAQ";
+import { Home } from "./pages/Home";
+import { Jobs } from "./pages/Jobs";
+import { Login } from "./pages/Login";
+import { PressRoom } from "./pages/Press-room";
+import { PrivacyPolicy } from "./pages/PrivacyPolicy";
+import { Register } from "./pages/Register";
+import { Services } from "./pages/Services";
+import { TermsofServices } from "./pages/TermsofServices";
+import { UserRating } from "./pages/UserRating";
+import { Wishlist } from "./pages/Wishlist";
 
 const App = () => {
   const { pathname } = useLocation();
