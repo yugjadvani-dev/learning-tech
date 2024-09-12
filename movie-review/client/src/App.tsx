@@ -1,14 +1,14 @@
 import { Route, Routes, useLocation } from "react-router-dom";
 import { AboutUs } from "./pages/AboutUs";
 import { AccountSetting } from "./pages/AccountSetting";
-import { ContactUs } from "./pages/ContactUs";
+import { Contact } from "./pages/ContactUs";
 import { Dashboard } from "./pages/Dashboard";
 import { FAQ } from "./pages/FAQ";
 import { Home } from "./pages/Home";
-import { Jobs } from "./pages/Jobs";
+import { Jobs } from "./pages/jobs";
 import { Login } from "./pages/Login";
-import { PressRoom } from "./pages/Press-room";
-import { PrivacyPolicy } from "./pages/PrivacyPolicy";
+import { PressRoom } from "./pages/PressRoom";
+import { PrivacyPolicy } from "./pages/privacy-policy";
 import { Register } from "./pages/Register";
 import { Services } from "./pages/Services";
 import { TermsofServices } from "./pages/TermsofServices";
@@ -23,7 +23,7 @@ const App = () => {
       <Routes>
         <Route path="/AboutUs" element={<AboutUs />} />
         <Route path="/AccountSetting" element={<AccountSetting />} />
-        <Route path="/ContactUs" element={<ContactUs />} />
+        <Route path="/ContactUs" element={<Contact />} />
         <Route path="/Dashboard" element={<Dashboard />} />
         <Route path="/FAQ" element={<FAQ />} />
         <Route path="/" element={<Home />} />

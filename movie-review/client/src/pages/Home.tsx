@@ -44,7 +44,7 @@ export function Home() {
             <div className="grid max-w-[1300px] mx-auto gap-4 px-4 sm:px-6 md:px-10 md:grid-cols-2 md:gap-16">
               <div>
                 <img
-                  src="/placeholder.svg"
+                  src="/home-photo.jpg"
                   width="800"
                   height="450"
                   alt="Hero"
@@ -81,7 +81,7 @@ export function Home() {
               <Card className="border-0 rounded-none shadow-none">
                 <CardContent className="p-0">
                   <img
-                    src="/placeholder.svg"
+                    src="/movie-1.jpg"
                     width={300}
                     height={450}
                     alt="Movie Poster"
@@ -102,7 +102,7 @@ export function Home() {
               <Card className="border-0 rounded-none shadow-none">
                 <CardContent className="p-0">
                   <img
-                    src="/placeholder.svg"
+                    src="/movie-2.jpg"
                     width={300}
                     height={450}
                     alt="Movie Poster"
@@ -123,7 +123,7 @@ export function Home() {
               <Card className="border-0 rounded-none shadow-none">
                 <CardContent className="p-0">
                   <img
-                    src="/placeholder.svg"
+                    src="/movie-3.jpg"
                     width={300}
                     height={450}
                     alt="Movie Poster"
@@ -145,7 +145,7 @@ export function Home() {
               <Card className="border-0 rounded-none shadow-none">
                 <CardContent className="p-0">
                   <img
-                    src="/placeholder.svg"
+                    src="/movie-4.jpg"
                     width={300}
                     height={450}
                     alt="Movie Poster"

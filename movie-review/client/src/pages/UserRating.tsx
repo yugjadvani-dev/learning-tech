@@ -7,7 +7,7 @@ export function UserRating() {
       <div className="grid md:grid-cols-2 gap-8">
         <div>
           <img
-            src="/placeholder.svg"
+            src="/the-shawshank-redemption.jpg"
             alt="Movie Poster"
             width={600}
             height={900}

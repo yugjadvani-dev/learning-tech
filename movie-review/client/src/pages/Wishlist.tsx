@@ -6,22 +6,22 @@ export function Wishlist() {
     {
       title: "The Shawshank Redemption",
       year: 1994,
-      image: "/placeholder.svg",
+      image: "/the-shawshank-redemption.jpg",
     },
     {
       title: "The Godfather",
       year: 1972,
-      image: "/placeholder.svg",
+      image: "/the-godfather.jpg",
     },
     {
       title: "The Dark Knight",
       year: 2008,
-      image: "/placeholder.svg",
+      image: "/movie-2.jpg",
     },
     {
       title: "Inception",
       year: 2010,
-      image: "/placeholder.svg",
+      image: "/movie-1.jpg",
     },
   ])
   const removeFromWishlist = (title) => {
@@ -39,7 +39,7 @@ export function Wishlist() {
             {wishlist.map((movie) => (
               <div key={movie.title} className="grid gap-2 relative group">
                 <img
-                  src="/placeholder.svg"
+                  src="/movie-1.jpg"
                   alt={movie.title}
                   width={300}
                   height={450}

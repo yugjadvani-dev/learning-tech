@@ -1,29 +1,39 @@
-import { Button } from "@/components/ui/button"
-import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from "@/components/ui/card"
-import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar"
-import { Label } from "@/components/ui/label"
-import { Input } from "@/components/ui/input"
-import { Link } from "lucide-react"
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Link } from "react-router-dom";
 
 export function AccountSetting() {
   return (
     <div className="flex flex-col w-full min-h-screen bg-muted/40">
       <header className="flex items-center h-16 px-4 border-b shrink-0 md:px-6">
-        <Link to="#" className="flex items-center gap-2 text-lg font-semibold sm:text-base mr-4">
+        <Link
+          to="/"
+          className="flex items-center gap-2 text-lg font-semibold sm:text-base mr-4"
+        >
           <FilmIcon className="w-6 h-6" />
           <span className="sr-only">Movie Ratings</span>
         </Link>
         <nav className="hidden font-medium sm:flex flex-row items-center gap-5 text-sm lg:gap-6">
-          <Link to="#" className="text-muted-foreground">
+          <Link to="/" className="text-muted-foreground">
             Home
           </Link>
-          <Link to="#" className="text-muted-foreground">
+          <Link to="/" className="text-muted-foreground">
             Movies
           </Link>
-          <Link to="#" className="text-muted-foreground">
+          <Link to="/" className="text-muted-foreground">
             Reviews
           </Link>
-          <Link to="#" className="font-bold">
+          <Link to="/" className="font-bold">
             Settings
           </Link>
         </nav>
@@ -47,24 +57,20 @@ export function AccountSetting() {
         </div>
         <div className="grid md:grid-cols-[180px_1fr] lg:grid-cols-[250px_1fr] items-start gap-6 max-w-6xl w-full mx-auto">
           <nav className="text-sm text-muted-foreground grid gap-4">
-            <Link to="#" className="font-semibold text-primary">
+            <Link to="/" className="font-semibold text-primary">
               Profile
             </Link>
-            <Link to="#">
-              Password
-            </Link>
-            <Link to="#">
-              Movie Ratings
-            </Link>
-            <Link to="#">
-              Reviews
-            </Link>
+            <Link to="/">Password</Link>
+            <Link to="/">Movie Ratings</Link>
+            <Link to="/">Reviews</Link>
           </nav>
           <div className="grid gap-6">
             <Card>
               <CardHeader>
                 <CardTitle>Profile</CardTitle>
-                <CardDescription>Update your profile picture, name, and email.</CardDescription>
+                <CardDescription>
+                  Update your profile picture, name, and email.
+                </CardDescription>
               </CardHeader>
               <CardContent>
                 <div className="flex items-center gap-4">
@@ -79,7 +85,11 @@ export function AccountSetting() {
                     </div>
                     <div className="grid gap-1">
                       <Label htmlFor="email">Email</Label>
-                      <Input id="email" type="email" defaultValue="john@example.com" />
+                      <Input
+                        id="email"
+                        type="email"
+                        defaultValue="john@example.com"
+                      />
                     </div>
                   </div>
                 </div>
@@ -116,14 +126,16 @@ export function AccountSetting() {
             <Card>
               <CardHeader>
                 <CardTitle>Movie Ratings</CardTitle>
-                <CardDescription>View and edit your movie ratings.</CardDescription>
+                <CardDescription>
+                  View and edit your movie ratings.
+                </CardDescription>
               </CardHeader>
               <CardContent>
                 <div className="grid gap-4">
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-3">
                       <img
-                        src="/placeholder.svg"
+                        src="/the-shawshank-redemption.jpg"
                         width="64"
                         height="64"
                         alt="Movie Poster"
@@ -131,8 +143,12 @@ export function AccountSetting() {
                         style={{ aspectRatio: "64/64", objectFit: "cover" }}
                       />
                       <div className="grid gap-1">
-                        <div className="font-medium">The Shawshank Redemption</div>
-                        <div className="text-sm text-muted-foreground">Rated: 4.5/5</div>
+                        <div className="font-medium">
+                          The Shawshank Redemption
+                        </div>
+                        <div className="text-sm text-muted-foreground">
+                          Rated: 4.5/5
+                        </div>
                       </div>
                     </div>
                     <div className="flex items-center gap-2">
@@ -149,7 +165,7 @@ export function AccountSetting() {
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-3">
                       <img
-                        src="/placeholder.svg"
+                        src="/movie-1.jpg"
                         width="64"
                         height="64"
                         alt="Movie Poster"
@@ -158,7 +174,9 @@ export function AccountSetting() {
                       />
                       <div className="grid gap-1">
                         <div className="font-medium">Inception</div>
-                        <div className="text-sm text-muted-foreground">Rated: 4.8/5</div>
+                        <div className="text-sm text-muted-foreground">
+                          Rated: 4.8/5
+                        </div>
                       </div>
                     </div>
                     <div className="flex items-center gap-2">
@@ -181,14 +199,16 @@ export function AccountSetting() {
             <Card>
               <CardHeader>
                 <CardTitle>Reviews</CardTitle>
-                <CardDescription>View and edit your movie reviews.</CardDescription>
+                <CardDescription>
+                  View and edit your movie reviews.
+                </CardDescription>
               </CardHeader>
               <CardContent>
                 <div className="grid gap-4">
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-3">
                       <img
-                        src="/placeholder.svg"
+                        src="/movie-2.jpg"
                         width="64"
                         height="64"
                         alt="Movie Poster"
@@ -197,10 +217,13 @@ export function AccountSetting() {
                       />
                       <div className="grid gap-1">
                         <div className="font-medium">The Dark Knight</div>
-                        <div className="text-sm text-muted-foreground">Rated: 5/5</div>
+                        <div className="text-sm text-muted-foreground">
+                          Rated: 5/5
+                        </div>
                         <div className="text-sm text-muted-foreground line-clamp-2">
-                          This is one of the best superhero movies I've ever seen. The acting, the plot, the action -
-                          everything is top-notch.
+                          This is one of the best superhero movies I've ever
+                          seen. The acting, the plot, the action - everything is
+                          top-notch.
                         </div>
                       </div>
                     </div>
@@ -218,7 +241,7 @@ export function AccountSetting() {
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-3">
                       <img
-                        src="/placeholder.svg"
+                        src="/movie-1.jpg"
                         width="64"
                         height="64"
                         alt="Movie Poster"
@@ -227,10 +250,13 @@ export function AccountSetting() {
                       />
                       <div className="grid gap-1">
                         <div className="font-medium">Interstellar</div>
-                        <div className="text-sm text-muted-foreground">Rated: 4.5/5</div>
+                        <div className="text-sm text-muted-foreground">
+                          Rated: 4.5/5
+                        </div>
                         <div className="text-sm text-muted-foreground line-clamp-2">
-                          A visually stunning and thought-provoking sci-fi masterpiece. The performances and the score
-                          are exceptional.
+                          A visually stunning and thought-provoking sci-fi
+                          masterpiece. The performances and the score are
+                          exceptional.
                         </div>
                       </div>
                     </div>
@@ -255,10 +281,10 @@ export function AccountSetting() {
         </div>
       </main>
     </div>
-  )
+  );
 }
 
-function FilmIcon(props:any) {
+function FilmIcon(props: any) {
   return (
     <svg
       {...props}
@@ -281,5 +307,5 @@ function FilmIcon(props:any) {
       <path d="M17 7.5h4" />
       <path d="M17 16.5h4" />
     </svg>
-  )
+  );
 }
