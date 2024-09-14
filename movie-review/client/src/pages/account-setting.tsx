@@ -10,9 +10,105 @@ import {
 } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Link } from "react-router-dom";
+import auth from "@/hooks/auth";
+import axios from "axios";
+import { useEffect, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+
+interface User {
+  _id: string;
+  name: string;
+  email: string;
+  password: string;
+}
 
 export function AccountSetting() {
+  const { user: users }: any = auth();
+  console.log("users", users);
+  const [user, setUser] = useState<User | null>(null);
+  console.log("user", user);
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+  });
+
+  // Fetch user data on component mount
+  useEffect(() => {
+    const fetchUser = async () => {
+      try {
+        const response = await axios.get(
+          `http://localhost:2222/api/auth/user/${users?._id}`
+        );
+        console.log("response", response);
+        setUser(response.data.user);
+        let isLogin = true;
+        localStorage.setItem(
+          "user",
+          JSON.stringify({ ...response.data.user, isLogin })
+        );
+        setFormData({
+          name: response.data.user.name,
+          email: response.data.user.email,
+        });
+      } catch (err) {
+        console.error("Failed to fetch user", err);
+      }
+    };
+
+    fetchUser();
+  }, [user?._id]);
+
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    localStorage.removeItem("user");
+    navigate("/");
+  };
+
+  // Handle input changes
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.id]: e.target.value,
+    });
+  };
+
+  // Handle form submission
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    try {
+      const response = await axios.put(
+        `http://localhost:2222/api/auth/user/${users?._id}`,
+        formData
+      );
+      console.log("response", response);
+      alert("Profile updated successfully");
+      let isLogin = true;
+      localStorage.setItem(
+        "user",
+        JSON.stringify({ ...response.data.user, isLogin })
+      );
+      window.location.reload();
+    } catch (err) {
+      console.error("Failed to update user", err);
+    }
+  };
+
+  const handleDelete = async () => {
+    try {
+      const response = await axios.delete(
+        `http://localhost:2222/api/auth/user/${users?._id}`
+      );
+      console.log("response", response);
+      alert("Profile deleted successfully");
+      navigate("/");
+      localStorage.removeItem("user");
+    } catch (error) {
+      console.error("Failed to update user", error);
+    }
+  };
+
   return (
     <div className="flex flex-col w-full min-h-screen bg-muted/40">
       <header className="flex items-center h-16 px-4 border-b shrink-0 md:px-6">
@@ -65,39 +161,52 @@ export function AccountSetting() {
             <Link to="/">Reviews</Link>
           </nav>
           <div className="grid gap-6">
-            <Card>
-              <CardHeader>
-                <CardTitle>Profile</CardTitle>
-                <CardDescription>
-                  Update your profile picture, name, and email.
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="flex items-center gap-4">
-                  <Avatar className="h-20 w-20">
-                    <AvatarImage src="/placeholder-user.jpg" alt="@shadcn" />
-                    <AvatarFallback>JD</AvatarFallback>
-                  </Avatar>
-                  <div className="grid gap-2">
-                    <div className="grid gap-1">
-                      <Label htmlFor="name">Name</Label>
-                      <Input id="name" defaultValue="John Doe" />
-                    </div>
-                    <div className="grid gap-1">
-                      <Label htmlFor="email">Email</Label>
-                      <Input
-                        id="email"
-                        type="email"
-                        defaultValue="john@example.com"
-                      />
+            <form onSubmit={handleSubmit}>
+              <Card>
+                <CardHeader>
+                  <CardTitle>Profile</CardTitle>
+                  <CardDescription>
+                    Update your profile picture, name, and email.
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <div className="flex items-center gap-4">
+                    <Avatar className="h-20 w-20">
+                      <AvatarImage src="/placeholder-user.jpg" alt="@shadcn" />
+                      <AvatarFallback>JD</AvatarFallback>
+                    </Avatar>
+                    <div className="grid gap-2">
+                      <div className="grid gap-1">
+                        <Label htmlFor="name">Name</Label>
+                        <Input
+                          id="name"
+                          value={formData.name}
+                          onChange={handleInputChange}
+                        />
+                      </div>
+                      <div className="grid gap-1">
+                        <Label htmlFor="email">Email</Label>
+                        <Input
+                          id="email"
+                          type="email"
+                          value={formData.email}
+                          onChange={handleInputChange}
+                        />
+                      </div>
                     </div>
                   </div>
-                </div>
-              </CardContent>
-              <CardFooter className="border-t p-6">
-                <Button>Save Changes</Button>
-              </CardFooter>
-            </Card>
+                </CardContent>
+                <CardFooter className="border-t p-6 flex items-center gap-4">
+                  <Button type="submit">Save Changes</Button>
+                  <Button type="button" onClick={handleLogout}>
+                    Logout
+                  </Button>
+                  <Button type="button" onClick={handleDelete}>
+                    Delete Profile
+                  </Button>
+                </CardFooter>
+              </Card>
+            </form>
             <Card>
               <CardHeader>
                 <CardTitle>Password</CardTitle>

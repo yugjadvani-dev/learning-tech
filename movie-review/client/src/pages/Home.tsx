@@ -6,38 +6,6 @@ import { Link } from "react-router-dom";
 export function Home() {
   return (
     <div className="flex flex-col min-h-dvh">
-      <header className="bg-background px-4 lg:px-6 h-14 flex items-center">
-        <Link to={"/"} className="flex items-center justify-center">
-          <FilmIcon className="size-6" />
-          <span className="sr-only">Movie Reviews</span>
-        </Link>
-        <nav className="ml-auto flex gap-4 sm:gap-6">
-          <Link
-            to={"/"}
-            className="text-sm font-medium hover:underline underline-offset-4"
-          >
-            Reviews
-          </Link>
-          <Link
-            to={"/"}
-            className="text-sm font-medium hover:underline underline-offset-4"
-          >
-            Genres
-          </Link>
-          <Link
-            to={"/"}
-            className="text-sm font-medium hover:underline underline-offset-4"
-          >
-            About
-          </Link>
-          <Link
-            to={"/"}
-            className="text-sm font-medium hover:underline underline-offset-4"
-          >
-            Contact
-          </Link>
-        </nav>
-      </header>
       <main className="flex-1">
         <section className="w-full pt-12 md:pt-24 lg:pt-32 border-y">
           <div className="px-4 md:px-6 space-y-10 xl:space-y-16">
@@ -276,59 +244,6 @@ export function Home() {
           </div>
         </section>
       </main>
-      <footer className="bg-muted p-6 md:py-12 w-full">
-        <div className="container max-w-7xl grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-8 text-sm">
-          <div className="grid gap-1">
-            <h3 className="font-semibold">Site</h3>
-            <Link to={"/"}>Home</Link>
-            <Link to={"/"}>Reviews</Link>
-            <Link to={"/"}>Genres</Link>
-            <Link to={"/"}>About</Link>
-          </div>
-          <div className="grid gap-1">
-            <h3 className="font-semibold">Categories</h3>
-            <Link to={"/"}>Action</Link>
-            <Link to={"/"}>Comedy</Link>
-            <Link to={"/"}>Drama</Link>
-            <Link to={"/"}>Horror</Link>
-          </div>
-          <div className="grid gap-1">
-            <h3 className="font-semibold">Resources</h3>
-            <Link to={"/"}>Blog</Link>
-            <Link to={"/"}>FAQ</Link>
-            <Link to={"/"}>Contact</Link>
-          </div>
-          <div className="grid gap-1">
-            <h3 className="" />
-          </div>
-        </div>
-      </footer>
     </div>
-  );
-}
-
-function FilmIcon(props: any) {
-  return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <rect width="18" height="18" x="3" y="3" rx="2" />
-      <path d="M7 3v18" />
-      <path d="M3 7.5h4" />
-      <path d="M3 12h18" />
-      <path d="M3 16.5h4" />
-      <path d="M17 3v18" />
-      <path d="M17 7.5h4" />
-      <path d="M17 16.5h4" />
-    </svg>
   );
 }

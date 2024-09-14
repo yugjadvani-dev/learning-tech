@@ -1,4 +1,6 @@
 import { Route, Routes, useLocation } from "react-router-dom";
+import Footer from "./components/Footer";
+import Header from "./components/Header";
 import { AboutUs } from "./pages/about-us";
 import { AccountSetting } from "./pages/account-setting";
 import { Contact } from "./pages/contact-us";
@@ -20,6 +22,7 @@ const App = () => {
 
   return (
     <>
+      {pathname === "/login" || pathname === "/register" ? null : <Header />}
       <Routes>
         <Route path="/about-us" element={<AboutUs />} />
         <Route path="/account-setting" element={<AccountSetting />} />
@@ -37,6 +40,7 @@ const App = () => {
         <Route path="/user-rating" element={<UserRating />} />
         <Route path="/wishlist" element={<Wishlist />} />
       </Routes>
+      {pathname === "/login" || pathname === "/register" ? null : <Footer />}
     </>
   );
 };
