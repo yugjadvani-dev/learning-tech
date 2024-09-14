@@ -6,38 +6,6 @@ import { Link } from "react-router-dom";
 export function Home() {
   return (
     <div className="flex flex-col min-h-[100dvh]">
-      <header className="px-4 lg:px-6 h-14 flex items-center">
-        <Link to="/" className="flex items-center justify-center">
-          <MountainIcon className="h-6 w-6" />
-          <span className="sr-only">Learning Management System</span>
-        </Link>
-        <nav className="ml-auto flex gap-4 sm:gap-6">
-          <Link
-            to="/"
-            className="text-sm font-medium hover:underline underline-offset-4"
-          >
-            Features
-          </Link>
-          <Link
-            to="/"
-            className="text-sm font-medium hover:underline underline-offset-4"
-          >
-            Pricing
-          </Link>
-          <Link
-            to="/"
-            className="text-sm font-medium hover:underline underline-offset-4"
-          >
-            About
-          </Link>
-          <Link
-            to="/"
-            className="text-sm font-medium hover:underline underline-offset-4"
-          >
-            Contact
-          </Link>
-        </nav>
-      </header>
       <main className="flex-1">
         <section className="w-full py-12 md:py-24 lg:py-32">
           <div className="container grid items-center gap-6 px-4 md:px-6 lg:grid-cols-2 lg:gap-10">
@@ -236,7 +204,7 @@ export function Home() {
             <div className="grid w-full max-w-5xl grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3">
               <Card className="bg-background p-6 shadow-sm">
                 <div className="space-y-4">
-                  <MicroscopeIcon className="h-12 w-12 text-primary" />
+                  <MicroscopeIcon className="h-12 w-12 text-primary mx-auto" />
                   <h3 className="text-xl font-bold">Microlearning</h3>
                   <p className="text-muted-foreground">
                     Bite-sized, on-demand learning modules that fit seamlessly
@@ -246,7 +214,7 @@ export function Home() {
               </Card>
               <Card className="bg-background p-6 shadow-sm">
                 <div className="space-y-4">
-                  <VibrateIcon className="h-12 w-12 text-primary" />
+                  <VibrateIcon className="h-12 w-12 text-primary mx-auto" />
                   <h3 className="text-xl font-bold">Virtual Reality</h3>
                   <p className="text-muted-foreground">
                     Immersive learning experiences that transport employees to
@@ -256,7 +224,7 @@ export function Home() {
               </Card>
               <Card className="bg-background p-6 shadow-sm">
                 <div className="space-y-4">
-                  <XIcon className="h-12 w-12 text-primary" />
+                  <XIcon className="h-12 w-12 text-primary mx-auto" />
                   <h3 className="text-xl font-bold">
                     AI-powered Personalization
                   </h3>
@@ -352,25 +320,6 @@ function MicroscopeIcon(props: any) {
       <path d="M9 14h2" />
       <path d="M9 12a2 2 0 0 1-2-2V6h6v4a2 2 0 0 1-2 2Z" />
       <path d="M12 6V3a1 1 0 0 0-1-1H9a1 1 0 0 0-1 1v3" />
-    </svg>
-  );
-}
-
-function MountainIcon(props: any) {
-  return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <path d="m8 3 4 8 5-5 5 15H2L8 3z" />
     </svg>
   );
 }
