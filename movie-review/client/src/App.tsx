@@ -1,19 +1,19 @@
 import { Route, Routes, useLocation } from "react-router-dom";
-import { AboutUs } from "./pages/AboutUs";
-import { AccountSetting } from "./pages/AccountSetting";
-import { Contact } from "./pages/ContactUs";
-import { Dashboard } from "./pages/Dashboard";
-import { FAQ } from "./pages/FAQ";
-import { Home } from "./pages/Home";
+import { AboutUs } from "./pages/about-us";
+import { AccountSetting } from "./pages/account-setting";
+import { Contact } from "./pages/contact-us";
+import { Dashboard } from "./pages/dashboard";
+import { FAQ } from "./pages/faq";
+import { Home } from "./pages/home";
 import { Jobs } from "./pages/jobs";
-import { Login } from "./pages/Login";
-import { PressRoom } from "./pages/PressRoom";
+import { Login } from "./pages/login";
+import { PressRoom } from "./pages/press-room";
 import { PrivacyPolicy } from "./pages/privacy-policy";
-import { Register } from "./pages/Register";
-import { Services } from "./pages/Services";
-import { TermsofServices } from "./pages/TermsofServices";
-import { UserRating } from "./pages/UserRating";
-import { Wishlist } from "./pages/Wishlist";
+import { Register } from "./pages/register";
+import { Services } from "./pages/services";
+import { TermsofServices } from "./pages/terms-of-services";
+import { UserRating } from "./pages/user-rating";
+import { Wishlist } from "./pages/wishlist";
 
 const App = () => {
   const { pathname } = useLocation();
@@ -21,21 +21,21 @@ const App = () => {
   return (
     <>
       <Routes>
-        <Route path="/AboutUs" element={<AboutUs />} />
-        <Route path="/AccountSetting" element={<AccountSetting />} />
-        <Route path="/ContactUs" element={<Contact />} />
-        <Route path="/Dashboard" element={<Dashboard />} />
-        <Route path="/FAQ" element={<FAQ />} />
+        <Route path="/about-us" element={<AboutUs />} />
+        <Route path="/account-setting" element={<AccountSetting />} />
+        <Route path="/contact-us" element={<Contact />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/faq" element={<FAQ />} />
         <Route path="/" element={<Home />} />
-        <Route path="/Jobs" element={<Jobs />} />
-        <Route path="/Login" element={<Login />} />
-        <Route path="/PressRoom" element={<PressRoom />} />
-        <Route path="/PrivacyPolicy" element={<PrivacyPolicy />} />
-        <Route path="/Register" element={<Register />} />
-        <Route path="/Services" element={<Services />} />
-        <Route path="/TermsofServices" element={<TermsofServices />} />
-        <Route path="/UserRating" element={<UserRating />} />
-        <Route path="/Wishlist" element={<Wishlist />} />
+        <Route path="/jobs" element={<Jobs />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/press-room" element={<PressRoom />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/terms-of-services" element={<TermsofServices />} />
+        <Route path="/user-rating" element={<UserRating />} />
+        <Route path="/wishlist" element={<Wishlist />} />
       </Routes>
     </>
   );
