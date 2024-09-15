@@ -107,7 +107,7 @@ export function SignIn() {
       </div>
       <div className="hidden md:block">
         <img
-          src="/placeholder.svg"
+          src="/learning.jpg"
           alt="Sign In"
           width="600"
           height="600"

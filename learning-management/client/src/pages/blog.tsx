@@ -12,7 +12,7 @@ export function Blog() {
           <div className="grid grid-cols-1 md:grid-cols-[1fr_auto] gap-6 md:gap-12">
             <div>
               <img
-                src="/placeholder.svg"
+                src="/blog.jpg"
                 alt="Blog post cover image"
                 width="800"
                 height="400"
@@ -28,10 +28,7 @@ export function Blog() {
                 <div className="flex items-center space-x-4 text-muted-foreground">
                   <div className="flex items-center space-x-2">
                     <Avatar>
-                      <AvatarImage
-                        src="/placeholder-user.jpg"
-                        alt="Author avatar"
-                      />
+                      <AvatarImage src="/blog.jpg" alt="Author avatar" />
                       <AvatarFallback>JD</AvatarFallback>
                     </Avatar>
                     <span>John Doe</span>
@@ -158,7 +155,7 @@ export function Blog() {
                     className="flex items-center space-x-4 hover:underline"
                   >
                     <img
-                      src="/placeholder.svg"
+                      src="/recent-1.jpg"
                       alt="Recent post thumbnail"
                       width="80"
                       height="80"
@@ -181,7 +178,7 @@ export function Blog() {
                     className="flex items-center space-x-4 hover:underline"
                   >
                     <img
-                      src="/placeholder.svg"
+                      src="/recent-2.jpg"
                       alt="Recent post thumbnail"
                       width="80"
                       height="80"
@@ -204,7 +201,7 @@ export function Blog() {
                     className="flex items-center space-x-4 hover:underline"
                   >
                     <img
-                      src="/placeholder.svg"
+                      src="/recent-3.jpg"
                       alt="Recent post thumbnail"
                       width="80"
                       height="80"
@@ -254,7 +251,7 @@ export function Blog() {
             <Card>
               <CardContent>
                 <img
-                  src="/placeholder.svg"
+                  src="/Articles-1.jpg"
                   alt="Related article thumbnail"
                   width="300"
                   height="200"
@@ -278,7 +275,7 @@ export function Blog() {
             <Card>
               <CardContent>
                 <img
-                  src="/placeholder.svg"
+                  src="/Articles-2.jpg"
                   alt="Related article thumbnail"
                   width="300"
                   height="200"
@@ -302,7 +299,7 @@ export function Blog() {
             <Card>
               <CardContent>
                 <img
-                  src="/placeholder.svg"
+                  src="/Articles-3.jpg"
                   alt="Related article thumbnail"
                   width="300"
                   height="200"

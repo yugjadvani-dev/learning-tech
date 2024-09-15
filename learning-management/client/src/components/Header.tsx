@@ -1,8 +1,8 @@
-import { Link, useNavigate } from "react-router-dom";
-import { Button } from "./ui/button";
+import auth from "@/hooks/auth";
 import axios from "axios";
 import { useEffect, useState } from "react";
-import auth from "@/hooks/auth";
+import { Link, useNavigate } from "react-router-dom";
+import { Button } from "./ui/button";
 import {
   Dialog,
   DialogContent,
@@ -117,28 +117,40 @@ const Header = () => {
         </Link>
         <nav className="hidden space-x-4 md:flex">
           <Link
-            to="/"
+            to="/about-us"
             className="text-sm font-medium text-primary-foreground hover:underline"
           >
-            Home
+            about Us
           </Link>
           <Link
-            to="/"
+            to="/blog"
             className="text-sm font-medium text-primary-foreground hover:underline"
           >
-            Affiliate Program
+            Blog
           </Link>
           <Link
-            to="/"
+            to="/events"
             className="text-sm font-medium text-primary-foreground hover:underline"
           >
-            Promotional Materials
+            Events
           </Link>
           <Link
-            to="/"
+            to="/affiliate"
             className="text-sm font-medium text-primary-foreground hover:underline"
           >
-            Contact
+            Affiliate
+          </Link>
+          <Link
+            to="/accessibility-statement"
+            className="text-sm font-medium text-primary-foreground hover:underline"
+          >
+            Accessibility-Statement
+          </Link>
+          <Link
+            to="/contact-us"
+            className="text-sm font-medium text-primary-foreground hover:underline"
+          >
+            Contact-Us
           </Link>
         </nav>
         {users?.isLogin ? (
@@ -208,7 +220,11 @@ const Header = () => {
             <Button onClick={handleLogout}>Logout</Button>
           </div>
         ) : (
-          <Button onClick={() => navigate("/sign-up")} variant="outline" className="hidden md:inline-flex">
+          <Button
+            onClick={() => navigate("/sign-up")}
+            variant="outline"
+            className="hidden md:inline-flex"
+          >
             Sign Up
           </Button>
         )}

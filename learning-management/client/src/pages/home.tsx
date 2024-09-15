@@ -34,7 +34,7 @@ export function Home() {
               </div>
             </div>
             <img
-              src="/placeholder.svg"
+              src="/learning1.jpg"
               width="550"
               height="550"
               alt="Hero"
@@ -45,7 +45,7 @@ export function Home() {
         <section className="w-full py-12 md:py-24 lg:py-32 bg-muted">
           <div className="container mx-auto grid items-center gap-6 px-4 md:px-6 lg:grid-cols-2 lg:gap-10">
             <img
-              src="/placeholder.svg"
+              src="/learning2.jpg"
               width="550"
               height="550"
               alt="Learning Focused"
@@ -104,7 +104,7 @@ export function Home() {
               </div>
             </div>
             <img
-              src="/placeholder.svg"
+              src="/learning3.jpg"
               width="550"
               height="550"
               alt="Enterprise"
@@ -251,7 +251,7 @@ export function Home() {
               <Card className="bg-background p-6 shadow-sm">
                 <div className="space-y-4">
                   <img
-                    src="/placeholder.svg"
+                    src="/learning4.jpg"
                     width="300"
                     height="200"
                     alt="Course Thumbnail"

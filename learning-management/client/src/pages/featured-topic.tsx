@@ -1,55 +1,11 @@
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
 import { Separator } from "@/components/ui/separator";
 import { Link } from "react-router-dom";
 
 export function FeaturedTopic() {
   return (
     <div className="flex flex-col min-h-[100dvh]">
-      <header className="bg-primary py-6 px-4 md:px-6">
-        <div className="container mx-auto flex items-center justify-between">
-          <Link to="/" className="flex items-center gap-2">
-            <BookIcon className="h-6 w-6 text-primary-foreground" />
-            <span className="text-lg font-semibold text-primary-foreground">
-              Learning Platform
-            </span>
-          </Link>
-          <nav className="hidden md:flex items-center gap-4">
-            <Link
-              to="/"
-              className="text-sm font-medium text-primary-foreground hover:underline"
-            >
-              Courses
-            </Link>
-            <Link
-              to="/"
-              className="text-sm font-medium text-primary-foreground hover:underline"
-            >
-              Articles
-            </Link>
-            <Link
-              to="/"
-              className="text-sm font-medium text-primary-foreground hover:underline"
-            >
-              Resources
-            </Link>
-            <Link
-              to="/"
-              className="text-sm font-medium text-primary-foreground hover:underline"
-            >
-              About
-            </Link>
-          </nav>
-          <div className="hidden md:block">
-            <Input
-              type="search"
-              placeholder="Search content..."
-              className="max-w-md rounded-md bg-primary-foreground/10 px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary-foreground/50"
-            />
-          </div>
-        </div>
-      </header>
       <main className="flex-1">
         <section className="bg-muted py-12 md:py-16 lg:py-20">
           <div className="container mx-auto px-4 md:px-6">
@@ -82,7 +38,7 @@ export function FeaturedTopic() {
               </div>
               <div>
                 <img
-                  src="/placeholder.svg"
+                  src="/Mastering-React-Hooks.jpg"
                   width="600"
                   height="400"
                   alt="Featured Topic"
@@ -109,7 +65,7 @@ export function FeaturedTopic() {
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
               <Card>
                 <img
-                  src="/placeholder.svg"
+                  src="/Related-Content-1.jpg"
                   width="400"
                   height="225"
                   alt="React Hooks Tutorial"
@@ -134,7 +90,7 @@ export function FeaturedTopic() {
               </Card>
               <Card>
                 <img
-                  src="/placeholder.svg"
+                  src="/Related-Content-2.jpg"
                   width="400"
                   height="225"
                   alt="React Hooks Cheatsheet"
@@ -158,7 +114,7 @@ export function FeaturedTopic() {
               </Card>
               <Card>
                 <img
-                  src="/placeholder.svg"
+                  src="/Related-Content-3.jpg"
                   width="400"
                   height="225"
                   alt="React Hooks Best Practices"
@@ -184,7 +140,7 @@ export function FeaturedTopic() {
               </Card>
               <Card>
                 <img
-                  src="/placeholder.svg"
+                  src="/Related-Content-4.jpg"
                   width="400"
                   height="225"
                   alt="React Hooks Advanced Patterns"
@@ -228,7 +184,7 @@ export function FeaturedTopic() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   <Card>
                     <img
-                      src="/placeholder.svg"
+                      src="/Supplementary-Resources-1.jpg"
                       width="400"
                       height="225"
                       alt="React Hooks Documentation"
@@ -253,7 +209,7 @@ export function FeaturedTopic() {
                   </Card>
                   <Card>
                     <img
-                      src="/placeholder.svg"
+                      src="/Supplementary-Resources-1.jpg"
                       width="400"
                       height="225"
                       alt="React Hooks Community Resources"
@@ -356,33 +312,6 @@ export function FeaturedTopic() {
           </div>
         </section>
       </main>
-      <footer className="bg-muted py-6 px-4 md:px-6">
-        <div className="container mx-auto flex items-center justify-between">
-          <p className="text-sm text-muted-foreground">
-            &copy; 2024 Learning Platform. All rights reserved.
-          </p>
-          <nav className="hidden md:flex items-center gap-4">
-            <Link
-              to="/"
-              className="text-sm font-medium text-muted-foreground hover:underline"
-            >
-              Terms of Service
-            </Link>
-            <Link
-              to="/"
-              className="text-sm font-medium text-muted-foreground hover:underline"
-            >
-              Privacy Policy
-            </Link>
-            <Link
-              to="/"
-              className="text-sm font-medium text-muted-foreground hover:underline"
-            >
-              Contact Us
-            </Link>
-          </nav>
-        </div>
-      </footer>
     </div>
   );
 }

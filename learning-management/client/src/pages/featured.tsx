@@ -32,7 +32,7 @@ export function Featured() {
               </div>
             </div>
             <img
-              src="/placeholder.svg"
+              src="/Elevate.jpg"
               width="550"
               height="550"
               alt="Hero"

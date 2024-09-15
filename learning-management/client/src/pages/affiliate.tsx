@@ -22,7 +22,7 @@ export function Affiliate() {
               </div>
               <div>
                 <img
-                  src="/placeholder.svg"
+                  src="/earnmoney.jpg"
                   width="600"
                   height="400"
                   alt="Affiliate Program"
@@ -102,7 +102,7 @@ export function Affiliate() {
             <div className="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
               <div className="flex flex-col items-center gap-2">
                 <img
-                  src="/placeholder.svg"
+                  src="photo-1.jpg"
                   width="200"
                   height="100"
                   alt="Banner 1"
@@ -113,7 +113,7 @@ export function Affiliate() {
               </div>
               <div className="flex flex-col items-center gap-2">
                 <img
-                  src="/placeholder.svg"
+                  src="/photo-2.jpg"
                   width="200"
                   height="100"
                   alt="Banner 2"
@@ -124,7 +124,7 @@ export function Affiliate() {
               </div>
               <div className="flex flex-col items-center gap-2">
                 <img
-                  src="/placeholder.svg"
+                  src="/photo-3.jpg"
                   width="200"
                   height="100"
                   alt="Logo"
@@ -135,7 +135,7 @@ export function Affiliate() {
               </div>
               <div className="flex flex-col items-center gap-2">
                 <img
-                  src="/placeholder.svg"
+                  src="/photo-4.jpg"
                   width="200"
                   height="100"
                   alt="Referral Link"
@@ -146,7 +146,7 @@ export function Affiliate() {
               </div>
               <div className="flex flex-col items-center gap-2">
                 <img
-                  src="/placeholder.svg"
+                  src="/photo-5.jpg"
                   width="200"
                   height="100"
                   alt="Social Media Post"

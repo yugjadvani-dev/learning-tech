@@ -1,4 +1,6 @@
 import { Route, Routes, useLocation } from "react-router-dom";
+import Footer from "./components/Footer";
+import Header from "./components/Header";
 import { AboutUs } from "./pages/about-us";
 import { AccessibilityStatement } from "./pages/accessibility-statement";
 import { Affiliate } from "./pages/affiliate";
@@ -14,11 +16,9 @@ import { SignIn } from "./pages/sign-in";
 import { SignUp } from "./pages/sign-up";
 import { Stories } from "./pages/stories";
 import { TermsOfServices } from "./pages/terms-of-services";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
 
 const App = () => {
-  const { pathname } = useLocation(); 
+  const { pathname } = useLocation();
   return (
     <>
       {pathname === "/sign-in" || pathname === "/sign-up" ? null : <Header />}
@@ -36,7 +36,6 @@ const App = () => {
           path="/accessibility-statement"
           element={<AccessibilityStatement />}
         />
-        <Route path="/affiliate" element={<Affiliate />} />
         <Route path="/featured" element={<Featured />} />
         <Route path="/stories" element={<Stories />} />
         <Route path="/press" element={<Press />} />

@@ -37,7 +37,7 @@ export function Events() {
               </div>
             </div>
             <img
-              src="/placeholder.svg"
+              src="/events.jpg"
               width="550"
               height="310"
               alt="Featured Event"

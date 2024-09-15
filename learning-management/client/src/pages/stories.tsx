@@ -11,44 +11,12 @@ import { Link } from "react-router-dom";
 export function Stories() {
   return (
     <div className="flex flex-col min-h-[100dvh]">
-      <header className="px-4 lg:px-6 h-14 flex items-center">
-        <Link to="/" className="flex items-center justify-center">
-          <MountainIcon className="h-6 w-6" />
-          <span className="sr-only">Acme LMS</span>
-        </Link>
-        <nav className="ml-auto flex gap-4 sm:gap-6">
-          <Link
-            to="/"
-            className="text-sm font-medium hover:underline underline-offset-4"
-          >
-            Courses
-          </Link>
-          <Link
-            to="/"
-            className="text-sm font-medium hover:underline underline-offset-4"
-          >
-            Instructors
-          </Link>
-          <Link
-            to="/"
-            className="text-sm font-medium hover:underline underline-offset-4"
-          >
-            Organizations
-          </Link>
-          <Link
-            to="/"
-            className="text-sm font-medium hover:underline underline-offset-4"
-          >
-            Stories
-          </Link>
-        </nav>
-      </header>
       <main className="flex-1">
         <section className="w-full py-12 md:py-24 lg:py-32 bg-muted">
           <div className="container px-4 md:px-6">
             <div className="grid gap-6 lg:grid-cols-2 lg:gap-12">
               <img
-                src="/placeholder.svg"
+                src="/stories.jpg"
                 width="550"
                 height="310"
                 alt="Success Story"
@@ -101,7 +69,7 @@ export function Stories() {
               <Card className="border-0 shadow-none">
                 <CardContent className="flex flex-col items-start gap-2">
                   <img
-                    src="/placeholder.svg"
+                    src="/stories-1.jpg"
                     width="400"
                     height="225"
                     alt="Success Story"
@@ -127,7 +95,7 @@ export function Stories() {
               <Card className="border-0 shadow-none">
                 <CardContent className="flex flex-col items-start gap-2">
                   <img
-                    src="/placeholder.svg"
+                    src="/stories-2.jpg"
                     width="400"
                     height="225"
                     alt="Success Story"
@@ -153,7 +121,7 @@ export function Stories() {
               <Card className="border-0 shadow-none">
                 <CardContent className="flex flex-col items-start gap-2">
                   <img
-                    src="/placeholder.svg"
+                    src="/stories-3.jpg"
                     width="400"
                     height="225"
                     alt="Success Story"
@@ -179,7 +147,7 @@ export function Stories() {
               <Card className="border-0 shadow-none">
                 <CardContent className="flex flex-col items-start gap-2">
                   <img
-                    src="/placeholder.svg"
+                    src="/stories-4.jpg"
                     width="400"
                     height="225"
                     alt="Success Story"
@@ -205,7 +173,7 @@ export function Stories() {
               <Card className="border-0 shadow-none">
                 <CardContent className="flex flex-col items-start gap-2">
                   <img
-                    src="/placeholder.svg"
+                    src="/stories-5.jpg"
                     width="400"
                     height="225"
                     alt="Success Story"
@@ -231,7 +199,7 @@ export function Stories() {
               <Card className="border-0 shadow-none">
                 <CardContent className="flex flex-col items-start gap-2">
                   <img
-                    src="/placeholder.svg"
+                    src="/stories-6.jpg"
                     width="400"
                     height="225"
                     alt="Success Story"
@@ -293,19 +261,6 @@ export function Stories() {
           </div>
         </section>
       </main>
-      <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t">
-        <p className="text-xs text-muted-foreground">
-          &copy; 2024 Acme LMS. All rights reserved.
-        </p>
-        <nav className="sm:ml-auto flex gap-4 sm:gap-6">
-          <Link to="/" className="text-xs hover:underline underline-offset-4">
-            Terms of Service
-          </Link>
-          <Link to="/" className="text-xs hover:underline underline-offset-4">
-            Privacy
-          </Link>
-        </nav>
-      </footer>
     </div>
   );
 }
