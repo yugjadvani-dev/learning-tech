@@ -8,7 +8,7 @@ export function Home() {
     <div className="flex flex-col min-h-[100dvh]">
       <main className="flex-1">
         <section className="w-full py-12 md:py-24 lg:py-32">
-          <div className="container grid items-center gap-6 px-4 md:px-6 lg:grid-cols-2 lg:gap-10">
+          <div className="container mx-auto grid items-center gap-6 px-4 md:px-6 lg:grid-cols-2 lg:gap-10">
             <div className="space-y-2">
               <h1 className="text-3xl font-bold tracking-tighter md:text-4xl/tight">
                 Learning Management System to Smoothly
@@ -43,7 +43,7 @@ export function Home() {
           </div>
         </section>
         <section className="w-full py-12 md:py-24 lg:py-32 bg-muted">
-          <div className="container grid items-center gap-6 px-4 md:px-6 lg:grid-cols-2 lg:gap-10">
+          <div className="container mx-auto grid items-center gap-6 px-4 md:px-6 lg:grid-cols-2 lg:gap-10">
             <img
               src="/placeholder.svg"
               width="550"
@@ -78,7 +78,7 @@ export function Home() {
           </div>
         </section>
         <section className="w-full py-12 md:py-24 lg:py-32">
-          <div className="container grid items-center gap-6 px-4 md:px-6 lg:grid-cols-2 lg:gap-10">
+          <div className="container mx-auto grid items-center gap-6 px-4 md:px-6 lg:grid-cols-2 lg:gap-10">
             <div className="space-y-2">
               <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight">
                 Accelerate growth — for you or your organization
@@ -113,7 +113,7 @@ export function Home() {
           </div>
         </section>
         <section className="w-full py-12 md:py-24 lg:py-32 bg-muted">
-          <div className="container grid items-center justify-center gap-4 px-4 text-center md:px-6 lg:gap-10">
+          <div className="container mx-auto grid items-center justify-center gap-4 px-4 text-center md:px-6 lg:gap-10">
             <div className="space-y-3">
               <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight">
                 See what others are achieving through learning
@@ -191,7 +191,7 @@ export function Home() {
           </div>
         </section>
         <section className="w-full py-12 md:py-24 lg:py-32">
-          <div className="container grid items-center justify-center gap-4 px-4 text-center md:px-6 lg:gap-10">
+          <div className="container mx-auto grid items-center justify-center gap-4 px-4 text-center md:px-6 lg:gap-10">
             <div className="space-y-3">
               <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight">
                 Top trends for the future of work
@@ -238,7 +238,7 @@ export function Home() {
           </div>
         </section>
         <section className="w-full py-12 md:py-24 lg:py-32 bg-muted">
-          <div className="container grid items-center justify-center gap-4 px-4 text-center md:px-6 lg:gap-10">
+          <div className="container mx-auto grid items-center justify-center gap-4 px-4 text-center md:px-6 lg:gap-10">
             <div className="space-y-3">
               <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight">
                 Trending Now

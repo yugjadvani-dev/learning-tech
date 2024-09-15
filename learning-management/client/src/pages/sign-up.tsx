@@ -1,9 +1,61 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import axios from "axios";
 import { Link } from "lucide-react";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+
+interface User {
+  firstname: string;
+  lastname: string;
+  email: string;
+  password: string;
+}
 
 export function SignUp() {
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const [success, setSuccess] = useState(false);
+  const [user, setUser] = useState<User>({
+    firstname: "",
+    lastname: "",
+    email: "",
+    password: "",
+  });
+
+  const navigate = useNavigate();
+
+  const handleChange = (e: any) => {
+    const { name, value } = e.target;
+
+    setUser((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = async (e: any) => {
+    e.preventDefault();
+    setLoading(true);
+    setError(null);
+
+    try {
+      const response = await axios.post(
+        "http://localhost:7777/api/auth/signup",
+        user
+      );
+      console.log("Response:", response.data);
+      navigate("/sign-in");
+      setSuccess(true);
+    } catch (err: any) {
+      console.error("Error:", err);
+      setError(err.response?.data?.message || "An error occurred");
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <div className="grid mx-auto min-h-screen w-full grid-cols-1 gap-8 md:grid-cols-2">
       <div className="flex flex-col items-start justify-center space-y-6 p-6 md:p-10">
@@ -16,15 +68,15 @@ export function SignUp() {
             </Link>
           </p>
         </div>
-        <form className="grid w-full gap-4">
+        <form className="grid w-full gap-4" onSubmit={handleSubmit}>
           <div className="grid grid-cols-2 gap-4">
             <div className="space-y-2">
               <Label htmlFor="first-name">First Name</Label>
-              <Input id="first-name" placeholder="John" required />
+              <Input id="first-name" type="text" name="firstname" value={user.firstname} onChange={handleChange} placeholder="John" required />
             </div>
             <div className="space-y-2">
               <Label htmlFor="last-name">Last Name</Label>
-              <Input id="last-name" placeholder="Doe" required />
+              <Input id="last-name" type="text" name="lastname" value={user.lastname} onChange={handleChange} placeholder="Doe" required />
             </div>
           </div>
           <div className="space-y-2">
@@ -32,17 +84,24 @@ export function SignUp() {
             <Input
               id="email"
               type="email"
+              name="email"
+              value={user.email}
+              onChange={handleChange}
               placeholder="example@email.com"
               required
             />
           </div>
           <div className="space-y-2">
             <Label htmlFor="password">Password</Label>
-            <Input id="password" type="password" required />
+            <Input id="password" type="password" name="password" value={user.password} onChange={handleChange} required />
           </div>
-          <Button type="submit" className="w-full">
-            Sign Up
+          <Button type="submit" className="w-full mb-3">
+            {loading ? "Loading..." : "Sign Up"}
           </Button>
+          {error && <p style={{ color: "red" }}>{error}</p>}
+            {success && (
+              <p style={{ color: "green" }}>Registration successful!</p>
+            )}
         </form>
       </div>
       <div className="hidden flex-col h-auto items-center justify-center bg-muted p-6 md:flex">

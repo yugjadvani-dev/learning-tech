@@ -1,48 +1,8 @@
 import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
 
 export function Affiliate() {
   return (
     <div className="w-full bg-background">
-      <header className="bg-primary py-6 px-4 md:px-6">
-        <div className="container mx-auto flex items-center justify-between">
-          <Link to="/" className="flex items-center gap-2">
-            <MountainIcon className="h-6 w-6 text-primary-foreground" />
-            <span className="text-lg font-bold text-primary-foreground">
-              LMS Affiliate
-            </span>
-          </Link>
-          <nav className="hidden space-x-4 md:flex">
-            <Link
-              to="/"
-              className="text-sm font-medium text-primary-foreground hover:underline"
-            >
-              Home
-            </Link>
-            <Link
-              to="/"
-              className="text-sm font-medium text-primary-foreground hover:underline"
-            >
-              Affiliate Program
-            </Link>
-            <Link
-              to="/"
-              className="text-sm font-medium text-primary-foreground hover:underline"
-            >
-              Promotional Materials
-            </Link>
-            <Link
-              to="/"
-              className="text-sm font-medium text-primary-foreground hover:underline"
-            >
-              Contact
-            </Link>
-          </nav>
-          <Button variant="outline" className="hidden md:inline-flex">
-            Sign Up
-          </Button>
-        </div>
-      </header>
       <main>
         <section className="py-12 md:py-24">
           <div className="container mx-auto px-4 md:px-6">
@@ -199,33 +159,6 @@ export function Affiliate() {
           </div>
         </section>
       </main>
-      <footer className="bg-muted py-6 px-4 md:px-6">
-        <div className="container mx-auto flex items-center justify-between">
-          <p className="text-sm text-muted-foreground">
-            &copy; 2024 LMS Affiliate. All rights reserved.
-          </p>
-          <nav className="hidden space-x-4 md:flex">
-            <Link
-              to="/"
-              className="text-sm font-medium text-muted-foreground hover:underline"
-            >
-              Terms of Service
-            </Link>
-            <Link
-              to="/"
-              className="text-sm font-medium text-muted-foreground hover:underline"
-            >
-              Privacy Policy
-            </Link>
-            <Link
-              to="/"
-              className="text-sm font-medium text-muted-foreground hover:underline"
-            >
-              Contact Us
-            </Link>
-          </nav>
-        </div>
-      </footer>
     </div>
   );
 }

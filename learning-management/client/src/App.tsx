@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
 import { AboutUs } from "./pages/about-us";
 import { AccessibilityStatement } from "./pages/accessibility-statement";
 import { Affiliate } from "./pages/affiliate";
@@ -14,30 +14,37 @@ import { SignIn } from "./pages/sign-in";
 import { SignUp } from "./pages/sign-up";
 import { Stories } from "./pages/stories";
 import { TermsOfServices } from "./pages/terms-of-services";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 const App = () => {
+  const { pathname } = useLocation(); 
   return (
-    <Routes>
-      <Route path="/sign-up" element={<SignUp />} />
-      <Route path="/sign-in" element={<SignIn />} />
-      <Route path="/" element={<Home />} />
-      <Route path="/about-us" element={<AboutUs />} />
-      <Route path="/contact-us" element={<ContactUs />} />
-      <Route path="/blog" element={<Blog />} />
-      <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-      <Route path="/terms-of-services" element={<TermsOfServices />} />
-      <Route path="/affiliate" element={<Affiliate />} />
-      <Route
-        path="/accessibility-statement"
-        element={<AccessibilityStatement />}
-      />
-      <Route path="/affiliate" element={<Affiliate />} />
-      <Route path="/featured" element={<Featured />} />
-      <Route path="/stories" element={<Stories />} />
-      <Route path="/press" element={<Press />} />
-      <Route path="/feaured-topic" element={<FeaturedTopic />} />
-      <Route path="/events" element={<Events />} />
-    </Routes>
+    <>
+      {pathname === "/sign-in" || pathname === "/sign-up" ? null : <Header />}
+      <Routes>
+        <Route path="/sign-up" element={<SignUp />} />
+        <Route path="/sign-in" element={<SignIn />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/about-us" element={<AboutUs />} />
+        <Route path="/contact-us" element={<ContactUs />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/terms-of-services" element={<TermsOfServices />} />
+        <Route path="/affiliate" element={<Affiliate />} />
+        <Route
+          path="/accessibility-statement"
+          element={<AccessibilityStatement />}
+        />
+        <Route path="/affiliate" element={<Affiliate />} />
+        <Route path="/featured" element={<Featured />} />
+        <Route path="/stories" element={<Stories />} />
+        <Route path="/press" element={<Press />} />
+        <Route path="/feaured-topic" element={<FeaturedTopic />} />
+        <Route path="/events" element={<Events />} />
+      </Routes>
+      {pathname === "/sign-in" || pathname === "/sign-up" ? null : <Footer />}
+    </>
   );
 };
 
