@@ -1,0 +1,144 @@
+Varni Consultancy
+---
+
+Client side
+--
+-  Login page
+-  Registration Page 
+-  Home Page
+-  About us
+-  Contact us
+-  Services
+-  Case Studies/Success Stories
+-  Blog/Insights
+-  Testimonials
+-  Resources/Downloads
+-  Privacy Policy
+-  Terms of Service
+
+
+Admin side
+--
+-  Login page
+-  Registration Page
+•	Admin Side Dashbord
+•	Case Studies Management
+•	Blog Management
+•	Resources Management
+
+
+----
+Prompts
+--
+
+---
+Client
+---
+
+Login page
+--
+Your task is create a client side Login Page for Varni Consultancy. 
+
+Registration
+--
+Your task is create a client side Registration page for Varni Consultancy.
+
+Home
+--
+Your task is create a home page for Varni Consultancy and include below sections
+- Hero section with data visulation
+- Press Releases
+- Recent Reports
+- Announcements
+- Search Publications / Survey Reports
+- About Ministry
+- what's new
+
+each section have details so user can get information About Varni Consultancy.
+
+About us
+--
+Your task is create a About Us page for Varni Consultancy and include below sections
+- National Statistical Commission
+- Events
+- Major Initiatives/Achievements Table view 
+- Conference of Central and State Statistical Organizations (COCSSO)
+- Summary of Monthly Activities Table view
+- Allocation of Business Rules
+
+Contact us
+--
+Your task is create a Contact us page for Varni Consultancy and form for contact us
+
+Services
+--
+Your task is create a Services page for Varni Consultancy and Include below services
+- Marrige certificate
+- passport
+- Driving license
+- pan card
+- voter id card
+- international driving license
+- vera bill name-transfer
+- Gujatat gas name-transfer
+- Light bill name-transfer
+- revenyu, RTO, ans insurance
+- Vima Policy
+- RC book
+- Aadhar card Address updatetion
+
+each services have cards and give some information About services
+
+Case Studies/Success Stories
+--
+Your task is create a Case Studies/Success Stories page for Varni Consultancy and add a sections for that which can so information about this page and write a contant for that.
+- for case Studies add seprates section and same as for Success Stories
+
+Blog/Insights
+--
+Your task is create a Blog/Insights page for Varni Consultancy and a blog for Our Consultancy. maximum add 5-6 blogs
+
+Testimonials
+--
+Your task is create a Testimonials page for Varni Consultancy and add customer reviews.
+
+Resources/Downloads
+--
+Your task is create a Resources/Downloads page for Varni Consultancy and add contact with additions information, add minimum 3-4 sections
+
+Privacy Policy
+--
+Your task is create a Privacy Policy page for Varni Consultancy.
+
+Terms of Service
+--
+Your task is create a Terms of Service page for Varni Consultancy
+
+
+---
+Admin
+---
+
+Login
+--
+Your task is create a Admin Login page for Varni Consultancy.
+
+Registration Page
+--
+Your task is create a Registration Page for Varni Consultancy.
+
+Admin Side Dashbord
+--
+Your task is create a Admin Side Dashbord for Varni Consultancy.
+
+Case Studies Management
+--
+Your task is create a Admin side Case Studies Management form page for Varni Consultancy.
+
+Blog Management
+--
+Your task is create a Admin side Blog Management form page for Varni Consultancy.
+
+Resources Management
+--
+Your task is create a Admin side Resources Management form page for Varni Consultancy.
