@@ -1,10 +1,17 @@
-import { useState } from "react"
-import { Button } from "@/components/ui/button"
-import { Table, TableHeader, TableRow, TableHead, TableBody, TableCell } from "@/components/ui/table"
-import { Badge } from "@/components/ui/badge"
-import { Label } from "@/components/ui/label"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/components/ui/table";
+import { Textarea } from "@/components/ui/textarea";
+import { useState } from "react";
 
 export function CaseStudies() {
   const [caseStudies, setCaseStudies] = useState([
@@ -32,29 +39,34 @@ export function CaseStudies() {
       client: "Wayne Enterprises",
       status: "Draft",
     },
-  ])
-  const [showModal, setShowModal] = useState(false)
-  const [editingCaseStudy, setEditingCaseStudy] = useState(null)
+  ]);
+  const [showModal, setShowModal] = useState(false);
+  const [editingCaseStudy, setEditingCaseStudy] = useState(null);
   const handleAddCaseStudy = () => {
-    setEditingCaseStudy(null)
-    setShowModal(true)
-  }
-  const handleEditCaseStudy = (caseStudy) => {
-    setEditingCaseStudy(caseStudy)
-    setShowModal(true)
-  }
-  const handleDeleteCaseStudy = (id) => {
-    setCaseStudies(caseStudies.filter((c) => c.id !== id))
-  }
-  const handleSaveCaseStudy = (caseStudy) => {
+    setEditingCaseStudy(null);
+    setShowModal(true);
+  };
+  const handleEditCaseStudy = (caseStudy: any) => {
+    setEditingCaseStudy(caseStudy);
+    setShowModal(true);
+  };
+  const handleDeleteCaseStudy = (id: any) => {
+    setCaseStudies(caseStudies.filter((c) => c.id !== id));
+  };
+  const handleSaveCaseStudy = (caseStudy: any) => {
     if (editingCaseStudy) {
-      setCaseStudies(caseStudies.map((c) => (c.id === editingCaseStudy.id ? caseStudy : c)))
+      setCaseStudies(
+        caseStudies.map((c) => (c.id === editingCaseStudy.id ? caseStudy : c))
+      );
     } else {
-      setCaseStudies([...caseStudies, { ...caseStudy, id: caseStudies.length + 1 }])
+      setCaseStudies([
+        ...caseStudies,
+        { ...caseStudy, id: caseStudies.length + 1 },
+      ]);
     }
-    setShowModal(false)
-    setEditingCaseStudy(null)
-  }
+    setShowModal(false);
+    setEditingCaseStudy(null);
+  };
   return (
     <div className="w-full h-full flex flex-col">
       <header className="bg-background border-b px-6 py-4 flex items-center justify-between">
@@ -77,10 +89,20 @@ export function CaseStudies() {
                 <TableCell>{caseStudy.title}</TableCell>
                 <TableCell>{caseStudy.client}</TableCell>
                 <TableCell>
-                  <Badge variant={caseStudy.status === "Published" ? "success" : "warning"}>{caseStudy.status}</Badge>
+                  <Badge
+                    variant={
+                      caseStudy.status === "Published" ? "success" : "warning"
+                    }
+                  >
+                    {caseStudy.status}
+                  </Badge>
                 </TableCell>
                 <TableCell className="text-right">
-                  <Button variant="outline" size="sm" onClick={() => handleEditCaseStudy(caseStudy)}>
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    onClick={() => handleEditCaseStudy(caseStudy)}
+                  >
                     Edit
                   </Button>
                   <Button
@@ -101,31 +123,43 @@ export function CaseStudies() {
         <div>
           <div>
             <div>
-              <div>{editingCaseStudy ? "Edit Case Study" : "Add Case Study"}</div>
+              <div>
+                {editingCaseStudy ? "Edit Case Study" : "Add Case Study"}
+              </div>
             </div>
             <div>
               <form
                 onSubmit={(e) => {
-                  e.preventDefault()
-                  const formData = new FormData(e.target)
+                  e.preventDefault();
+                  const formData = new FormData(e.target);
                   const caseStudy = {
                     title: formData.get("title"),
                     client: formData.get("client"),
                     description: formData.get("description"),
                     image: formData.get("image"),
-                  }
-                  handleSaveCaseStudy(caseStudy)
+                  };
+                  handleSaveCaseStudy(caseStudy);
                 }}
               >
                 <div className="grid gap-4">
                   <div className="grid grid-cols-2 gap-4">
                     <div>
                       <Label htmlFor="title">Title</Label>
-                      <Input id="title" name="title" defaultValue={editingCaseStudy?.title} required />
+                      <Input
+                        id="title"
+                        name="title"
+                        defaultValue={editingCaseStudy?.title}
+                        required
+                      />
                     </div>
                     <div>
                       <Label htmlFor="client">Client</Label>
-                      <Input id="client" name="client" defaultValue={editingCaseStudy?.client} required />
+                      <Input
+                        id="client"
+                        name="client"
+                        defaultValue={editingCaseStudy?.client}
+                        required
+                      />
                     </div>
                   </div>
                   <div>
@@ -140,11 +174,20 @@ export function CaseStudies() {
                   </div>
                   <div>
                     <Label htmlFor="image">Case Study Image</Label>
-                    <Input id="image" name="image" type="file" accept="image/*" />
+                    <Input
+                      id="image"
+                      name="image"
+                      type="file"
+                      accept="image/*"
+                    />
                   </div>
                 </div>
                 <div className="mt-6 flex justify-end gap-2">
-                  <Button type="button" variant="outline" onClick={() => setShowModal(false)}>
+                  <Button
+                    type="button"
+                    variant="outline"
+                    onClick={() => setShowModal(false)}
+                  >
                     Cancel
                   </Button>
                   <Button type="submit">Save</Button>
@@ -155,5 +198,5 @@ export function CaseStudies() {
         </div>
       )}
     </div>
-  )
+  );
 }

@@ -1,8 +1,20 @@
+import { Route, Routes, useLocation } from "react-router-dom";
+import { Blog } from "./pages/blog";
+import { CaseStudies } from "./pages/case-studies";
+import { DeshBord } from "./pages/desh-bord";
+import { Resources } from "./pages/resources";
+
 const App = () => {
+  const { pathname } = useLocation();
   return (
-    <div>
-      <h1 className="text-3xl font-bold underline">hello</h1>
-    </div>
+    <>
+      <Routes>
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/case-studies" element={<CaseStudies />} />
+        <Route path="/desh-bord" element={<DeshBord />} />
+        <Route path="/resources" element={<Resources />} />
+      </Routes>
+    </>
   );
 };
 
