@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 export function Blog() {
-  const [blogs, setBlogs] = useState([]);
+  const [blogs, setBlogs] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   console.log("blogs", blogs);
@@ -64,10 +64,13 @@ export function Blog() {
         <section className="py-12 md:py-16 lg:py-20">
           <div className="container max-w-5xl mx-auto px-4 md:px-6">
             <div className="grid md:grid-cols-3 gap-8">
-              <div className="col-span-2">
-                <h2 className="text-2xl font-bold mb-6">Latest Insights</h2>
-                <div className="grid md:grid-cols-2 gap-8">
-                  {[...Array(6)].map((_, i) => (
+              {blogs.length === 0 ? (
+                <p className="text-center">No blog posts found.</p>
+              ) : (
+                <div className="col-span-2">
+                  <h2 className="text-2xl font-bold mb-6">Latest Insights</h2>
+                  <div className="grid md:grid-cols-2 gap-8">
+                    {/* {[...Array(6)].map((_, i) => (
                     <Link
                       key={i}
                       to="/"
@@ -93,34 +96,35 @@ export function Blog() {
                         </p>
                       </div>
                     </Link>
-                  ))}
-
-                  {/* {blogs?.map((blog, i) => (
-                    <Link
-                      key={i}
-                      to="/"
-                      className="group block rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow"
-                    >
-                      <img
-                        src="/placeholder.svg"
-                        width={600}
-                        height={400}
-                        alt={`Blog Post ${i + 1}`}
-                        className="w-full h-48 object-cover"
-                        style={{ aspectRatio: "600/400", objectFit: "cover" }}
-                      />
-                      <div className="p-4 bg-background">
-                        <h3 className="text-lg font-semibold group-hover:underline">
-                          {blog?.title}
-                        </h3>
-                        <p className="text-muted-foreground line-clamp-2">
-                          {blog?.content}
-                        </p>
-                      </div>
-                    </Link>
                   ))} */}
+
+                    {blogs?.map((blog, i) => (
+                      <Link
+                        key={i}
+                        to="/"
+                        className="group block rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow"
+                      >
+                        <img
+                          src="/placeholder.svg"
+                          width={600}
+                          height={400}
+                          alt={`Blog Post ${i + 1}`}
+                          className="w-full h-48 object-cover"
+                          style={{ aspectRatio: "600/400", objectFit: "cover" }}
+                        />
+                        <div className="p-4 bg-background">
+                          <h3 className="text-lg font-semibold group-hover:underline">
+                            {blog?.title}
+                          </h3>
+                          <p className="text-muted-foreground line-clamp-2">
+                            {blog?.content}
+                          </p>
+                        </div>
+                      </Link>
+                    ))}
+                  </div>
                 </div>
-              </div>
+              )}
               <div className="space-y-6">
                 <div>
                   <h3 className="text-lg font-semibold mb-2">Categories</h3>
