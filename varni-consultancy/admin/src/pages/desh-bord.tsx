@@ -28,9 +28,46 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import { Link } from "react-router-dom";
+import auth from "@/hooks/auth";
+import axios from "axios";
+import { useEffect, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 
 export function DeshBord() {
+  const { user: users }: any = auth();
+  console.log("users", users);
+  const [user, setUser] = useState<any>(null);
+  console.log("user", user);
+
+  // Fetch user data on component mount
+  useEffect(() => {
+    const fetchUser = async () => {
+      try {
+        const response = await axios.get(
+          `http://localhost:5454/api/auth/admin/${users?._id}`
+        );
+        console.log("response", response);
+        setUser(response.data.user);
+        let isLogin = true;
+        localStorage.setItem(
+          "user",
+          JSON.stringify({ ...response.data.user, isLogin })
+        );
+      } catch (err) {
+        console.error("Failed to fetch user", err);
+      }
+    };
+
+    fetchUser();
+  }, [user?._id]);
+
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    localStorage.removeItem("user");
+    navigate("/");
+  };
+
   return (
     <div className="flex min-h-screen w-full flex-col bg-muted/40">
       <header className="sticky top-0 z-30 flex h-14 items-center gap-4 border-b bg-background px-4 sm:static sm:h-auto sm:border-0 sm:bg-transparent sm:px-6">
@@ -90,7 +127,7 @@ export function DeshBord() {
               <DropdownMenuItem>Profile</DropdownMenuItem>
               <DropdownMenuItem>Settings</DropdownMenuItem>
               <DropdownMenuSeparator />
-              <DropdownMenuItem>Logout</DropdownMenuItem>
+              <DropdownMenuItem onClick={handleLogout}>Logout</DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
         </div>
@@ -401,7 +438,7 @@ export function DeshBord() {
                   <TableCell>
                     <DropdownMenu>
                       <DropdownMenuTrigger asChild>
-                        <Button variant />
+                        <Button variant={"default"} />
                       </DropdownMenuTrigger>
                     </DropdownMenu>
                   </TableCell>

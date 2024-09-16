@@ -17,9 +17,59 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
+import axios from "axios";
 import { Link } from "lucide-react";
+import { useState } from "react";
 
 export function Blog() {
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  // State to store form data
+  const [formData, setFormData] = useState({
+    title: "",
+    content: "",
+    author: "",
+    date: "",
+    category: "",
+  });
+  console.log("formData", formData);
+
+  // Handler to update state on input change
+  const handleInputChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { id, value } = e.target;
+    setFormData((prevState: any) => ({
+      ...prevState,
+      [id]: value, // Update the relevant field dynamically
+    }));
+  };
+
+  const handleCategoryChange = (value: string) => {
+    setFormData((prevState) => ({
+      ...prevState,
+      category: value,
+    }));
+  };
+
+  const handleSubmit = async (e: any) => {
+    e.preventDefault();
+    setLoading(true);
+
+    try {
+      const response = await axios.post(
+        "http://localhost:5454/api/blog/add-blog",
+        formData
+      );
+      console.log("Response:", response.data);
+    } catch (err: any) {
+      console.error("Error:", err);
+      setError(err.response?.data?.message || "An error occurred");
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <div className="flex min-h-screen w-full flex-col bg-muted/40">
       <header className="flex h-14 items-center justify-between border-b bg-background px-6 shadow-sm">
@@ -88,32 +138,50 @@ export function Blog() {
           </nav>
         </aside>
         <div className="flex-1 p-6">
-          <form className="grid gap-6">
+          <form onSubmit={handleSubmit} className="grid gap-6">
             <div className="grid gap-2">
               <Label htmlFor="title">Blog Title</Label>
-              <Input id="title" placeholder="Enter blog title" />
+              <Input
+                id="title"
+                value={formData.title}
+                onChange={handleInputChange}
+                placeholder="Enter blog title"
+              />
             </div>
             <div className="grid gap-2">
               <Label htmlFor="content">Blog Content</Label>
               <Textarea
                 id="content"
                 placeholder="Enter blog content"
+                value={formData.content}
+                onChange={handleInputChange}
                 className="min-h-[300px]"
               />
             </div>
             <div className="grid grid-cols-2 gap-6">
               <div className="grid gap-2">
                 <Label htmlFor="author">Author</Label>
-                <Input id="author" placeholder="Enter author name" />
+                <Input
+                  id="author"
+                  value={formData.author}
+                  onChange={handleInputChange}
+                  placeholder="Enter author name"
+                />
               </div>
               <div className="grid gap-2">
                 <Label htmlFor="publish-date">Publish Date</Label>
-                <Input id="publish-date" type="date" />
+                <Input
+                  id="date"
+                  value={formData.date}
+                  onChange={handleInputChange}
+                  // placeholder="Enter publish date"
+                  type="date"
+                />
               </div>
             </div>
             <div className="grid gap-2">
               <Label htmlFor="category">Category</Label>
-              <Select id="category">
+              <Select onValueChange={handleCategoryChange}>
                 <SelectTrigger className="w-full">
                   <SelectValue placeholder="Select category" />
                 </SelectTrigger>
@@ -125,11 +193,10 @@ export function Blog() {
                 </SelectContent>
               </Select>
             </div>
-            <div className="flex justify-end gap-2">
-              <Button variant="outline">Preview</Button>
-              <Button variant="outline">Save</Button>
-              <Button>Publish</Button>
+            <div className="flex justify-end gap-2 mb-3">
+              <Button type="submit">{loading ? "Loading.." : "Publish"}</Button>
             </div>
+            {error && <p style={{ color: "red" }}>{error}</p>}
           </form>
         </div>
       </div>

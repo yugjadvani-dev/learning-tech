@@ -40,7 +40,7 @@ export function Registration() {
 
     try {
       const response = await axios.post(
-        "http://localhost:5454/api/auth/signup",
+        "http://localhost:5454/api/auth/admin/signup",
         user
       );
       console.log("Response:", response.data);

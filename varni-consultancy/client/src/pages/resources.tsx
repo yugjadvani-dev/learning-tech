@@ -106,11 +106,16 @@ export function Resources() {
                 </div>
                 <form className="grid gap-4">
                   <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-                    <Input label="Name" id="name" required />
-                    <Input label="Email" id="email" type="email" required />
+                    <Input placeholder="Name" id="name" required />
+                    <Input
+                      placeholder="Email"
+                      id="email"
+                      type="email"
+                      required
+                    />
                   </div>
-                  <Input label="Phone" id="phone" />
-                  <Textarea label="Message" id="message" required />
+                  <Input placeholder="Phone" id="phone" />
+                  <Textarea placeholder="Message" id="message" required />
                   <Button type="submit" className="w-full sm:w-auto">
                     Submit
                   </Button>

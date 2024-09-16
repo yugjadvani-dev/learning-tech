@@ -246,8 +246,21 @@ export function Home() {
             </Link>
             <Link
               to="/"
-              className="group grid h-auto w-full items-center justify-start gap-1 rounded-md bg-background p-4 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus"
-            />
+              className="group grid h-auto w-full items-center justify-start gap-1 rounded-md bg-background p-4 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50"
+            >
+              <div className="text-sm font-medium leading-none group-hover:underline">
+                Varni Consultancy Announces the Launch of its Sustainability
+                Practice
+              </div>
+              <div className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                Varni Consultancy, a leading global management consulting firm,
+                today announced the launch of its dedicated Sustainability
+                Practice, empowering organizations to navigate the complex
+                landscape of environmental, social, and governance (ESG)
+                challenges.
+              </div>
+              <div className="text-xs text-muted-foreground">June 1, 2023</div>
+            </Link>
           </div>
         </div>
       </section>

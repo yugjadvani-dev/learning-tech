@@ -1,33 +1,36 @@
-import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import axios from "axios";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 export function Blog() {
+  const [blogs, setBlogs] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+  console.log("blogs", blogs);
+
+  useEffect(() => {
+    const fetchBlogs = async () => {
+      try {
+        const response = await axios.get(
+          "http://localhost:5454/api/blog/blogs"
+        ); // Adjust the URL if needed
+        setBlogs(response.data.blogs);
+      } catch (err: any) {
+        setError(err.message);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchBlogs();
+  }, []);
+
+  if (loading) return <p>Loading...</p>;
+  if (error) return <p>Error: {error}</p>;
+
   return (
     <div className="flex flex-col min-h-[100dvh]">
-      <header className="bg-primary text-primary-foreground py-6 px-4 md:px-6">
-        <div className="container max-w-5xl mx-auto flex items-center justify-between">
-          <Link to="/" className="flex items-center gap-2">
-            <MountainIcon className="h-6 w-6" />
-            <span className="text-lg font-semibold">Varni Consultancy</span>
-          </Link>
-          <nav className="hidden md:flex items-center gap-4">
-            <Link to="/" className="hover:underline">
-              Home
-            </Link>
-            <Link to="/" className="hover:underline">
-              Services
-            </Link>
-            <Link to="/" className="hover:underline">
-              About
-            </Link>
-            <Link to="/" className="hover:underline">
-              Contact
-            </Link>
-          </nav>
-          <Button variant="outline">Get a Quote</Button>
-        </div>
-      </header>
       <main className="flex-1">
         <section className="bg-muted py-12 md:py-16 lg:py-20">
           <div className="container max-w-5xl mx-auto px-4 md:px-6">
@@ -91,6 +94,31 @@ export function Blog() {
                       </div>
                     </Link>
                   ))}
+
+                  {/* {blogs?.map((blog, i) => (
+                    <Link
+                      key={i}
+                      to="/"
+                      className="group block rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow"
+                    >
+                      <img
+                        src="/placeholder.svg"
+                        width={600}
+                        height={400}
+                        alt={`Blog Post ${i + 1}`}
+                        className="w-full h-48 object-cover"
+                        style={{ aspectRatio: "600/400", objectFit: "cover" }}
+                      />
+                      <div className="p-4 bg-background">
+                        <h3 className="text-lg font-semibold group-hover:underline">
+                          {blog?.title}
+                        </h3>
+                        <p className="text-muted-foreground line-clamp-2">
+                          {blog?.content}
+                        </p>
+                      </div>
+                    </Link>
+                  ))} */}
                 </div>
               </div>
               <div className="space-y-6">
@@ -163,41 +191,6 @@ export function Blog() {
           </div>
         </section>
       </main>
-      <footer className="bg-muted text-muted-foreground py-6 px-4 md:px-6">
-        <div className="container max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-sm">&copy; 2024 Varni Consultancy</p>
-          <nav className="flex items-center gap-4">
-            <Link to="/" className="hover:underline">
-              Privacy
-            </Link>
-            <Link to="/" className="hover:underline">
-              Terms
-            </Link>
-            <Link to="/" className="hover:underline">
-              Contact
-            </Link>
-          </nav>
-        </div>
-      </footer>
     </div>
-  );
-}
-
-function MountainIcon(props: any) {
-  return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <path d="m8 3 4 8 5-5 5 15H2L8 3z" />
-    </svg>
   );
 }
