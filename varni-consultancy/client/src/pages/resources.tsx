@@ -7,38 +7,6 @@ import { Link } from "react-router-dom";
 export function Resources() {
   return (
     <div className="flex flex-col min-h-[100dvh]">
-      <header className="px-4 lg:px-6 h-14 flex items-center bg-primary text-primary-foreground">
-        <Link to="/" className="flex items-center justify-center">
-          <MountainIcon className="h-6 w-6" />
-          <span className="sr-only">Varni Consultancy</span>
-        </Link>
-        <nav className="ml-auto flex gap-4 sm:gap-6">
-          <Link
-            to="/"
-            className="text-sm font-medium hover:underline underline-offset-4"
-          >
-            Resources
-          </Link>
-          <Link
-            to="/"
-            className="text-sm font-medium hover:underline underline-offset-4"
-          >
-            Contact
-          </Link>
-          <Link
-            to="/"
-            className="text-sm font-medium hover:underline underline-offset-4"
-          >
-            About
-          </Link>
-          <Link
-            to="/"
-            className="text-sm font-medium hover:underline underline-offset-4"
-          >
-            Services
-          </Link>
-        </nav>
-      </header>
       <main className="flex-1">
         <section className="w-full py-12 md:py-24 lg:py-32">
           <div className="container px-4 md:px-6">
@@ -150,7 +118,7 @@ export function Resources() {
                   </div>
                   <div className="aspect-video overflow-hidden rounded-lg">
                     <img
-                      src="/placeholder.svg"
+                      src="/resources.jpg"
                       alt="Map"
                       width="600"
                       height="400"
@@ -267,19 +235,6 @@ export function Resources() {
           </div>
         </section>
       </main>
-      <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t">
-        <p className="text-xs text-muted-foreground">
-          &copy; 2024 Varni Consultancy. All rights reserved.
-        </p>
-        <nav className="sm:ml-auto flex gap-4 sm:gap-6">
-          <Link to="/" className="text-xs hover:underline underline-offset-4">
-            Terms of Service
-          </Link>
-          <Link to="/" className="text-xs hover:underline underline-offset-4">
-            Privacy
-          </Link>
-        </nav>
-      </footer>
     </div>
   );
 }

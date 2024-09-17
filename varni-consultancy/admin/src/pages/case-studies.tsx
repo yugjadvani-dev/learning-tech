@@ -1,3 +1,5 @@
+import Header from "@/components/Header";
+import Sidebar from "@/components/Sidebar";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -41,7 +43,7 @@ export function CaseStudies() {
     },
   ]);
   const [showModal, setShowModal] = useState(false);
-  const [editingCaseStudy, setEditingCaseStudy] = useState(null);
+  const [editingCaseStudy, setEditingCaseStudy] = useState<any>(null);
   const handleAddCaseStudy = () => {
     setEditingCaseStudy(null);
     setShowModal(true);
@@ -69,11 +71,9 @@ export function CaseStudies() {
   };
   return (
     <div className="w-full h-full flex flex-col">
-      <header className="bg-background border-b px-6 py-4 flex items-center justify-between">
-        <h1 className="text-2xl font-bold">Case Studies</h1>
-        <Button onClick={handleAddCaseStudy}>Add Case Study</Button>
-      </header>
-      <main className="flex-1 overflow-auto p-6">
+      <Header />
+      <main className="overflow-auto flex flex-1 gap-4 p-4 md:p-6">
+        <Sidebar />
         <Table>
           <TableHeader>
             <TableRow>
@@ -91,7 +91,9 @@ export function CaseStudies() {
                 <TableCell>
                   <Badge
                     variant={
-                      caseStudy.status === "Published" ? "success" : "warning"
+                      caseStudy.status === "Published"
+                        ? "secondary"
+                        : "destructive"
                     }
                   >
                     {caseStudy.status}
@@ -129,7 +131,7 @@ export function CaseStudies() {
             </div>
             <div>
               <form
-                onSubmit={(e) => {
+                onSubmit={(e: any) => {
                   e.preventDefault();
                   const formData = new FormData(e.target);
                   const caseStudy = {

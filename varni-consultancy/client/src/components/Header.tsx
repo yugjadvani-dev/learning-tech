@@ -47,17 +47,20 @@ const Header = () => {
             <span className="text-lg font-semibold">Varni Consultancy</span>
           </Link>
           <nav className="hidden md:flex items-center gap-4">
-            <Link to="/" className="hover:underline">
-              Home
+            <Link to="/about-us" className="hover:underline">
+              AboutUs
             </Link>
-            <Link to="/" className="hover:underline">
-              Services
+            <Link to="/blog" className="hover:underline">
+              Blog
             </Link>
-            <Link to="/" className="hover:underline">
-              About
+            <Link to="/case-studies" className="hover:underline">
+              CaseStudies
             </Link>
-            <Link to="/" className="hover:underline">
-              Contact
+            <Link to="/resources" className="hover:underline">
+              Resources
+            </Link>
+            <Link to="/contact-us" className="hover:underline">
+              ContactUs
             </Link>
           </nav>
           <div className="flex items-center gap-4">

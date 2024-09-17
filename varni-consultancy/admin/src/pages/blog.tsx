@@ -1,12 +1,6 @@
+import Header from "@/components/Header";
+import Sidebar from "@/components/Sidebar";
 import { Button } from "@/components/ui/button";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import {
@@ -18,7 +12,6 @@ import {
 } from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
 import axios from "axios";
-import { Link } from "lucide-react";
 import { useState } from "react";
 
 export function Blog() {
@@ -72,71 +65,9 @@ export function Blog() {
 
   return (
     <div className="flex min-h-screen w-full flex-col bg-muted/40">
-      <header className="flex h-14 items-center justify-between border-b bg-background px-6 shadow-sm">
-        <Link to="/" className="flex items-center gap-2">
-          <Package2Icon className="h-6 w-6" />
-          <span className="font-semibold">Varni Consultancy</span>
-        </Link>
-        <DropdownMenu>
-          <DropdownMenuTrigger asChild>
-            <Button
-              variant="ghost"
-              size="icon"
-              className="overflow-hidden rounded-full"
-            >
-              <img
-                src="/placeholder.svg"
-                width={36}
-                height={36}
-                alt="Avatar"
-                className="overflow-hidden rounded-full"
-                style={{ aspectRatio: "36/36", objectFit: "cover" }}
-              />
-            </Button>
-          </DropdownMenuTrigger>
-          <DropdownMenuContent align="end">
-            <DropdownMenuLabel>My Account</DropdownMenuLabel>
-            <DropdownMenuSeparator />
-            <DropdownMenuItem>Settings</DropdownMenuItem>
-            <DropdownMenuItem>Support</DropdownMenuItem>
-            <DropdownMenuSeparator />
-            <DropdownMenuItem>Logout</DropdownMenuItem>
-          </DropdownMenuContent>
-        </DropdownMenu>
-      </header>
-      <div className="flex flex-1">
-        <aside className="hidden border-r bg-muted/40 lg:block">
-          <nav className="flex h-full flex-col gap-2 p-4">
-            <Link
-              href="#"
-              className="flex items-center gap-2 rounded-md px-3 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground"
-            >
-              <HomeIcon className="h-4 w-4" />
-              Dashboard
-            </Link>
-            <Link
-              href="#"
-              className="flex items-center gap-2 rounded-md bg-accent px-3 py-2 text-sm font-medium text-accent-foreground transition-colors hover:bg-accent/90"
-            >
-              <FileTextIcon className="h-4 w-4" />
-              Blog
-            </Link>
-            <Link
-              href="#"
-              className="flex items-center gap-2 rounded-md px-3 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground"
-            >
-              <UsersIcon className="h-4 w-4" />
-              Customers
-            </Link>
-            <Link
-              href="#"
-              className="flex items-center gap-2 rounded-md px-3 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground"
-            >
-              <SettingsIcon className="h-4 w-4" />
-              Settings
-            </Link>
-          </nav>
-        </aside>
+      <Header />
+      <div className="flex flex-1 gap-4 p-4 md:p-6">
+        <Sidebar />
         <div className="flex-1 p-6">
           <form onSubmit={handleSubmit} className="grid gap-6">
             <div className="grid gap-2">

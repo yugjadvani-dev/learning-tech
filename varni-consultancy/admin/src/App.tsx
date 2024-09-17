@@ -1,7 +1,7 @@
 import { Route, Routes, useLocation } from "react-router-dom";
 import { Blog } from "./pages/blog";
 import { CaseStudies } from "./pages/case-studies";
-import { DeshBord } from "./pages/desh-bord";
+import { DeshBord } from "./pages/dash-board";
 import { Login } from "./pages/login";
 import { Registration } from "./pages/registration";
 import { Resources } from "./pages/resources";

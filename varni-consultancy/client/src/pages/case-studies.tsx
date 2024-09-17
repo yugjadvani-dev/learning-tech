@@ -19,7 +19,7 @@ export function CaseStudies() {
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
               <Card>
                 <img
-                  src="/placeholder.svg"
+                  src="/CaseStudies-1.jpg"
                   width="550"
                   height="310"
                   alt="Case Study"
@@ -45,7 +45,7 @@ export function CaseStudies() {
               </Card>
               <Card>
                 <img
-                  src="/placeholder.svg"
+                  src="/CaseStudies-2.jpg"
                   width="550"
                   height="310"
                   alt="Case Study"
@@ -71,7 +71,7 @@ export function CaseStudies() {
               </Card>
               <Card>
                 <img
-                  src="/placeholder.svg"
+                  src="/CaseStudies-3.jpg"
                   width="550"
                   height="310"
                   alt="Case Study"
@@ -123,7 +123,7 @@ export function CaseStudies() {
                     </p>
                     <div className="flex items-center gap-2">
                       <img
-                        src="/placeholder.svg"
+                        src="/stories-1.jpg"
                         width="40"
                         height="40"
                         alt="Client Logo"
@@ -150,7 +150,7 @@ export function CaseStudies() {
                     </p>
                     <div className="flex items-center gap-2">
                       <img
-                        src="/placeholder.svg"
+                        src="/stories-2.jpg"
                         width="40"
                         height="40"
                         alt="Client Logo"
@@ -177,7 +177,7 @@ export function CaseStudies() {
                     </p>
                     <div className="flex items-center gap-2">
                       <img
-                        src="/placeholder.svg"
+                        src="/stories-3.jpg"
                         width="40"
                         height="40"
                         alt="Client Logo"

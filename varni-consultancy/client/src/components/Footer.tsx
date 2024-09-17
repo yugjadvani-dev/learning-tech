@@ -7,14 +7,14 @@ const Footer = () => {
         <div className="container mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-sm">&copy; 2024 Varni Consultancy</p>
           <nav className="flex items-center gap-4">
-            <Link to="/" className="hover:underline">
-              Privacy
+            <Link to="/privacy-policy" className="hover:underline">
+              PrivacyPolicy
             </Link>
-            <Link to="/" className="hover:underline">
-              Terms
+            <Link to="/terms-of-services" className="hover:underline">
+              TermsOfServices
             </Link>
-            <Link to="/" className="hover:underline">
-              Contact
+            <Link to="/contact-us" className="hover:underline">
+              ContactUs
             </Link>
           </nav>
         </div>

@@ -51,7 +51,7 @@ export function Blog() {
                 </Link>
               </div>
               <img
-                src="/placeholder.svg"
+                src="/Insights.jpg"
                 width={600}
                 height={400}
                 alt="Hero Image"
@@ -105,7 +105,7 @@ export function Blog() {
                         className="group block rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow"
                       >
                         <img
-                          src="/placeholder.svg"
+                          src="/Latest.jpg"
                           width={600}
                           height={400}
                           alt={`Blog Post ${i + 1}`}
@@ -172,7 +172,7 @@ export function Blog() {
                   className="group block rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow"
                 >
                   <img
-                    src="/placeholder.svg"
+                    src="/blog.jpg"
                     width={600}
                     height={400}
                     alt={`Blog Post ${i + 1}`}

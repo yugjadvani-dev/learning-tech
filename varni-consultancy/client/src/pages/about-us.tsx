@@ -1,35 +1,6 @@
-import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
-
 export function AboutUs() {
   return (
     <div className="flex flex-col min-h-screen">
-      <header className="bg-primary text-primary-foreground py-4 px-6">
-        <div className="container mx-auto flex items-center justify-between">
-          <Link
-            to="/"
-            className="flex items-center gap-2 font-semibold text-lg"
-          >
-            <MountainIcon className="h-6 w-6" />
-            <span>Varni Consultancy</span>
-          </Link>
-          <nav className="hidden md:flex items-center gap-4">
-            <Link to="/" className="hover:underline">
-              About
-            </Link>
-            <Link to="/" className="hover:underline">
-              Services
-            </Link>
-            <Link to="/" className="hover:underline">
-              Contact
-            </Link>
-          </nav>
-          <Button variant="outline" className="md:hidden">
-            <MenuIcon className="h-5 w-5" />
-            <span className="sr-only">Toggle Menu</span>
-          </Button>
-        </div>
-      </header>
       <main className="flex-1">
         <section className="py-12 md:py-20">
           <div className="container mx-auto px-4 md:px-6">
@@ -340,21 +311,6 @@ export function AboutUs() {
           </div>
         </section>
       </main>
-      <footer className="bg-primary text-primary-foreground py-4 px-6">
-        <div className="container mx-auto flex items-center justify-between">
-          <p className="text-sm">
-            &copy; 2024 Varni Consultancy. All rights reserved.
-          </p>
-          <nav className="flex items-center gap-4">
-            <Link to="/" className="hover:underline">
-              Privacy
-            </Link>
-            <Link to="/" className="hover:underline">
-              Terms of Service
-            </Link>
-          </nav>
-        </div>
-      </footer>
     </div>
   );
 }

@@ -59,7 +59,7 @@ export function Registration() {
       <Card className="w-full max-w-md">
         <div className="flex justify-center py-6">
           <img
-            src="/placeholder.svg"
+            src="/registration.jpg"
             alt="Varni Consultancy"
             width={120}
             height={40}
