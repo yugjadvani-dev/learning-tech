@@ -18,7 +18,7 @@ export function NewScooter() {
   const scooters = [
     {
       id: 1,
-      name: "Razor E300 Electric Scooter",
+      name: "ola s1 pro",
       description:
         "High-performance electric scooter with a powerful motor and long-lasting battery.",
       price: 299.99,
@@ -28,21 +28,21 @@ export function NewScooter() {
     },
     {
       id: 2,
-      name: "Segway Ninebot ES2 Electric Kick Scooter",
+      name: "TVS iQube",
       description:
         "Lightweight and portable electric scooter with a sleek design and smart features.",
       price: 499.99,
-      image: "/placeholder.svg?height=300&width=300",
+      image: "/newscooter-2.webp?height=300&width=300",
       brand: "Segway",
       type: "Electric",
     },
     {
       id: 3,
-      name: "Mongoose Expo Scooter",
+      name: "Activa 6G Scooter",
       description:
         "Durable and versatile kick scooter with large wheels for a smooth ride.",
       price: 79.99,
-      image: "/placeholder.svg?height=300&width=300",
+      image: "/newscooter-3.jpeg?height=300&width=300",
       brand: "Mongoose",
       type: "Kick",
     },
@@ -52,27 +52,27 @@ export function NewScooter() {
       description:
         "Compact and lightweight kick scooter with a foldable design for easy storage.",
       price: 99.99,
-      image: "/placeholder.svg?height=300&width=300",
+      image: "/newscooter-4.webp?height=300&width=300",
       brand: "Micro",
       type: "Kick",
     },
     {
       id: 5,
-      name: "Glion Dolly Foldable Lightweight Adult Electric Scooter",
+      name: "Bajaj Auto High Speed Electric Scooter",
       description:
         "Portable and durable electric scooter with a unique dolly feature for easy transport.",
       price: 599.99,
-      image: "/placeholder.svg?height=300&width=300",
+      image: "/newscooter-5.jpeg?height=300&width=300",
       brand: "Glion",
       type: "Electric",
     },
     {
       id: 6,
-      name: "Gotrax G4 Electric Scooter",
+      name: "Green Invicta Electric Scooter",
       description:
         "High-speed electric scooter with a long-range battery and advanced safety features.",
       price: 449.99,
-      image: "/placeholder.svg?height=300&width=300",
+      image: "/newscooter-6.jpg?height=300&width=300",
       brand: "Gotrax",
       type: "Electric",
     },

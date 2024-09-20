@@ -164,7 +164,7 @@ export function Services() {
                 <CardContent>
                   <div className="flex items-center gap-4 mb-4">
                     <img
-                      src="/placeholder.svg"
+                      src="/services-1.jpeg"
                       width={48}
                       height={48}
                       alt="Customer Avatar"
@@ -186,7 +186,7 @@ export function Services() {
                 <CardContent>
                   <div className="flex items-center gap-4 mb-4">
                     <img
-                      src="/placeholder.svg"
+                      src="/services-2.jpeg"
                       width={48}
                       height={48}
                       alt="Customer Avatar"
@@ -208,7 +208,7 @@ export function Services() {
                 <CardContent>
                   <div className="flex items-center gap-4 mb-4">
                     <img
-                      src="/placeholder.svg"
+                      src="/services-3.jpeg"
                       width={48}
                       height={48}
                       alt="Customer Avatar"

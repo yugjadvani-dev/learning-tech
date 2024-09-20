@@ -26,18 +26,18 @@ export function NewBike() {
     },
     {
       id: 2,
-      image: "/placeholder.svg",
-      name: "Velocity Mountain Bike",
+      image: "/newbike-2.jpg",
+      name: "Kawasaki Ninja H2R",
       description:
-        "A rugged and versatile mountain bike for off-road adventures.",
+      "A versatile hybrid bike that combines the best of road bikes.",
       price: 1299.99,
       type: "Mountain",
       brand: "Velocity",
     },
     {
       id: 3,
-      image: "/placeholder.svg",
-      name: "Cruiser Deluxe",
+      image: "/newbike-3.jpg",
+      name: "Suzuki Hayabusa ",
       description:
         "A comfortable and stylish cruiser bike for leisurely rides.",
       price: 599.99,
@@ -46,18 +46,18 @@ export function NewBike() {
     },
     {
       id: 4,
-      image: "/placeholder.svg",
-      name: "Hybrid Elite",
+      image: "/newbike-4.jpg",
+      name: "BMW S 1000 RR",
       description:
-        "A versatile hybrid bike that combines the best of road and mountain bikes.",
+        "A versatile hybrid bike that combines the best of road bikes.",
       price: 899.99,
       type: "Hybrid",
       brand: "Velocity",
     },
     {
       id: 5,
-      image: "/placeholder.svg",
-      name: "Commuter Pro",
+      image: "/newbike-5.jpg",
+      name: "Ducati Streetfighter V4",
       description: "A lightweight and efficient commuter bike for city riding.",
       price: 799.99,
       type: "Commuter",
@@ -65,8 +65,8 @@ export function NewBike() {
     },
     {
       id: 6,
-      image: "/placeholder.svg",
-      name: "Trail Blazer",
+      image: "/newbike-6.webp",
+      name: "Aprilia RSV4 1100 Factory",
       description:
         "A rugged and capable mountain bike for tackling tough terrain.",
       price: 1499.99,
