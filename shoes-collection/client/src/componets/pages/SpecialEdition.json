@@ -1,0 +1,59 @@
+[
+    {
+        "id" : 1,
+        "name":"Nike Special Edition",
+        "img" :"/src/assets/Special Edition/1.png",
+        "meta":"Nike Lunar Trainer Limited Caldra Edition",
+        "price": 95500
+    },
+    {
+        "id" : 2,
+        "name":"Nike Special Edition",
+        "img" :"/src/assets/Special Edition/2.png",
+        "meta":"Nike Quest 2 SE (BRight crmison)",
+        "price": 85000
+    },
+    {
+        "id" : 3,
+        "name":"Nike Special Edition",
+        "img" :"/src/assets/Special Edition/3.png",
+        "meta":"Nike Lebron SOliderr 11 ",
+        "price": 82000
+    },
+    {
+        "id" : 4,
+        "name":"Nike Special Edition",
+        "img" :"/src/assets/Special Edition/4.png",
+        "meta":"Nike Alabama Crimson Tide",
+        "price": 42500
+    },
+    {
+        "id" : 5,
+        "name":"Nike Special Edition",
+        "img" :"/src/assets/Special Edition/5.png",
+        "meta":"Nike 1 Anodized Silver",
+        "price": 60000
+    },
+    {
+        "id" : 6,   
+        "name":"Nike Special Edition",
+        "img" :"/src/assets/Special Edition/6.png",
+        "meta":"Nike Gold Glory ",
+        "price": 35500
+    },
+    {
+        "id" : 7,
+        "name":"Nike Special Edition",
+        "img" :"/src/assets/Special Edition/7.png",
+        "meta":"Nike Zoom Shift Zapatos de baloncest",
+        "price": 23000
+    },
+    {
+        "id" : 8,
+        "name":"Nike Special Edition",
+        "img" :"/src/assets/Special Edition/8.png",
+        "meta":"Nike Air Monarch iv",
+        "price": 51000
+    }
+    
+]

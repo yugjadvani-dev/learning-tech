@@ -1,0 +1,59 @@
+[
+    {
+        "id" : 1,
+        "name":"Nike Kid Shoes",
+        "img" :"/src/assets/KID/k1.png",
+        "meta":"Nike Air Force 270",
+        "price": 1500
+    },
+    {
+        "id" : 2,
+        "name":"Nike Air Jorden",
+        "img" :"/src/assets/KID/k2.png",
+        "meta":"Nike Air Max 270 Neon",
+        "price": 3000
+    },
+    {
+        "id" : 3,
+        "name":"Nike Air Jorden ",
+        "img" :"/src/assets/KID/k3.png",
+        "meta":"Nike Air MAx 90 Thunder Blue ",
+        "price": 2000
+    },
+    {
+        "id" : 4,
+        "name":"Nike Kid Shoes",
+        "img" :"/src/assets/KID/k4.png",
+        "meta":"Nike Revolution Baby Toddler shoes",
+        "price": 2500
+    },
+    {
+        "id" : 5,
+        "name":"Nike Kid Shoes",
+        "img" :"/src/assets/KID/k5.png",
+        "meta":"Nike Court Legacy Toddler shoes",
+        "price": 4000
+    },
+    {
+        "id" : 6,
+        "name":"Nike DUNK'S",
+        "img" :"/src/assets/KID/k6.png",
+        "meta":"Nike Dunk Panda White Black ",
+        "price": 5500
+    },
+    {
+        "id" : 7,
+        "name":"Nike Snkers",
+        "img" :"/src/assets/KID/k7.png",
+        "meta":"Nike Air Force 1 Low Snkers",
+        "price": 7000
+    },
+    {
+        "id" : 8,
+        "name":"Nike Snkers",
+        "img" :"/src/assets/KID/k8.png",
+        "meta":"Nike Md Valiant PSVs",
+        "price": 5000
+    }
+    
+]

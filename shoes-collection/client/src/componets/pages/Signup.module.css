@@ -1,0 +1,64 @@
+.image{
+    position: relative;
+    top: 4rem;
+    height:500px;
+    width: 35%;
+    left: 4rem;
+    aspect-ratio: 3/2;
+    box-shadow: rgba(0, 0, 0, 0.5) 1px 5px 10px;
+}
+.signup{
+    display: flex;
+    padding-left: 11rem;
+   
+
+    
+    
+}
+.rege{
+    position: relative;
+    top: 4rem;
+   background-color: rgba(0, 0, 0, 0.849);
+    padding-left: 1rem;
+    left: 4rem;
+    width: 45%;
+    color: white;
+    box-shadow: rgba(0, 0, 0, 0.5) 1px 5px 10px;
+    height: 100%;
+
+}
+.rege h1{
+    margin-bottom: 2rem;
+}
+.input{
+    color: white;
+    width: 90%;
+    height: 80%;
+    font-size: 17px;
+}
+input{
+    color: #000 !important;
+}
+.inn{
+    
+    width: 60%;
+    height: 5rem;
+    display: flex;
+    flex-direction: column;
+}
+.inn input{
+    height: 2.5rem;
+    padding-left: 1rem;
+    font-size: 17px;
+}
+.inn label{
+    margin-bottom: 0.4rem;
+}   
+.button{
+    height: 3rem;
+    width: 10rem;
+    font-size: 20px;
+    border-radius: 10rem;
+    margin-top: 2rem ;
+    cursor: pointer;
+}

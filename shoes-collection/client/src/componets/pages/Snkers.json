@@ -1,0 +1,59 @@
+[
+    {
+        "id" : 1,
+        "name":"Nike Snkers",
+        "img" :"/src/assets/SNKERS/s1.png",
+        "meta":"Nike Shoes by Prahlad lnala on Dribbble",
+        "price": 56500
+    },
+    {
+        "id" : 2,
+        "name":"Nike Snkers",
+        "img" :"/src/assets/SNKERS/s2.png",
+        "meta":"Nike Dual Fusion ST2",
+        "price": 35000
+    },
+    {
+        "id" : 3,
+        "name":"Nike Snkers",
+        "img" :"/src/assets/SNKERS/s3.png",
+        "meta":"Nike Air Jorden 12 Retro White ",
+        "price": 2000
+    },
+    {
+        "id" : 4,
+        "name":"Nike Snkers",
+        "img" :"/src/assets/SNKERS/s4.png",
+        "meta":"Nike Air Forced1xCR7 Football Thmed",
+        "price": 22500
+    },
+    {
+        "id" : 5,
+        "name":"Nike Snkers",
+        "img" :"/src/assets/SNKERS/s5.png",
+        "meta":"Nike LeBorn Witness 5 Fierce Purple",
+        "price": 10000
+    },
+    {
+        "id" : 6,
+        "name":"Nike Snkers",
+        "img" :"/src/assets/SNKERS/s6.png",
+        "meta":"Nike Air Max pluse (Hyper Blue) ",
+        "price": 34500
+    },
+    {
+        "id" : 7,
+        "name":"Nike Snkers",
+        "img" :"/src/assets/SNKERS/s7.png",
+        "meta":"Nike Dunk Next Nature Bicoastal",
+        "price": 11000
+    },
+    {
+        "id" : 8,
+        "name":"Nike Snkers",
+        "img" :"/src/assets/SNKERS/s8.png",
+        "meta":"Nike Hyperdunk 2017 University Red",
+        "price": 51000
+    }
+    
+]
