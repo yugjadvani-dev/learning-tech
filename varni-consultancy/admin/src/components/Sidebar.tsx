@@ -15,25 +15,25 @@ const Sidebar = () => {
                 Dashboard
               </Link>
               <Link
-                to="/"
+                to="/resources"
                 className="flex items-center gap-3 rounded-lg bg-muted px-3 py-2 text-primary transition-all hover:text-primary"
               >
                 <PackageIcon className="h-4 w-4" />
                 Resources
               </Link>
               <Link
-                to="/"
+                to="/case-studies"
                 className="flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-all hover:text-primary"
               >
                 <UsersIcon className="h-4 w-4" />
-                Employees
+                case-studies
               </Link>
               <Link
-                to="/"
+                to="/blog"
                 className="flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-all hover:text-primary"
               >
                 <LineChartIcon className="h-4 w-4" />
-                Analytics
+                Blog
               </Link>
             </nav>
           </div>
