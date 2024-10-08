@@ -1,0 +1,59 @@
+[
+    {
+        "id" : 1,
+        "name":"Nike Jorden",
+        "img" :"/src/assets/MEN/m5.png",
+        "meta":"Air Jorden 1 Retro High og Bloodline",
+        "price": 30000
+    },
+    {
+        "id" : 2,
+        "name":"Nike Sport Shoes",
+        "img" :"/src/assets/MEN/m2.png",
+        "meta":"Sport Shoes -Kouwi",
+        "price": 60000
+    },
+    {
+        "id" : 3,
+        "name":"Nike Air Force",
+        "img" :"/src/assets/MEN/m6.png",
+        "meta":"Air Force basketball(Sport Shoes)",
+        "price": 8000
+    },
+    {
+        "id" : 4,
+        "name":"Nike Sport Shoes",
+        "img" :"/src/assets/MEN/m8.png",
+        "meta":"Nike Zoom Pegasus Turbo Shield",
+        "price": 6500
+    },
+    {
+        "id" : 5,
+        "name":"Nike Jordan",
+        "img" :"/src/assets/MEN/m1.png",
+        "meta":"Jordan 1 retro High Track red",
+        "price": 42000
+    },
+    {
+        "id" : 6,
+        "name":"Nike Jorden",
+        "img" :"/src/assets/MEN/m4.png",
+        "meta":"Jorden 4 Retro Fiba(2019)",
+        "price": 45500
+    },
+    {
+        "id" : 7,
+        "name":"Nike Air jorden",
+        "img" :"/src/assets/MEN/m7.png",
+        "meta":"OG reverse shattred background ",
+        "price": 23000
+    },
+    {
+        "id" : 8,
+        "name":"Nike Running Shoes",
+        "img" :"/src/assets/MEN/m3.png",
+        "meta":"Nike Boy Star Runner JDI",
+        "price": 5000
+    }
+    
+]

@@ -1,0 +1,133 @@
+
+.cmain{
+    height: 80vh;
+    display: flex;
+    padding-top: 5rem;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+
+.cmain .form{
+    width: 30%;
+    height: 95%;
+    position: relative;
+    padding-left: 2rem;
+    background-color:rgba(79, 205, 240, 0.425);
+    padding-top: 1rem;
+    right: 4rem;
+    box-shadow: -5px 3px 5px 1px rgba(0, 0, 0, 0.301);
+}
+
+.cmain .in{
+    box-shadow: 5px 3px 5px 1px rgba(0, 0, 0, 0.29);
+    width: 50%;
+    position: relative;
+    right: 4rem;
+    height: 95%;
+
+}
+
+.cmain .h22{
+    position: relative;
+    bottom: 3.5rem;
+    font-size: 25px;
+    width: 13rem;
+    height: 3rem;
+    font-weight: 700;
+    left: 42%;
+}
+
+.cmain span{
+    position: relative;
+    font-size: 26px;
+}
+
+.cmain .p{
+    position: relative;
+    font-size: 18px;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+.cmain .left_section{
+    width: 60%;
+    height: 60%;
+}
+
+.cmain .left_section i{
+    font-size: 20px;
+    margin-right: 1rem;
+    border-radius: 50%;
+    padding: 10px;
+    border: 1px solid #252525;
+}
+
+.cmain .left_section p{
+    position: relative;
+    line-height: 22px;
+    left: 3.5rem;
+    bottom: 1.8rem;
+}
+
+.cmain .in span{
+    position: relative;
+    margin-left: 2rem;
+    top: 1rem;
+}
+
+.cmain .right_section{
+    width: 80%;
+    margin-top: 2rem;
+    margin-left: 2rem;
+    font-weight: 600;
+    height: 80%;
+}
+
+.cmain .right_section p{
+    margin-bottom: .5rem;
+}
+
+.cmain .right_section input{
+    height: 2rem;
+    width: 15rem;
+    padding-left: 1rem;
+    color: #252525;
+    border: 1px solid #252525;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    box-shadow: rgba(0, 0, 0, 0.082) 0px 2px 8px;
+}
+
+.cmain .right_section .in1{
+    position: relative;
+    justify-content: space-between;
+    display: flex;
+    padding-right: 1rem;
+    margin-bottom: 2rem;
+}
+
+.cmain .right_section .in2{
+    margin-bottom: 2rem;
+}
+
+.cmain .right_section .in3 textarea{
+    width: 60%;
+    height: 4rem;
+}
+
+.cmain button{
+    margin-top: 2rem;
+    height: 2rem;
+    width: 8rem;
+    font-size: 15px;
+    cursor: pointer;
+    
+    border: 1px solid black;
+    border-radius: 3px;
+}
+
+.cmain button:hover{
+    background-color:rgba(79, 205, 240, 0.886);
+}
+

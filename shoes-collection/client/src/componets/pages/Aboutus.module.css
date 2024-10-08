@@ -1,0 +1,148 @@
+.about_sec {
+    
+    color: #000;
+    background-color: rgba(202, 120, 232, 0.447);
+    position: relative;
+    height: 1800px;
+    width: 95%;
+    top: 3rem;
+    left: 2rem;
+}
+
+.head {
+    position: relative;
+    justify-content: center;
+    top: 2.5rem;
+    font-size: 4rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 700;
+    width: 20rem;
+    left: 35rem;
+    right: 50rem;
+
+}
+
+.t1 {
+    position: relative;
+    justify-content: left;
+    left: 1.5rem;
+    font-size: 1.90 rem;
+    width: 40%;
+    font-family: Arial, Helvetica, sans-serif;
+    /* border: 1px; */
+    top: 7rem;
+    
+    margin: 20px;
+}
+
+.p1 {
+    position: relative;
+    justify-content: left;
+    left: 1.3rem;
+    font-size: 1.2rem;
+    width: 45%;
+    top: 7rem;
+    margin: 20px;
+    
+}
+
+.i1 {
+    position: relative;
+    left: 45rem;
+    width: 50%;
+    height: 30rem;
+    bottom: 17rem;
+    aspect-ratio: 3/2;
+    object-fit: contain;
+   
+
+}
+
+.t2 {
+    position: relative;
+    top: 15rem;
+    right: 9.5rem;
+    float: right;
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.p2 {
+    position: relative;
+    bottom: 12rem;
+
+    float: right;
+
+    width: 50%;
+    font-size: 1.2rem;
+}
+
+.i2 {
+    position: relative;
+    float: left;
+
+    width: 45%;
+    aspect-ratio: 3/2;
+    height: 20rem;
+    object-fit: contain;
+    bottom: 17rem;
+
+}
+
+.t3 {
+    position: relative;
+    right: 38rem;
+    float: left;
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.p3 {
+    position: relative;
+    width: 40%;
+    right: 38rem;
+    top: 1.8rem;
+    float: left;
+
+}
+
+.i3 {
+    position: relative;
+    left: 4rem;
+    width: 50%;
+    height: 30rem;
+    bottom: 17rem;
+    aspect-ratio: 3/2;
+    object-fit: contain;
+
+    mix-blend-mode: color-burn;
+}
+
+.t4 {
+    position: relative;
+
+    right: 4rem;
+    float: right;
+    bottom: 13rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.p4 {
+    position: relative;
+    width: 40%;
+    float: right;
+    left: 32rem;
+    bottom: 9rem;
+
+}
+
+.i4 {
+    position: relative;
+    width: 40%;
+    height: 30rem;
+    left: 3rem;
+    bottom: 30rem;
+    aspect-ratio: 3/2;
+    object-fit: contain;
+}
+

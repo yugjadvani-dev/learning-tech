@@ -1,0 +1,122 @@
+.log_sec{
+    height: 80vh;
+    width: 80%;
+    border: 1px solid rgb(172, 161, 161);
+    position: relative;
+    top: 3rem;
+    margin: 0 auto;
+    border-radius: 8px;
+    background-color:  rgba(222, 176, 176, 0.56);
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 2px 8px;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.log_img{
+    height: 90%;
+    width: 50%;
+    top: 2rem;
+    position: relative;
+    left: 2rem;
+    opacity: 0.9;
+    
+}
+.log_img img{
+
+    filter: drop-shadow(2px 2px 30px #222);
+    height: 90%;
+    width: 90%;
+  
+}
+.log{
+    height: 90%;
+    width: 45%;
+    top: 2rem;
+    right: 2rem;
+    border-radius: 15px;
+    position: relative;
+    background-color: white;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    
+}
+.log h2{
+    /* color: white; */
+    position: relative;
+    font-size: 50px;
+    top: 2rem;
+    left: 14rem;
+}
+
+.input{
+    position: relative;
+    height: 10rem;
+    width: 60%;
+    margin: 0 auto;
+    top: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    
+}
+
+.input_log{
+    height: 3rem;
+    border-radius: 20px;
+    padding-left: 5rem;
+    border: none;
+    background-color: rgba(170, 169, 169, 0.349);
+    font-size: 17px;
+    font-family: Arial, Helvetica, sans-serif;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 8px;
+}
+
+.input_log1{
+    height: 3rem;
+    border-radius: 20px;
+    padding-left: 8rem;
+    border: none;
+    background-color: rgba(170, 169, 169, 0.349);
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 8px;
+}
+
+
+.input i{
+    width: 30px;
+    font-size: 25px;
+    position: relative;
+    top: 2.5rem;
+    left: 20px;
+}
+
+.login_btn{
+    position: relative;
+    width: 60%;
+    left: 7.4rem;
+    border-radius: 40px;
+    top: 7rem;
+    height: 4rem;
+    padding-right: 8.5rem;
+    cursor: pointer;
+}
+.login_btn button{
+    height: 100%;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 25px;
+    width: 165%;
+    background-color:  rgb(139, 134, 134);
+    border-radius: 40px;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 8px;
+    border: none;
+}
+
+button:hover{
+    background-color:  rgba(126, 123, 123, 0.567);
+}   
+
+

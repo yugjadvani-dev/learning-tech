@@ -1,0 +1,59 @@
+[
+    {
+        "id" : 1,
+        "name":"Nike AIr Jorden",
+        "img" :"/src/assets/WOMEN/w1.png",
+        "meta":"Nike Air max 97 shoes",
+        "price": 5000
+    },
+    {
+        "id" : 2,
+        "name":"Nike Air Jorden",
+        "img" :"/src/assets/WOMEN/w2.png",
+        "meta":"Nike Women's Air Max Excellerate 4",
+        "price": 4000
+    },
+    {
+        "id" : 3,
+        "name":"Nike Snkers",
+        "img" :"/src/assets/WOMEN/w3.png",
+        "meta":"Nike Women's Air Max 270 Black ",
+        "price": 8000
+    },
+    {
+        "id" : 4,
+        "name":"Nike SPort Shoes",
+        "img" :"/src/assets/WOMEN/w4.png",
+        "meta":"Nike Air Zoom Pegasus 37 Running Shoes",
+        "price": 6500
+    },
+    {
+        "id" : 5,
+        "name":"Nike Women Shoes",
+        "img" :"/src/assets/WOMEN/w5.png",
+        "meta":"Air Max Torch 4 Running Shoes",
+        "price": 20000
+    },
+    {
+        "id" : 6,
+        "name":"Nike Sport Shoes",
+        "img" :"/src/assets/WOMEN/w6.png",
+        "meta":"Air Max Fusion  Running Shoes",
+        "price": 10500
+    },
+    {
+        "id" : 7,
+        "name":"Nike Snkers",
+        "img" :"/src/assets/WOMEN/w7.png",
+        "meta":"Nnikke Zoom Vapor X Tennish Shoes ",
+        "price": 20000
+    },
+    {
+        "id" : 8,
+        "name":"Nike Snkers",
+        "img" :"/src/assets/WOMEN/w8.png",
+        "meta":"Nike Zoom Court NXT",
+        "price": 5000
+    }
+    
+]
