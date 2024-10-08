@@ -1,19 +1,23 @@
 import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { Textarea } from "@/components/ui/textarea";
 import axios from "axios";
-import { Link } from "lucide-react";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 interface User {
   firstname: string;
   lastname: string;
   email: string;
   password: string;
+  confirmPassword: string;
+  number: string;
+  address: string;
 }
 
-export function SignUp() {
+export function Register() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [success, setSuccess] = useState(false);
@@ -22,6 +26,9 @@ export function SignUp() {
     lastname: "",
     email: "",
     password: "",
+    confirmPassword: "",
+    number: "",
+    address: "",
   });
 
   const navigate = useNavigate();
@@ -46,7 +53,7 @@ export function SignUp() {
         user
       );
       console.log("Response:", response.data);
-      navigate("/sign-in");
+      navigate("/login");
       setSuccess(true);
     } catch (err: any) {
       console.error("Error:", err);
@@ -57,18 +64,15 @@ export function SignUp() {
   };
 
   return (
-    <div className="grid mx-auto min-h-screen w-full grid-cols-1 gap-8 md:grid-cols-2">
-      <div className="flex flex-col items-start justify-center space-y-6 p-6 md:p-10">
-        <div className="space-y-2">
-          <h1 className="text-3xl font-bold">Create an account</h1>
-          <p className="text-muted-foreground">
-            Already have an account?{" "}
-            <Link to="/" className="font-medium underline underline-offset-4">
-              Sign in
-            </Link>
-          </p>
-        </div>
-        <form className="grid w-full gap-4" onSubmit={handleSubmit}>
+    <div className="mx-auto max-w-md space-y-6 py-12">
+      <div className="space-y-2 text-center">
+        <h1 className="text-3xl font-bold">Sign Up</h1>
+        <p className="text-muted-foreground">
+          Create your account to get started.
+        </p>
+      </div>
+      <Card>
+        <CardContent className="space-y-4">
           <div className="grid grid-cols-2 gap-4">
             <div className="space-y-2">
               <Label htmlFor="first-name">First Name</Label>
@@ -96,7 +100,7 @@ export function SignUp() {
             </div>
           </div>
           <div className="space-y-2">
-            <Label htmlFor="email">Email</Label>
+            <Label htmlFor="email">Email Address</Label>
             <Input
               id="email"
               type="email"
@@ -107,56 +111,73 @@ export function SignUp() {
               required
             />
           </div>
+          <div className="grid grid-cols-2 gap-4">
+            <div className="space-y-2">
+              <Label htmlFor="password">Password</Label>
+              <Input
+                id="password"
+                type="password"
+                name="password"
+                value={user.password}
+                onChange={handleChange}
+                required
+              />
+            </div>
+            <div className="space-y-2">
+              <Label htmlFor="confirmPassword">Confirm Password</Label>
+              <Input
+                id="confirmPassword"
+                name="confirmPassword"
+                type="password"
+                value={user.confirmPassword}
+                onChange={handleChange}
+                required
+              />
+            </div>
+          </div>
           <div className="space-y-2">
-            <Label htmlFor="password">Password</Label>
+            <Label htmlFor="number">Phone Number (Optional)</Label>
             <Input
-              id="password"
-              type="password"
-              name="password"
-              value={user.password}
+              id="number"
+              name="number"
+              value={user.number}
               onChange={handleChange}
-              required
+              type="tel"
+              placeholder="+1 (555) 555-5555"
             />
           </div>
-          <Button type="submit" className="w-full mb-3">
-            {loading ? "Loading..." : "Sign Up"}
-          </Button>
-          {error && <p style={{ color: "red" }}>{error}</p>}
+          <div className="space-y-2">
+            <Label htmlFor="address">Address (Optional)</Label>
+            <Textarea
+              id="address"
+              name="address"
+              value={user.address}
+              onChange={handleChange}
+              placeholder="123 Main St, Anytown USA"
+            />
+          </div>
+
+          {error && (
+            <p className="mt-4" style={{ color: "red" }}>
+              {error}
+            </p>
+          )}
           {success && (
             <p style={{ color: "green" }}>Registration successful!</p>
           )}
-        </form>
-      </div>
-      <div className="hidden flex-col h-auto items-center justify-center bg-muted p-6 md:flex">
-        <div className="mx-auto max-w-md space-y-4 text-center">
-          <GraduationCapIcon className="h-12 w-12 text-primary mx-auto" />
-          <h2 className="text-2xl font-bold">Welcome to our LMS</h2>
-          <p className="text-muted-foreground">
-            Join our community of learners and start your journey today.
-          </p>
-        </div>
+        </CardContent>
+        <CardFooter>
+          <Button onClick={handleSubmit} type="submit" className="w-full">
+            Sign Up
+          </Button>
+        </CardFooter>
+      </Card>
+      <div className="text-center text-sm text-muted-foreground">
+        Already have an account?{" "}
+        <Link to="/login" className="underline">
+          Login
+        </Link>
       </div>
     </div>
-  );
-}
-
-function GraduationCapIcon(props: any) {
-  return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z" />
-      <path d="M22 10v6" />
-      <path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5" />
-    </svg>
   );
 }
