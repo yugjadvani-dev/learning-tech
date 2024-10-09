@@ -83,7 +83,7 @@ const handleDelete = async (id) => {
         </div>
       ))}
       <div className="mt-6 text-right">
-        <p className="text-xl font-semibold">Total: ₹{total.toLocaleString()}</p>
+        <p className="text-xl font-semibold">Total: ${total.toLocaleString()}</p>
         <button className="mt-4">Proceed to Checkout</button>
       </div>
     </div>
