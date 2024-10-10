@@ -1,9 +1,9 @@
-import { Label } from "@/components/ui/label";
-import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { Link, useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
 import axios from "axios";
+import { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 
 interface User {
   username: string;
@@ -72,7 +72,10 @@ export function Register() {
           </h2>
           <p className="mt-2 text-center text-sm text-muted-foreground">
             Or{" "}
-            <Link to="#" className="font-medium text-primary hover:text-primary/80" >
+            <Link
+              to="#"
+              className="font-medium text-primary hover:text-primary/80"
+            >
               sign in to your existing account
             </Link>
           </p>
@@ -130,12 +133,12 @@ export function Register() {
               />
             </div>
             <div>
-              <Label htmlFor="contact" className="sr-only">
+              <Label htmlFor="number" className="sr-only">
                 Contact Number
               </Label>
               <Input
-                id="contact"
-                name="contact"
+                id="number"
+                name="number"
                 type="tel"
                 autoComplete="tel"
                 value={user.number}
