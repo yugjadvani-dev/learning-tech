@@ -1,10 +1,8 @@
 import React, { useState } from 'react'
-
-import style from './login.module.css'
-import { useNavigate } from 'react-router-dom';
+import { assets } from "../../assets/assets";
 import axios from 'axios';
 
-const login = () => {
+const Login = ({ setShowLogin, setCurrentState }) => {
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
     const [success, setSuccess] = useState(false);
@@ -12,8 +10,6 @@ const login = () => {
         email: "",
         password: "",
     });
-
-    const navigate = useNavigate();
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -35,11 +31,11 @@ const login = () => {
                 password: user.password,
             }
             const response = await axios.post(
-                "http://localhost:7777/api/auth/login",
+                "http://localhost:8585/api/auth/login",
                 body
             );
             console.log("Response:", response.data);
-            navigate("/");
+            setShowLogin(false)
             setSuccess(true);
 
             let isLogin = true;
@@ -56,27 +52,32 @@ const login = () => {
     };
 
     return (
-        <div className={style.log_sec}>
-            <div className={style.log_img}>
-                <img src="src/assets/log.png" alt="assd" />
-            </div>
-            <div className={style.log}>
-                <h2>Login</h2>
-                <div className={style.input}>
-                    <i class="fa-regular fa-envelope"></i><input type='email' placeholder='Email' name='email' value={user.email} onChange={handleChange} className={style.input_log} />
-                    <i class="fa-solid fa-lock"></i> <input type='password' placeholder='Password' name='password' value={user.password} onChange={handleChange} className={style.input_log1} />
-
-
+        <div className="login-popup">
+            <form className="login-popup-container">
+                <div className="login-popup-title">
+                    <h2>{"Login"}</h2>
+                    <img
+                        src={assets.cross_icon}
+                        alt="cross_icon"
+                        onClick={() => setShowLogin(false)}
+                    />
                 </div>
-                <div className={style.login_btn}>
-                    <button onClick={handleSubmit}>Login</button>
+                <div className="login-popup-inputs">
+                    <input type="email" placeholder="Your email" name='email' value={user.email} onChange={handleChange} required />
+                    <input type="password" placeholder="Password" name='password' value={user.password} onChange={handleChange} required />
                 </div>
 
-            </div>
+                <button onClick={handleSubmit}>
+                    {"Login"}
+                </button>
 
-
+                <p>
+                    Create a new account?
+                    <span onClick={() => setCurrentState("Sign up")}>Click here</span>
+                </p>
+            </form>
         </div>
     )
 }
 
-export default login
+export default Login
