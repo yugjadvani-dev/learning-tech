@@ -3,7 +3,6 @@ import { Button } from "@/components/ui/button"
 import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from "@/components/ui/carousel"
 import { Input } from "@/components/ui/input"
 import { Card, CardContent } from "@/components/ui/card"
-import { Link } from "react-router-dom";
 
 export function Home() {
   return (
@@ -17,8 +16,8 @@ export function Home() {
                 <CarouselItem>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                     <div>
-                      <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">Avengers: Endgame</h1>
-                      <p className="text-muted-foreground mb-6">The epic conclusion to the Avengers saga.</p>
+                      <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">Vettaiyan</h1>
+                      <p className="text-muted-foreground mb-6">The epic conclusion to the action saga.</p>
                       <div className="flex space-x-4">
                         <Button>Buy Tickets</Button>
                         <Button variant="secondary">Watch Trailer</Button>
@@ -37,8 +36,8 @@ export function Home() {
                 <CarouselItem>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                     <div>
-                      <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">Dune</h1>
-                      <p className="text-muted-foreground mb-6">An epic science fiction film.</p>
+                      <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">Vicky Vidya ka woh vala video</h1>
+                      <p className="text-muted-foreground mb-6">An epic comedy fiction film.</p>
                       <div className="flex space-x-4">
                         <Button>Buy Tickets</Button>
                         <Button variant="secondary">Watch Trailer</Button>
