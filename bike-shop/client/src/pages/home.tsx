@@ -3,8 +3,33 @@ import { Card, CardContent, CardFooter } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar"
 import { Link } from "react-router-dom"
+import addToCart from "@/hooks/addToCart";
+
+const featured = [
+  {
+    "name": "Mountain Bike",
+    "price": 999,
+    "img": "/mountain.avif"
+  },
+  {
+    "name": "Road Bike",
+    "price": 799,
+    "img": "/road.avif"
+  },
+  {
+    "name": "Electric Scooter",
+    "price": 499,
+    "img": "/electric-scooter.avif"
+  },
+  {
+    "name": "Folding Bike",
+    "price": 399,
+    "img": "/folding.jpg"
+  }
+]
 
 export function Home() {
+  const {handleSubmit} = addToCart()
   return (
     <div className="flex flex-col min-h-[100dvh]">
 
@@ -33,25 +58,29 @@ export function Home() {
               </div>
             </div>
             <div className="mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 py-12">
+              {featured?.map(record=>{
+                return (
               <Card>
                 <CardContent className="flex flex-col items-center justify-center p-6">
                   <img
-                    src="/mountain.avif"
+                    src={record.img}
                     width="200"
                     height="200"
                     alt="Bike 1"
                     className="aspect-square overflow-hidden rounded-xl object-cover"
                   />
                   <div className="mt-4 text-center">
-                    <h3 className="text-xl font-bold">Mountain Bike</h3>
-                    <p className="text-muted-foreground">$999.99</p>
+                    <h3 className="text-xl font-bold">{record.name}</h3>
+                    <p className="text-muted-foreground">${record.price}</p>
                   </div>
                 </CardContent>
-                <CardFooter className="flex justify-end">
-                  <Button>Add to Cart</Button>
+                <CardFooter className="flex justify-center">
+                  <Button onClick={() => handleSubmit(record)}>Add to Cart</Button>
                 </CardFooter>
               </Card>
-              <Card>
+                )
+              })}
+              {/* <Card>
                 <CardContent className="flex flex-col items-center justify-center p-6">
                   <img
                     src="/road.avif"
@@ -65,7 +94,7 @@ export function Home() {
                     <p className="text-muted-foreground">$799.99</p>
                   </div>
                 </CardContent>
-                <CardFooter className="flex justify-end">
+                <CardFooter className="flex justify-center">
                   <Button>Add to Cart</Button>
                 </CardFooter>
               </Card>
@@ -83,7 +112,7 @@ export function Home() {
                     <p className="text-muted-foreground">$499.99</p>
                   </div>
                 </CardContent>
-                <CardFooter className="flex justify-end">
+                <CardFooter className="flex justify-center">
                   <Button>Add to Cart</Button>
                 </CardFooter>
               </Card>
@@ -101,10 +130,10 @@ export function Home() {
                     <p className="text-muted-foreground">$399.99</p>
                   </div>
                 </CardContent>
-                <CardFooter className="flex justify-end">
+                <CardFooter className="flex justify-center">
                   <Button>Add to Cart</Button>
                 </CardFooter>
-              </Card>
+              </Card> */}
             </div>
           </div>
         </section>
@@ -210,7 +239,7 @@ export function Home() {
                     <p className="text-muted-foreground">Get 20% off all bike helmets this month.</p>
                   </div>
                 </CardContent>
-                <CardFooter className="flex justify-end">
+                <CardFooter className="flex justify-center">
                   <Button>Shop Now</Button>
                 </CardFooter>
               </Card>
@@ -228,7 +257,7 @@ export function Home() {
                     <p className="text-muted-foreground">Get a free tune-up with the purchase of any new bike.</p>
                   </div>
                 </CardContent>
-                <CardFooter className="flex justify-end">
+                <CardFooter className="flex justify-center">
                   <Button>Shop Now</Button>
                 </CardFooter>
               </Card>
@@ -246,7 +275,7 @@ export function Home() {
                     <p className="text-muted-foreground">Buy any bike and get a second one for free.</p>
                   </div>
                 </CardContent>
-                <CardFooter className="flex justify-end">
+                <CardFooter className="flex justify-center">
                   <Button>Shop Now</Button>
                 </CardFooter>
               </Card>

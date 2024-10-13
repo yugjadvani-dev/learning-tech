@@ -16,6 +16,7 @@ import { Register } from "./pages/register";
 import { Review } from "./pages/review";
 import { Rides } from "./pages/rides";
 import { Services } from "./pages/services";
+import Cart from "./pages/Cart";
 
 const App = () => {
   const { pathname } = useLocation();
@@ -39,6 +40,7 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/exchange" element={<Exchange />} />
         <Route path="/electric" element={<Electric />} />
+        <Route path="/cart" element={<Cart />} />
       </Routes>
       {pathname === "/login" || pathname === "/register" ? null : <Footer />}
     </>

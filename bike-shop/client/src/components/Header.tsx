@@ -1,6 +1,6 @@
 import auth from "@/hooks/auth";
 import axios from "axios";
-import { PhoneIcon } from "lucide-react";
+import { PhoneIcon, ShoppingCart } from "lucide-react";
 import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Button } from "./ui/button";
@@ -256,6 +256,7 @@ const Header = () => {
               </Dialog>
               <Button onClick={handleDelete}>Delete Profile</Button>
               <Button onClick={handleLogout}>Logout</Button>
+              <Link to={'/cart'}><ShoppingCart /></Link>
             </div>
           ) : (
             <Link
