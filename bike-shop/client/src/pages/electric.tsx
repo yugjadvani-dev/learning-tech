@@ -8,23 +8,19 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import {
-  NavigationMenu,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-} from "@/components/ui/navigation-menu";
 import { Slider } from "@/components/ui/slider";
+import addToCart from "@/hooks/addToCart";
 import { useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 
 export function Electric() {
+  const {handleSubmit} = addToCart()
   const electricBikes = [
     {
       id: 1,
       name: "Acme Volt",
       description: "A powerful and stylish electric bike for city commuting.",
-      image: "/electric-1.jpeg",
+      img: "/electric-1.jpeg",
       price: 1999.99,
       brand: "Acme",
       type: "City",
@@ -33,7 +29,7 @@ export function Electric() {
       id: 2,
       name: "Speedster X",
       description: "A high-performance electric bike for off-road adventures.",
-      image: "/electric-2.avif",
+      img: "/electric-2.avif",
       price: 2499.99,
       brand: "Speedster",
       type: "Mountain",
@@ -43,7 +39,7 @@ export function Electric() {
       name: "Eco Cruiser",
       description:
         "A comfortable and eco-friendly electric bike for leisurely rides.",
-        image: "/electric-3.avif",
+        img: "/electric-3.avif",
         price: 1799.99,
       brand: "Eco",
       type: "Cruiser",
@@ -52,7 +48,7 @@ export function Electric() {
       id: 4,
       name: "Velo Commuter",
       description: "A compact and efficient electric bike for city commuting.",
-      image: "/electric-4.jpg",
+      img: "/electric-4.jpg",
       price: 1499.99,
       brand: "Velo",
       type: "City",
@@ -62,7 +58,7 @@ export function Electric() {
       name: "Terrain Conqueror",
       description:
         "A rugged and powerful electric bike for off-road adventures.",
-        image: "/electric-5.jpg",
+        img: "/electric-5.jpg",
         price: 2799.99,
       brand: "Terrain",
       type: "Mountain",
@@ -71,7 +67,7 @@ export function Electric() {
       id: 6,
       name: "Breeze Glider",
       description: "A lightweight and stylish electric bike for casual rides.",
-      image: "/electric-6.jpg",
+      img: "/electric-6.jpg",
       price: 1699.99,
       brand: "Breeze",
       type: "Cruiser",
@@ -86,7 +82,7 @@ export function Electric() {
   const filteredBikes = useMemo(() => {
     return electricBikes.filter((bike) => {
       const brandMatch =
-        filters.brand.length === 0 || filters.brand.includes(bike.image);
+        filters.brand.length === 0 || filters.brand.includes(bike.img);
       const typeMatch =
         filters.type.length === 0 || filters.type.includes(bike.type);
       const priceMatch =
@@ -273,11 +269,11 @@ export function Electric() {
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
               {featuredBikes.map((bike) => (
                 <Card key={bike.id} className="relative group">
-                  <Link to="/" className="absolute inset-0 z-10">
+                  {/* <Link to="/" className="absolute inset-0 z-10">
                     <span className="sr-only">View {bike.name}</span>
-                  </Link>
+                  </Link> */}
                   <img
-                    src={bike.image}
+                    src={bike.img}
                     alt={bike.type}
                     width={400}
                     height={300}
@@ -292,7 +288,7 @@ export function Electric() {
                       <span className="text-lg font-bold">
                         ${bike.price.toFixed(2)}
                       </span>
-                      <Button size="sm">Add to Cart</Button>
+                      <Button size="sm" onClick={() => handleSubmit(bike)}>Add to Cart</Button>
                     </div>
                   </CardContent>
                 </Card>
@@ -304,11 +300,11 @@ export function Electric() {
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
               {filteredBikes.map((bike) => (
                 <Card key={bike.id} className="relative group">
-                  <Link to="/" className="absolute inset-0 z-10">
+                  {/* <Link to="/" className="absolute inset-0 z-10">
                     <span className="sr-only">View {bike.name}</span>
-                  </Link>
+                  </Link> */}
                   <img
-                    src={bike.image}
+                    src={bike.img}
                     alt={bike.type}
                     width={400}
                     height={300}
@@ -323,7 +319,7 @@ export function Electric() {
                       <span className="text-lg font-bold">
                         ${bike.price.toFixed(2)}
                       </span>
-                      <Button size="sm">Add to Cart</Button>
+                      <Button size="sm" onClick={() => handleSubmit(bike)}>Add to Cart</Button>
                     </div>
                   </CardContent>
                 </Card>

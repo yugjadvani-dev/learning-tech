@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import { Minus, Plus, Trash2 } from 'lucide-react'
 import axios from 'axios';
+import { Button } from "@/components/ui/button";
 
 function Cart() {
   const [cartItems, setCartItems] = React.useState([])
@@ -83,7 +84,7 @@ const handleDelete = async (id) => {
       ))}
       <div className="mt-6 text-right">
         <p className="text-xl font-semibold">Total: ${total.toLocaleString()}</p>
-        <button className="mt-4">Proceed to Checkout</button>
+        <Button className="mt-4">Proceed to Checkout</Button>
       </div>
     </div>
   )

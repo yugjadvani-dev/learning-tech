@@ -13,8 +13,10 @@ import {
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Link } from "react-router-dom";
+import addToCart from "@/hooks/addToCart";
 
 export function NewScooter() {
+  const {handleSubmit} = addToCart()
   const scooters = [
     {
       id: 1,
@@ -22,7 +24,7 @@ export function NewScooter() {
       description:
         "High-performance electric scooter with a powerful motor and long-lasting battery.",
       price: 299.99,
-      image: "/newscooter-1.webp?height=300&width=300",
+      img: "/newscooter-1.webp?height=300&width=300",
       brand: "Razor",
       type: "Electric",
     },
@@ -32,7 +34,7 @@ export function NewScooter() {
       description:
         "Lightweight and portable electric scooter with a sleek design and smart features.",
       price: 499.99,
-      image: "/newscooter-2.webp?height=300&width=300",
+      img: "/newscooter-2.webp?height=300&width=300",
       brand: "Segway",
       type: "Electric",
     },
@@ -42,7 +44,7 @@ export function NewScooter() {
       description:
         "Durable and versatile kick scooter with large wheels for a smooth ride.",
       price: 79.99,
-      image: "/newscooter-3.jpeg?height=300&width=300",
+      img: "/newscooter-3.jpeg?height=300&width=300",
       brand: "Mongoose",
       type: "Kick",
     },
@@ -52,7 +54,7 @@ export function NewScooter() {
       description:
         "Compact and lightweight kick scooter with a foldable design for easy storage.",
       price: 99.99,
-      image: "/newscooter-4.webp?height=300&width=300",
+      img: "/newscooter-4.webp?height=300&width=300",
       brand: "Micro",
       type: "Kick",
     },
@@ -62,7 +64,7 @@ export function NewScooter() {
       description:
         "Portable and durable electric scooter with a unique dolly feature for easy transport.",
       price: 599.99,
-      image: "/newscooter-5.jpeg?height=300&width=300",
+      img: "/newscooter-5.jpeg?height=300&width=300",
       brand: "Glion",
       type: "Electric",
     },
@@ -72,7 +74,7 @@ export function NewScooter() {
       description:
         "High-speed electric scooter with a long-range battery and advanced safety features.",
       price: 449.99,
-      image: "/newscooter-6.jpg?height=300&width=300",
+      img: "/newscooter-6.jpg?height=300&width=300",
       brand: "Gotrax",
       type: "Electric",
     },
@@ -266,7 +268,7 @@ export function NewScooter() {
               {filteredScooters.map((scooter) => (
                 <Card key={scooter.id}>
                   <img
-                    src={scooter.image}
+                    src={scooter.img}
                     alt={scooter.name}
                     width={300}
                     height={300}
@@ -282,7 +284,7 @@ export function NewScooter() {
                       <span className="text-primary font-bold">
                         ${scooter.price}
                       </span>
-                      <Button>Add to Cart</Button>
+                      <Button onClick={() => handleSubmit(scooter)}>Add to Cart</Button>
                     </div>
                   </CardContent>
                 </Card>
@@ -297,7 +299,7 @@ export function NewScooter() {
               {featuredScooters.map((scooter) => (
                 <Card key={scooter.id}>
                   <img
-                    src={scooter.image}
+                    src={scooter.img}
                     alt={scooter.name}
                     width={300}
                     height={300}
@@ -313,7 +315,7 @@ export function NewScooter() {
                       <span className="text-primary font-bold">
                         ${scooter.price}
                       </span>
-                      <Button>Add to Cart</Button>
+                      <Button onClick={() => handleSubmit(scooter)}>Add to Cart</Button>
                     </div>
                   </CardContent>
                 </Card>

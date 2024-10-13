@@ -4,8 +4,34 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Checkbox } from "@/components/ui/checkbox"
 import { Link } from "react-router-dom"
+import addToCart from "@/hooks/addToCart";
+
+const data = [
+  {
+    "name": "Shimano Deore XT Rear Derailleur",
+    "price": 99,
+    "img": "/parts-1.jpeg"
+  },
+  {
+    "name": "Shimano Dura-Ace Wheelset",
+    "price": 1499,
+    "img": "/parts-2.webp"
+  },
+  {
+    "name": "SRAM Force eTap AXS Groupset",
+    "price": 2199,
+    "img": "/parts-3.avif"
+  },
+  {
+    "name": "Campagnolo Bora WTO 45 Wheelset",
+    "price": 1999,
+    "img": "/parts-4.webp"
+  }
+]
+
 
 export function Parts() {
+  const {handleSubmit} = addToCart()
   return (
     <div className="flex flex-col min-h-screen">
    
@@ -113,9 +139,11 @@ export function Parts() {
           <div className="container mx-auto px-4">
             <h2 className="text-2xl font-bold mb-4">Product Listings</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+              {data.map(record =>{
+                return (
               <div className="bg-background rounded-lg overflow-hidden shadow-md">
                 <img
-                  src="/parts-1.jpeg"
+                  src={record.img}
                   alt="Product Image"
                   width={300}
                   height={200}
@@ -123,15 +151,17 @@ export function Parts() {
                   style={{ aspectRatio: "300/200", objectFit: "cover" }}
                 />
                 <div className="p-4">
-                  <h3 className="text-lg font-bold mb-2">Shimano Deore XT Rear Derailleur</h3>
+                  <h3 className="text-lg font-bold mb-2">{record.name}</h3>
                   <p className="text-muted-foreground mb-4">High-performance rear derailleur for mountain bikes.</p>
                   <div className="flex items-center justify-between">
-                    <span className="text-primary font-bold">$99.99</span>
-                    <Button>Add to Cart</Button>
+                    <span className="text-primary font-bold">${record.price}</span>
+                    <Button onClick={() => handleSubmit(record)}>Add to Cart</Button>
                   </div>
                 </div>
               </div>
-              <div className="bg-background rounded-lg overflow-hidden shadow-md">
+                )
+              })}
+              {/* <div className="bg-background rounded-lg overflow-hidden shadow-md">
                 <img
                   src="/parts-2.webp"
                   alt="Product Image"
@@ -184,7 +214,7 @@ export function Parts() {
                     <Button>Add to Cart</Button>
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </section>

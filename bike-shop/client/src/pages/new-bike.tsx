@@ -9,14 +9,16 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import addToCart from "@/hooks/addToCart";
 import { useMemo, useState } from "react";
-import { Link } from "react-router-dom";
 
 export function NewBike() {
+  const {handleSubmit} = addToCart()
+
   const bikes = [
     {
       id: 1,
-      image: "/newbike-1.webp",
+      img: "/newbike-1.webp",
       name: "Acme Road Bike",
       description:
         "A lightweight and responsive road bike for the avid cyclist.",
@@ -26,7 +28,7 @@ export function NewBike() {
     },
     {
       id: 2,
-      image: "/newbike-2.jpg",
+      img: "/newbike-2.jpg",
       name: "Kawasaki Ninja H2R",
       description:
       "A versatile hybrid bike that combines the best of road bikes.",
@@ -36,7 +38,7 @@ export function NewBike() {
     },
     {
       id: 3,
-      image: "/newbike-3.jpg",
+      img: "/newbike-3.jpg",
       name: "Suzuki Hayabusa ",
       description:
         "A comfortable and stylish cruiser bike for leisurely rides.",
@@ -46,7 +48,7 @@ export function NewBike() {
     },
     {
       id: 4,
-      image: "/newbike-4.jpg",
+      img: "/newbike-4.jpg",
       name: "BMW S 1000 RR",
       description:
         "A versatile hybrid bike that combines the best of road bikes.",
@@ -56,7 +58,7 @@ export function NewBike() {
     },
     {
       id: 5,
-      image: "/newbike-5.jpg",
+      img: "/newbike-5.jpg",
       name: "Ducati Streetfighter V4",
       description: "A lightweight and efficient commuter bike for city riding.",
       price: 799.99,
@@ -65,7 +67,7 @@ export function NewBike() {
     },
     {
       id: 6,
-      image: "/newbike-6.webp",
+      img: "/newbike-6.webp",
       name: "Aprilia RSV4 1100 Factory",
       description:
         "A rugged and capable mountain bike for tackling tough terrain.",
@@ -263,7 +265,7 @@ export function NewBike() {
                   className="bg-background rounded-lg overflow-hidden shadow-lg transition-all hover:shadow-xl"
                 >
                   <img
-                    src={bike.image}
+                    src={bike.img}
                     alt={bike.brand}
                     width={400}
                     height={300}
@@ -279,7 +281,7 @@ export function NewBike() {
                       <span className="text-lg font-semibold">
                         ${bike.price.toFixed(2)}
                       </span>
-                      <Button size="sm">Add to Cart</Button>
+                      <Button size="sm" onClick={() => handleSubmit(bike)}>Add to Cart</Button>
                     </div>
                   </div>
                 </div>
@@ -297,7 +299,7 @@ export function NewBike() {
                   className="bg-background rounded-lg overflow-hidden shadow-lg transition-all hover:shadow-xl"
                 >
                   <img
-                    src={bike.image}
+                    src={bike.img}
                     alt={bike.brand}
                     width={400}
                     height={300}
@@ -313,7 +315,7 @@ export function NewBike() {
                       <span className="text-lg font-semibold">
                         ${bike.price.toFixed(2)}
                       </span>
-                      <Button size="sm">Add to Cart</Button>
+                      <Button size="sm" onClick={() => handleSubmit(bike)}>Add to Cart</Button>
                     </div>
                   </div>
                 </div>
