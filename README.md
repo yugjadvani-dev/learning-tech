@@ -1,33 +1,16 @@
-# In this repo I put everything that I learned Checkout below branches.
+# Node JS
 
-# Front-end
-
-- [JavaScript](https://github.com/yugjadvani-dev/learning-tech/tree/javascript)
-
-- [React Js](https://github.com/yugjadvani-dev/learning-tech/tree/reactjs)
-
-# Backend
-
-- [Node Js](https://github.com/yugjadvani-dev/learning-tech/tree/nodejs)
-
-- [Python](https://github.com/yugjadvani-dev/learning-tech/tree/python)
-
-- [FastAPI](https://github.com/yugjadvani-dev/learning-tech/tree/fastapi)
-
-# Mobile App
-
-- [React-Native](https://github.com/yugjadvani-dev/learning-tech/tree/react-native)
-
-# Web Framework
-
-- [Next Js](https://github.com/yugjadvani-dev/learning-tech/tree/nextjs)
-  
-- [Astro](https://github.com/yugjadvani-dev/learning-tech/tree/astro)
-
-# Version Control
-
-- [GIT](https://github.com/yugjadvani-dev/learning-tech/tree/git)
-
-# MERN Stack
-
-- [MERN](https://github.com/yugjadvani-dev/learning-tech/tree/mern-stack)
+## Notes
+- Allways start `custom header` name with `X-` in the request header.
+- Allways use `dotenv` to store the environment variables.
+- Allways use `cors` to allow the cross-origin requests.
+- Allways use `body-parser` to parse the request body.
+- Allways use `pg` to connect to the PostgreSQL database.
+- Allways use `express` to create the server.
+- Allways use `nodemon` to restart the server on file changes.
+- Allways use `express.urlencoded({ extended: true })` to parse the request body.
+- Allways use `express.json()` to parse the request body.
+- Allways use `express.static('public')` to serve the static files.
+- Allways use `express.json()` to parse the request body.
+- Allways use `express.json()` to parse the request body.
+- Allways use `express.json()` to parse the request body.
