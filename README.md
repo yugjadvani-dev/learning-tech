@@ -1,1 +1,1 @@
-# NextJs Project's
+# Default folder for the HTML

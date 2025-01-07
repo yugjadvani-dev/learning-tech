@@ -1,0 +1,611 @@
+/*********************  Default-CSS  *********************/
+
+input[type="file"]::-webkit-file-upload-button {
+    cursor: pointer;
+}
+
+input[type="file"]::-moz-file-upload-button {
+    cursor: pointer;
+}
+
+input[type="file"]::-ms-file-upload-button {
+    cursor: pointer;
+}
+
+input[type="file"]::-o-file-upload-button {
+    cursor: pointer;
+}
+
+input[type="file"],
+a[href],
+input[type='submit'],
+input[type='button'],
+input[type='image'],
+label[for],
+select,
+button,
+.pointer {
+    cursor: pointer;
+}
+
+::-moz-focus-inner {
+    border: 0px solid transparent;
+}
+
+::-webkit-focus-inner {
+    border: 0px solid transparent;
+}
+
+*::-moz-selection {
+    color: #fff;
+    background: #000;
+}
+
+*::-webkit-selection {
+    color: #fff;
+    background: #000;
+}
+
+*::-webkit-input-placeholder {
+    color: #333333;
+    opacity: 1;
+}
+
+*:-moz-placeholder {
+    color: #333333;
+    opacity: 1;
+}
+
+*::-moz-placeholder {
+    color: #333333;
+    opacity: 1;
+}
+
+*:-ms-input-placeholder {
+    color: #333333;
+    opacity: 1;
+}
+
+html body {
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    line-height: 1.3;
+}
+
+a,
+div a:hover,
+div a:active,
+div a:focus,
+button {
+    text-decoration: none;
+    -webkit-transition: all 0.5s ease 0s;
+    -moz-transition: all 0.5s ease 0s;
+    -ms-transition: all 0.5s ease 0s;
+    -o-transition: all 0.5s ease 0s;
+    transition: all 0.5s ease 0s;
+}
+
+a,
+span,
+div a:hover,
+div a:active,
+button {
+    text-decoration: none;
+}
+
+*::after,
+*::before,
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.no-list li,
+.no-list ul,
+.no-list ol,
+footer li,
+footer ul,
+footer ol,
+header li,
+header ul,
+header ol {
+    list-style: inside none none;
+}
+
+.no-list ul,
+.no-list ol,
+footer ul,
+footer ol,
+header ul,
+header ol {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    outline: none;
+    color: #555;
+}
+
+a:hover {
+    color: #000;
+}
+
+body .clearfix,
+body .clear {
+    clear: both;
+    line-height: 100%;
+}
+
+body .clearfix {
+    height: auto;
+}
+
+* {
+    outline: none !important;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+ul:after,
+li:after,
+.clr:after,
+.clearfix:after,
+.container:after,
+.grve-container:after {
+    clear: both;
+    display: block;
+    content: "";
+}
+
+div input,
+div select,
+div textarea,
+div button {
+    font-family: 'Lato', sans-serif;
+}
+
+body h1,
+body h2,
+body h3,
+body h4,
+body h5,
+body h6 {
+    font-family: 'Lato', sans-serif;
+    line-height: 120%;
+    color: #333;
+    font-weight: bold;
+    margin: 0 0 15px;
+}
+
+body h1:last-child,
+body h2:last-child,
+body h3:last-child,
+body h4:last-child,
+body h5:last-child,
+body h6:last-child {
+    margin-bottom: 0;
+}
+
+div select {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+div select option {
+    font-size: 13px;
+    color: #333;
+    padding: 2px 5px;
+}
+
+img {
+    margin: 0 auto;
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+}
+
+body p {
+    color: #333;
+    font-family: 'Lato', sans-serif;
+    font-size: 15px;
+    line-height: 140%;
+    margin: 0 0 15px;
+    padding: 0;
+}
+
+body p:empty {
+    margin: 0;
+    line-height: 0;
+}
+
+body p:last-child {
+    margin-bottom: 0;
+}
+
+p strong {
+    font-weight: bold;
+}
+
+.a-left {
+    text-align: left;
+}
+
+.a-right {
+    text-align: right;
+}
+
+.a-center {
+    text-align: center;
+}
+
+label em {
+    color: #ff0000;
+    display: inline-block;
+    font-style: normal;
+    vertical-align: top;
+    margin-left: 5px;
+}
+
+.hidden {
+    display: none !important;
+}
+
+body .container {
+    width: 100%;
+    max-width: 1600px;
+}
+
+
+/*********************  scroll Hide  *********************/
+
+html.show-menu {
+    overflow: hidden;
+}
+
+html.show-menu body {
+    overflow: hidden;
+    height: 100%;
+}
+
+
+/*********************  Default-CSS close  *********************/
+
+
+/*********************  Gapping  *********************/
+
+section {
+    padding-bottom: 60px;
+    padding-top: 60px;
+}
+
+
+/*********************  Gapping close  *********************/
+
+
+/*********************  Default-CSS  *********************/
+
+
+/*********************  Common-Css  *******************/
+
+.clr:after,
+ul:after,
+.clearfix:after,
+li:after,
+.grve-container:after {
+    clear: both;
+    display: block;
+    content: "";
+}
+
+.btn.focus,
+.btn:focus {
+    box-shadow: none !important;
+}
+
+.form-control:focus {
+    box-shadow: none !important;
+}
+
+
+/*********************  Common-Css Close  *******************/
+
+
+/*********************  Header  *******************/
+div#navbarNav {
+    justify-content: center;
+}
+
+.btns {}
+
+ul.navbar-nav {
+    margin: auto;
+}
+
+a.borderred {
+    width: 110px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid;
+    border-radius: 50px;
+}
+
+a.btnblack {
+    width: 110px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    border-radius: 50px;
+    background: black;
+    color: white;
+    margin-left: 10px;
+}
+
+.btns {
+    display: flex;
+}
+
+section.heresecrion {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+}
+
+ul.navbar-nav a {
+    color: black;
+}
+
+header {
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    transform: all 0.5s;
+    z-index: 999;
+}
+
+.cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99999999;
+    width: 50px;
+    height: 50px;
+    margin: -25px 0 0 -25px;
+    opacity: 0;
+    transition: opacity 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
+    pointer-events: none;
+}
+
+.cursor--hover .cursor-inner {
+    transform: scale(0.5);
+    opacity: 0;
+}
+
+.cursor--hover .cursor-outer {
+    transform: scale(1.4);
+    border-color: #000;
+    opacity: 1;
+}
+
+.cursor-move-inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 6px;
+    height: 6px;
+    margin-top: -3px;
+    margin-left: -3px;
+}
+
+.cursor-move-outer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.cursor-inner {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: black;
+    border-radius: 50%;
+    transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1), opacity 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.cursor-outer {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 1px solid black;
+    border-radius: 50%;
+    box-sizing: border-box;
+    transition: border 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), transform 0.4s cubic-bezier(0.23, 1, 0.32, 1), opacity 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+html:hover .cursor {
+    opacity: 1;
+}
+
+a {
+    transition: border 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+ul.navbar-nav a {
+    margin: 0 15px;
+}
+
+nav.navbar.navbar-expand-lg {
+    padding: 25px 0px;
+    transition: all 0.5s;
+}
+
+header.fixed .navbar {
+    box-shadow: 0px 5px 50px #0000000d;
+    padding: 15px 0px;
+}
+
+/*********************  Header Close  *******************/
+a.btnblack:hover {
+    background: transparent;
+    color: black;
+}
+
+a.borderred:hover {
+    color: white;
+    background: black;
+}
+
+section.herosection {
+    height: 100vh;
+    position: relative;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    background: rgb(255, 255, 255);
+}
+
+
+
+
+/*********************  Home banner  *******************/
+
+
+/*********************  Home banner Close  *******************/
+
+
+/*********************  Content  *******************/
+
+
+/*********************  Content Close  *******************/
+
+
+/*********************  Footer  *******************/
+ul.social {
+    display: flex;
+    align-items: center;
+}
+
+ul.social a {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    alc: inherit;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid;
+    border-radius: 50px;
+    font-size: 16px;
+}
+
+ul.social li {
+    margin-right: 10px;
+}
+
+ul.footermenu {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.contactbtns input {
+    width: 100%;
+    height: 50px;
+    border-radius: 50px;
+    border: 1px solid;
+    padding: 0px 20px;
+}
+
+.contactbtns {
+    position: relative;
+}
+
+.contactbtns a {
+    width: 100px;
+    height: 40px;
+    background: black;
+    border-radius: 50px;
+    color: white;
+    position: absolute;
+    right: 6px;
+    display: f;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+footer {
+    padding: 60px 0px 0px;
+    background: #00000005;
+}
+
+.coprights {
+    padding: 20px 0px;
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #00000047;
+}
+
+.coprights p {
+    margin: 0;
+}
+
+.footerlogo img {
+    margin-bottom: 21px;
+}
+
+.footerlogo p {
+    margin-bottom: 20px;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+/*********************  Footer Close  *******************/
+
+
+/*********************  Inner-Pages  *******************/
+
+
+/*********************  Inner-Pages Close  *******************/
+
+
+/*********************  Owl  *******************/
+
+
+/*********************  Owl Close  *******************/
+
+
+/*********************  Fancy-box  *******************/
+
+
+/*********************  Fancy-box Close  *******************/
