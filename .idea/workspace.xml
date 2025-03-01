@@ -5,11 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3450c733-2e39-405d-a529-cae4eeacaef0" name="Changes" comment="Create folder structure">
-      <change afterPath="$PROJECT_DIR$/NOTES.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deploy-node/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/deploy-node/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/deploy-node/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/deploy-node/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,14 +57,14 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;D:\\learning-tech\\file-uploader-multer\\node_modules\\typescript\\lib&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;H:\\software\\WebStorm 2024.2.4\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-deb605915726-JavaScript-WS-243.22562.222" />
+        <option value="bundled-js-predefined-d6986cc7102b-822845ee3bb5-JavaScript-WS-243.23654.157" />
       </set>
     </attachedChunks>
   </component>
@@ -87,6 +83,10 @@
       <workItem from="1736023127270" duration="6170000" />
       <workItem from="1736039928111" duration="8000" />
       <workItem from="1736040953093" duration="7000" />
+      <workItem from="1739665555926" duration="691000" />
+      <workItem from="1739816999063" duration="594000" />
+      <workItem from="1740323487453" duration="1268000" />
+      <workItem from="1740804231502" duration="96000" />
     </task>
     <task id="LOCAL-00001" summary="Create folder structure">
       <option name="closed" value="true" />
