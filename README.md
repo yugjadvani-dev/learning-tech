@@ -31,3 +31,7 @@
 # MERN Stack
 
 - [MERN](https://github.com/yugjadvani-dev/learning-tech/tree/mern-stack)
+
+# Notes
+
+- [Here](https://www.apnacollege.in/notes)
