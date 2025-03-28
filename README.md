@@ -1,5 +1,9 @@
 # In this repo I put everything that I learned Checkout below branches.
 
+# DNS Server
+
+- [My Own DNS Server](https://github.com/yugjadvani-dev/learning-tech/tree/my-dns-server)
+
 # Front-end
 
 - [JavaScript](https://github.com/yugjadvani-dev/learning-tech/tree/javascript)
